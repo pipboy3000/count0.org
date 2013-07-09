@@ -1,0 +1,263 @@
+@import "compass";
+
+$main-color: #3892E3;
+$sub-color: #84BFEB;
+
+/*
+ * font
+ */
+@include font-face("ExpletusSans", font-files("ExpletusSans-Regular.ttf"));
+@import "ss-social-regular";
+
+
+/*
+ * reset
+ */
+@include global-reset;
+@include establish-baseline;
+
+a {
+  @include transition-property(color);
+  @include transition-duration(0.3s);
+}
+
+code {
+  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+}
+
+#page {
+  position: relative;
+  > header {
+    width: 120px;
+    position: fixed;
+    text-align: center;
+    background: $main-color;
+    height: 100%;
+
+    h1 {
+      font-family: "ExpletusSans";
+      @include adjust-font-size-to(18px);
+      @include text-shadow(rgba(0, 0, 0, 0.5) 0 1px 0);
+      color: #fff;
+      margin: 30px 0;
+      a {
+        &:hover, &:active {
+          @include text-shadow(rgba(255, 255, 255, 0.5) 0 1px 0);
+        }
+      }
+    }
+
+    a {
+      @include unstyled-link;
+      &:hover, &:active {
+        text-decoration: none;
+      }
+      @include link-colors(#fff, #333, #333, #fff);
+    }
+
+    .social {
+      font-family: "SSSocialRegular";
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      a {
+        text-align: center;
+        width: 20px;
+        margin-bottom: 5px;
+        display: inline-block;
+        @include link-colors(#fff, #333, #333, #fff, #fff);
+        font-size: 16px;
+      }
+    }
+  }
+
+  > .content,
+  > footer {
+    width: 60%;
+    min-width: 500px;
+    padding: 20px;
+    margin-left: 130px;
+  }
+
+  > footer {
+    text-align: right;
+    @include adjust-font-size-to(12px);
+  }
+
+}
+
+
+article {
+  header  {
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  h1 {
+    @include adjust-font-size-to(30px);
+  }
+
+  a {
+    @include hover-link;
+    @include link-colors($main-color, $sub-color, $sub-color, $main-color);
+  }
+  
+  ul {
+    list-style: disc; 
+    margin-left: 20px;
+    margin-bottom: 1em;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
+  .post-title {
+    @include adjust-font-size-to(20px);
+    margin-top: 0.25em;
+  }
+
+  .date {
+    display: inline-block;;
+    @include adjust-font-size-to(14px);
+  }
+
+  .post-meta {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    @include adjust-font-size-to(12px);
+    line-height: 1.8;
+    span {
+      padding: 0 8px;
+      text-align: center;
+      display: inline-block;
+      background: $main-color;
+      color: #fff;
+    }
+
+    a {
+      @include unstyled-link;
+      span {
+        @include transition-property(background-color);
+        @include transition-duration(0.3s);
+      }
+      &:link, &:visited {
+        span {
+          background: $main-color;
+        }
+      }
+      &:hover, &:active {
+        span {
+          background: $sub-color;
+        }
+      }
+    }
+  }
+
+  .post-body {
+    p, ul, dl {
+      @include adjust-font-size-to(16px, 1);
+      margin-bottom: 1.5em;
+    }
+
+    h2, h3, h4, h5, h6 {
+      @include adjust-font-size-to(18px);
+      font-weight: bold;
+      margin-bottom: 1em;
+    }
+
+    blockquote {
+      position: relative;
+      overflow: hidden;
+      padding: 0 0 0 4em;
+      &:before {
+        position: absolute;
+        color: #000;
+        display: block;
+        z-index: 100;
+        font-size: 80px;
+        font-family: georgia, serif;
+        top: 20px;
+        left: 20px;
+        content: '\201C';
+      }
+    }
+    
+    p {
+      code {
+        @include adjust-font-size-to(13px);
+        vertical-align: top;
+        padding: 2px 3px 1px 3px;
+        background: #fafafa;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+/*
+ * pagination
+ */
+.pagination {
+  width: 60%;
+  margin: 0 auto;
+  @include adjust-font-size-to(14px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+  a {
+    @include hover-link;
+    position: absolute;
+
+    &.prev {
+      top: 0;
+      left: 0;
+    }
+
+    &.next {
+      top: 0;
+      right: 0;
+    }
+  }
+
+  span {
+    &.prev {
+      display: none;
+    }
+
+    &.next {
+      display: none;
+    }
+  }
+}
+
+/*
+ * category page
+ */
+.category-title {
+  position: relative;
+  @include adjust-font-size-to(20px);
+  color: #fff;
+  background: $main-color;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 1em 0;
+  @include transition-property(width);
+  @include transition-duration(0.3s);
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    padding: 0 10px;
+    display: block;
+    width: 100%;
+  }
+}
+
+/*
+ * syntax highlight (fenced code)
+ */
+@import "syntaxhighlight";

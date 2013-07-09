@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+    <meta name="description" content="{{ page.exerpt | strip_html }}">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{ site.url}}/css/style.css">
+    <link rel="alternate" type="application/atom+xml" href="{{ site.url }}/atom.xml" title="Atom feed">
+  </head>
+  <body>
+
+  <div id="page">
+    <header>
+    <h1><a href="{{ site.baseurl }}">{{ site.name }}</a></h1> 
+    <div class="social">
+      <a href="//twitter.com/count0" title="twitter" target="_blank">&#xF611;</a>
+      <a href="//shake4me.tumblr.com/" title="tumblr" target="_blank">&#xF620;</a>
+      <a href="//github.com/pipboy3000" title="github" target="_blank">&#xF670;</a>
+      <a href="mailto:{{ site.author.email }}">&#x2709;</a>
+      <a href="{{ site.url }}/atom.xml" title="feed">&#xE310;</a>
+    </div>
+    </header>
+    <div class="content">{{ content }}</div>
+    <footer>
+    <p>&copy; 2013 {{ site.author.name }}</p>
+    </footer>
+  </div>
+  <script>
+  var _gaq=[['_setAccount','{{ site.analytics_id }}'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+   g.src='//www.google-analytics.com/ga.js';
+   s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  </body>
+</html>
