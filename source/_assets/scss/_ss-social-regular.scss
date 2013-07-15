@@ -10,6 +10,7 @@
 * <link href="webfonts/ss-social-regular.css" rel="stylesheet" />
 */
 
+/*
 @font-face {
   font-family: "SSSocialRegular";
   src: font-url('ss-social-regular.eot');
@@ -20,6 +21,9 @@
   font-weight: normal;
   font-style: normal;
 }
+*/
+
+@include font-face("SSSocialRegular", font-files("ss-social-regular.eot?#iefix", "ss-social-regular.woff"));
 
 /* This triggers a redraw in IE to Fix IE8's :before content rendering. */
 html:hover [class^="ss-"]{-ms-zoom: 1;}

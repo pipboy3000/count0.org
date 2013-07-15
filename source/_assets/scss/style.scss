@@ -6,7 +6,7 @@ $sub-color: #84BFEB;
 /*
  * font
  */
-@include font-face("ExpletusSans", font-files("ExpletusSans-Regular.ttf"));
+@include font-face("ExpletusSans", font-files("ExpletusSans-Regular.eot?#iefix", "ExpletusSans-Regular.woff"));
 @import "ss-social-regular";
 
 
