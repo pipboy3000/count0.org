@@ -2,7 +2,6 @@
 
 My site created by jekyll, grunt, compass and more.
 
-
 ---
 
 The MIT License (MIT)

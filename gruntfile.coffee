@@ -39,7 +39,6 @@ module.exports =  ->
         tasks: []
     connect:
       options:
-        hostname: "10.0.1.7"
         port: 9000
       livereload:
         options:

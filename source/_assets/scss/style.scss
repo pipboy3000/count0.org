@@ -158,13 +158,13 @@ article {
   .post-body {
     p, ul, dl {
       @include adjust-font-size-to(16px, 1);
-      margin-bottom: 1.5em;
+      margin-bottom: 1.8em;
     }
 
     h2, h3, h4, h5, h6 {
       @include adjust-font-size-to(18px);
       font-weight: bold;
-      margin-bottom: 1em;
+      margin: 1.5em 0;
     }
 
     blockquote {
