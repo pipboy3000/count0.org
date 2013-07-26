@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+{% if page.description %}
+<meta name="description" content="{{ page.description | strip_html | strip_newlines }}">
+{% elsif page.excerpt %}
+<meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}">
+{% else %}
+<meta name="description" content="count0.orgはAsai Masamiの個人サイトです">
+{% endif %}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site_username" content="@count0">
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
+{% if page.description %}
+<meta name="twitter:description" content="{{ page.description | strip_html | strip_newlines }}">
+{% elsif page.excerpt %}
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
+{% else %}
+<meta name="twitter:description" content="count0.orgはAsai Masamiの個人サイトです">
+{% endif %}
+{% if page.featureimage %}
+<meta name="twitter:image" content="{{ page.featureimage }}">
+{% endif %}
+
+<meta name="og:url" content="{{ site.url }}{{ page.url }}">
+<meta name="og:site_name" content="{{ site.name }}">
+<meta name="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
+{% if page.description %}
+<meta name="og:description" content="{{ page.description | strip_html | strip_newlines }}">
+{% elsif page.excerpt %}
+<meta name="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
+{% else %}
+<meta name="og:description" content="count0.orgはAsai Masamiの個人サイトです">
+{% endif %}
+{% if page.featureimage %}
+<meta name="og:image" content="{{ page.featureimage }}">
+{% endif %}

@@ -6,6 +6,7 @@ exclude: ['']
 markdown: redcarpet
 redcarpet:
   extensions: ['autolink', 'no_intra_emphasis']
+url: //count0.org
 name: count0.org
 analytics_id: UA-357228-7
 author:
