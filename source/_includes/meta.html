@@ -9,7 +9,8 @@
 <meta name="description" content="count0.orgはAsai Masamiの個人サイトです">
 {% endif %}
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site_username" content="@count0">
+<meta name="twitter:site_username" content="{{ site.author.twitter }}">
+<meta name="twitter:domain" content="{{ site.name }}">
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
 {% if page.description %}
@@ -23,16 +24,17 @@
 <meta name="twitter:image" content="{{ page.featureimage }}">
 {% endif %}
 
-<meta name="og:url" content="{{ site.url }}{{ page.url }}">
-<meta name="og:site_name" content="{{ site.name }}">
-<meta name="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
 {% if page.description %}
-<meta name="og:description" content="{{ page.description | strip_html | strip_newlines }}">
+<meta property="og:description" content="{{ page.description | strip_html | strip_newlines }}">
 {% elsif page.excerpt %}
-<meta name="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
 {% else %}
-<meta name="og:description" content="count0.orgはAsai Masamiの個人サイトです">
+<meta property="og:description" content="count0.orgはAsai Masamiの個人サイトです">
 {% endif %}
 {% if page.featureimage %}
-<meta name="og:image" content="{{ page.featureimage }}">
+<meta property="og:image" content="{{ page.featureimage }}">
 {% endif %}
