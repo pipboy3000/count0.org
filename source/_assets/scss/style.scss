@@ -28,7 +28,7 @@ code {
 #page {
   position: relative;
   > header {
-    width: 120px;
+    width: 150px;
     position: fixed;
     text-align: center;
     background: $main-color;
@@ -72,10 +72,10 @@ code {
 
   > .content,
   > footer {
-    width: 60%;
+    width: 75%;
     min-width: 500px;
     padding: 20px;
-    margin-left: 130px;
+    margin-left: 150px;
   }
 
   > footer {
@@ -261,3 +261,8 @@ article {
  * syntax highlight (fenced code)
  */
 @import "syntaxhighlight";
+
+/*
+ * responsive
+ */
+@import "responsive";
