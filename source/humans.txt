@@ -1,0 +1,15 @@
+   __________  __  ___   ____________   ____  ____  ______
+  / ____/ __ \/ / / / | / /_  __/ __ \ / __ \/ __ \/ ____/
+ / /   / / / / / / /  |/ / / / / / / // / / / /_/ / / __  
+/ /___/ /_/ / /_/ / /|  / / / / /_/ // /_/ / _, _/ /_/ /  
+\____/\____/\____/_/ |_/ /_/  \____(_)____/_/ |_|\____/   
+                                                         
+# TEAM
+  Author:   Asai Masami
+  Contact:  shakeforme [at] gmail.com
+  Twitter:  @count0
+  From:     Nagoya, Aichi, Japan.
+
+# SITE
+  Doctype:  html5
+  Software: jekyll, grunt, compass, sass
