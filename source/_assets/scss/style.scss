@@ -16,6 +16,10 @@ $sub-color: #84BFEB;
 @include global-reset;
 @include establish-baseline;
 
+body {
+  font-family: sans-serif;
+}
+
 a {
   @include transition-property(color);
   @include transition-duration(0.3s);
@@ -155,6 +159,14 @@ article {
     }
   }
 
+  .post-image {
+    margin-bottom: 1em;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
   .post-body {
     p, ul, dl {
       @include adjust-font-size-to(16px, 1);
@@ -165,6 +177,11 @@ article {
       @include adjust-font-size-to(18px);
       font-weight: bold;
       margin: 1.5em 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
     }
 
     blockquote {

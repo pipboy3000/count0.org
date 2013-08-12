@@ -1,14 +1,7 @@
 $break-small: 480px;
-$break-large: 1200px;
 
 @mixin for-mobile {
   @media screen and (max-width: $break-small) {
-    @content
-  }
-}
-
-@mixin for-bigpicture {
-  @media screen and (max-width: $break-large) {
     @content
   }
 }
