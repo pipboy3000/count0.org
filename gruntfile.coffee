@@ -14,6 +14,7 @@ module.exports =  ->
       dist:
         options:
           config: 'compass.rb'
+          environment: 'production'
           bundleExec: true
     coffee:
       dist:

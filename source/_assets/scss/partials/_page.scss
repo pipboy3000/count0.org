@@ -1,0 +1,61 @@
+@charset 'UTF-8';
+
+#page {
+  position: relative;
+  > header {
+    width: 150px;
+    position: fixed;
+    text-align: center;
+    background: $main-color;
+    height: 100%;
+
+    h1 {
+      font-family: "Expletus Sans";
+      @include adjust-font-size-to(22px);
+      @include text-shadow($glass-black 0 1px 0);
+      color: $white;
+      margin: 20px 0;
+      a {
+        &:hover, &:active {
+          @include text-shadow($glass-white 0 1px 0);
+        }
+      }
+    }
+
+    a {
+      @include unstyled-link;
+      &:hover, &:active {
+        text-decoration: none;
+      }
+      @include link-colors($white, $black);
+    }
+
+    .social {
+      font-family: "SSSocialRegular";
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      a {
+        text-align: center;
+        width: 20px;
+        margin-bottom: 5px;
+        display: inline-block;
+        @include link-colors($white, $black, $black, $white, $white);
+        font-size: 16px;
+      }
+    }
+  }
+
+  > .content,
+  > footer {
+    width: 75%;
+    min-width: 500px;
+    padding: 20px;
+    margin-left: 150px;
+  }
+
+  > footer {
+    text-align: right;
+    @include adjust-font-size-to(12px);
+  }
+
+}

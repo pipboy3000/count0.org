@@ -116,3 +116,8 @@ s3_website自体は簡単便利なものですが、S3とかIAMの方が最初�
 ## jekyllで作ってみて
 rssの出力、カテゴリー別記事一覧、コメント等普通のブログでは当たり前のように存在している機能が標準ではないので、つまづくところかもしれません。逆に欲しい機能は自分でなんとかする。という意気込みが必要というと敷居が高くなりますが、試行錯誤は必要かなと思います。面倒ならば、[octopress](http://octopress.org/)という選択肢もあるし、sinatraで自分ブログシステムを作るのも有りではないでしょうか。あ、wordpressもいいですね。
 
+## 追記 windowsで動かす場合
+仕事でもjekyllを使おうと試みたのですが、windows xp, ruby 2.0の環境ではエンコーディングエラーやyajlのエラーでまともに使えませんでした。エンコーディングに関しては https://github.com/mojombo/jekyll/pull/1449 が取り込まれるので近々どうにかなりそう。yajlに関してはjekyllの問題ではなくyajl-rubyの問題のようです。https://github.com/brianmario/yajl-ruby/issues/116 に詳細が書かれています。
+
+## 関連
+* [jekyllのカテゴリーページ]({% post_url 2013-07-04-jekyll-category-page %})

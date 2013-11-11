@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+body {
+  font-family: $sans-serif;
+  color: $black;
+}
+
+a {
+  @include transition-property(color);
+  @include transition-duration(0.3s);
+}
+
+code {
+  font-family: $monospace;
+}
+
+

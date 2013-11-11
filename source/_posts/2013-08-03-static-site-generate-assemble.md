@@ -13,6 +13,10 @@ githubのプロジェクトページにこう書かれています。
 
 案件的にはサーバがなくてもssiやphpのincludeができて条件分岐も使えてhtmlに出力できたらいいな。程度だったので、gruntで回せてpartialもlayoutもYAML front matterも使えることは大変役にたちました。
 
+## 2013/10/30追記
+
+ものすごく簡単な[サンプル](https://github.com/pipboy3000/assemble-example)を作りました。テンプレートファイルを監視してhtmlを生成します。OS X 10.9の人はgrunt-contrib-watchを動かすためにnode.js v0.10.21以上が必要です。
+
 ## Handlebars
 このテンプレートのことは知らなかったけど、mustache系なんだなという印象。helpersは全く使いませんでした。
 
@@ -25,3 +29,16 @@ YAML front matterで変数定義できて便利です。[このページ](http:/
 
 ## それで
 時系列ではこのブログを作るより前にお仕事でassembleを使いました。今だったらjekyllを使ったかもしれませんし、middlemanを使ったかもしれません。assembleの利点はgruntで回せること。会社で使うwindows xpではgruntのほうがguardよりも安定して動くからです。
+
+## その後
+職場の環境(windows xp)ではjekyll、middlemanが動かないのでassemble使っています。
+
+
+## 参考
+* [assemble/assemble](https://github.com/assemble/assemble)
+* [Welcome! | Assemble](http://assemble.io/docs/)
+* [Resources | Assemble](http://assemble.io/docs/Resources.html)
+* [ものすごく簡素なサンプル](https://github.com/pipboy3000/assemble-example)
+
+
+

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+// ## Color
+// 
+// prefixがglass-は半透明です。
+// 
+// $main-color       - メインの色
+// $sub-color        - サブの色
+// $black            - 黒
+// $white            - 白
+// $glass-black      - 半透明(opacity 50%)の黒
+// $glass-white      - 半透明(opacity 50%)の白
+// 
+// Styleguide Colors
+
+$main-color: #3892E3;
+$sub-color: #84BFEB;
+
+$black: #3f3f3f;
+$white: #fff;
+
+$glass-black: rgba(0, 0, 0, .5);
+$glass-white: rgba(255, 255, 255, .5);
+
