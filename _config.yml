@@ -1,4 +1,4 @@
-source: source
+source: src
 timezone: Asia/Tokyo
 permalink: /:year/:month/:day/:title.html
 paginate: 10

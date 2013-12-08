@@ -4,6 +4,6 @@ _site
 .bundle
 .sass-cache
 .DS_Store
-source/css
-source/_drafts
+src/css
+src/_drafts
 Gemfile.lock

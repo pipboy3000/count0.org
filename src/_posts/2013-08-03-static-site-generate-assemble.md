@@ -18,7 +18,7 @@ githubのプロジェクトページにこう書かれています。
 ものすごく簡単な[サンプル](https://github.com/pipboy3000/assemble-example)を作りました。テンプレートファイルを監視してhtmlを生成します。OS X 10.9の人はgrunt-contrib-watchを動かすためにnode.js v0.10.21以上が必要です。
 
 ## Handlebars
-このテンプレートのことは知らなかったけど、mustache系なんだなという印象。helpersは全く使いませんでした。
+このテンプレートのことは知らなかったけど、mustache系なんだなという印象。helpersは全く使いませんでした。主にif, eachを使いまくってます。
 
 ## 変数
 YAML front matterで変数定義できて便利です。[このページ](http://assemble.io/docs/YAML-front-matter.html)に書かれているようにページ固有のデータを定義しておいて、テンプレートで使う。例えばpageに変数定義して、layoutで変数の値で読み込むpartialを切り替えるようにしておくと便利。
@@ -32,7 +32,6 @@ YAML front matterで変数定義できて便利です。[このページ](http:/
 
 ## その後
 職場の環境(windows xp)ではjekyll、middlemanが動かないのでassemble使っています。
-
 
 ## 参考
 * [assemble/assemble](https://github.com/assemble/assemble)
