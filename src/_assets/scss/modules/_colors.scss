@@ -13,7 +13,7 @@
 // Styleguide Colors
 
 $main-color: #3892E3;
-$sub-color: #84BFEB;
+$sub-color: darken($main-color, 20%);
 
 $black: #3f3f3f;
 $white: #fff;

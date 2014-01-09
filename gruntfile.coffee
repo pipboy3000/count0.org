@@ -8,8 +8,8 @@ module.exports =  ->
     pkg: @file.readJSON 'package.json'
     concat:
       dist:
-        src: ['source/_assets/js/vendor/*.js', 'source/_assets/js/*.js']
-        dest: 'source/js/script.js'
+        src: ['src/_assets/js/vendor/*.js', 'src/_assets/js/*.js']
+        dest: 'src/js/script.js'
     compass:
       dist:
         options:
@@ -20,20 +20,20 @@ module.exports =  ->
       dist:
         expand: true
         flatten: true
-        src: ['source/_assets/coffee/*.coffee']
-        dest: ['source/_assets/js/']
+        src: ['src/_assets/coffee/*.coffee']
+        dest: ['src/_assets/js/']
         ext: '.js'
     watch:
       options:
         livereload: LIVERELOAD_PORT
       js:
-        files: ['source/_assets/js/*.js']
+        files: ['src/_assets/js/**/*.js']
         tasks: ['concat']
       compass:
-        files: ['source/_assets/scss/*.scss']
+        files: ['src/_assets/scss/**/*.scss']
         tasks: ['compass']
       coffee:
-        files: ['source/_assets/coffee/*.coffee']
+        files: ['src/_assets/coffee/**/*.coffee']
         tasks: ['coffee']
       html:
         files: ['_site/*.html']

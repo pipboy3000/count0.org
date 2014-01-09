@@ -13,6 +13,7 @@
   
   a {
     @include hover-link;
+    @include link-colors($main-color, $sub-color, $sub-color, $main-color);
     position: absolute;
 
     &.prev {

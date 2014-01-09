@@ -1,19 +1,19 @@
 <div class="pagination">
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-      <a href="{{ site.baseurl }}" class="prev">&laquo; Top page</a>
+      <a href="{{ site.baseurl }}" class="prev"><i class="fa fa-chevron-left"></i> Top page</a>
     {% else %}
-      <a href="/page{{ paginator.previous_page }}" class="prev">&laquo; Previous</a>
+      <a href="/page{{ paginator.previous_page }}" class="prev"><i class="fa fa-chevron-left"></i> Previous</a>
     {% endif %}
   {% else %}
-    <span class="prev">&laquo; Previous</span>
+    <span class="prev"><i class="fa fa-chevron-left"></i> Previous</span>
   {% endif %}
 
   <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
 
   {% if paginator.next_page %}
-  <a href="/page{{ paginator.next_page }}" class="next">Next &raquo;</a>
+  <a href="/page{{ paginator.next_page }}" class="next">Next <i class="fa fa-chevron-right"></i></a>
   {% else %}
-  <span class="next">Next &raquo;</span>
+  <span class="next">Next <i class="fa fa-chevron-right"></i></span>
   {% endif %}
 </div>
