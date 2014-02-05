@@ -81,4 +81,4 @@ src
 @import "vendor/font-awesome";
 ```
 
-これでアイコンが使えます<i class="fa fa-thumbs-o-up"></i>(markdown文章に生なhtmlを書くの抵抗ありますが・・・)
+これでアイコンが使えます<i class="fa fa-thumbs-o-up"></i>(markdown文章に生なhtmlを書くのは抵抗ありますが・・・)
