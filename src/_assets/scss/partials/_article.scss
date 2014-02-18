@@ -128,6 +128,11 @@ article {
         border-radius: 3px;
       }
     }
+
+    a[href*="amazon"] + img {
+      width: auto;
+      display: inline;
+    }
   }
 }
 
