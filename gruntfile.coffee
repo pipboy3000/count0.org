@@ -1,9 +1,6 @@
-LIVERELOAD_PORT = 35729
-lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT})
-mountFolder = (connect, dir) ->
-  return connect.static(require('path').resolve(dir))
-
 module.exports =  ->
+  require('load-grunt-tasks')(@, {pattern: ['grunt-*']})
+
   @initConfig
     pkg: @file.readJSON 'package.json'
     concat:
@@ -25,7 +22,7 @@ module.exports =  ->
         ext: '.js'
     watch:
       options:
-        livereload: LIVERELOAD_PORT
+        livereload: true
       js:
         files: ['src/_assets/js/**/*.js']
         tasks: ['concat']
@@ -39,20 +36,10 @@ module.exports =  ->
         files: ['_site/*.html']
         tasks: []
     connect:
-      options:
-        port: 9000
-      livereload:
+      server:
         options:
-          middleware: (connect) ->
-            return [mountFolder(connect, './_site/'), lrSnippet]
-
-  @loadNpmTasks 'grunt-contrib-coffee'
-  @loadNpmTasks 'grunt-contrib-compass'
-  # @loadNpmTasks 'grunt-contrib-jshint'
-  @loadNpmTasks 'grunt-contrib-watch'
-  # @loadNpmTasks 'grunt-contrib-uglify'
-  @loadNpmTasks 'grunt-contrib-connect'
-  @loadNpmTasks 'grunt-contrib-concat'
-  @loadNpmTasks 'grunt-notify'
+          port: 9000
+          livereload: true
+          base: '_site'
 
   @registerTask 'default', ['connect', 'watch']
