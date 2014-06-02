@@ -6,8 +6,18 @@ body {
 }
 
 a {
-  @include transition-property(color);
-  @include transition-duration(0.3s);
+  transition: {
+    property: "color";
+    duration: 0.3s;
+  }
+
+  &:link, &:visited {
+    text-decoration: none;
+  }
+
+  &:hover, &:active {
+    text-decoration: underline;
+  }
 }
 
 code {

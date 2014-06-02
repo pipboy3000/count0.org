@@ -7,12 +7,14 @@ module.exports =  ->
       dist:
         src: ['src/_assets/js/vendor/*.js', 'src/_assets/js/*.js']
         dest: 'src/js/script.js'
-    compass:
+    sass:
       dist:
         options:
-          config: 'compass.rb'
-          environment: 'production'
+          style: 'expanded'
+          loadPath: 'src/_assets/scss/*'
           bundleExec: true
+        files:
+          'src/css/style.css': 'src/_assets/scss/style.scss'
     coffee:
       dist:
         expand: true
@@ -26,9 +28,9 @@ module.exports =  ->
       js:
         files: ['src/_assets/js/**/*.js']
         tasks: ['concat']
-      compass:
+      sass:
         files: ['src/_assets/scss/**/*.scss']
-        tasks: ['compass']
+        tasks: ['sass']
       coffee:
         files: ['src/_assets/coffee/**/*.coffee']
         tasks: ['coffee']

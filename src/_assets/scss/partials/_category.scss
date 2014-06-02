@@ -5,14 +5,17 @@
 
 .category-title {
   position: relative;
-  @include adjust-font-size-to(20px);
+  font-size: 20px;
+  // @include adjust-font-size-to(20px);
   color: $white;
   background: $main-color;
   height: 40px;
   line-height: 40px;
   margin: 0 0 1em 0;
-  @include transition-property(width);
-  @include transition-duration(0.3s);
+  transition: {
+    property: width;
+    duration: 0.3s;
+  }
   overflow: hidden;
 
   span {

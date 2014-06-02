@@ -11,31 +11,24 @@
 
     h1 {
       font-family: "Expletus Sans";
-      @include adjust-font-size-to(22px);
-      @include text-shadow($glass-black 0 1px 0);
+      font-size: 22px;
+      text-shadow: $glass-black 0 1px 0;
       color: $white;
       margin: 20px 0;
       a {
         &:hover, &:active {
-          @include text-shadow($glass-white 0 1px 0);
+          text-shadow: $glass-white 0 1px 0;
         }
       }
     }
 
     a {
-      @include unstyled-link;
-      &:hover, &:active {
-        text-decoration: none;
-      }
       @include link-colors($white, $black);
     }
 
     .social {
-      // font-family: "SSSocialRegular";
-      // -webkit-font-smoothing: antialiased;
-      // text-rendering: optimizeLegibility;
       a {
-        @include link-colors($white, $black, $black, $white, $white);
+        @include link-colors($white, $black);
       }
     }
   }
@@ -50,7 +43,8 @@
 
   > footer {
     text-align: right;
-    @include adjust-font-size-to(12px);
+    font-size: 12px;
+    // @include adjust-font-size-to(12px);
   }
 
 }

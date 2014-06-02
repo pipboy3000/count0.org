@@ -21,7 +21,8 @@ $break-small: 480px;
         margin: 0 0 0 10px;
         display: inline-block;
         width: 32%;
-        @include adjust-font-size-to(20px);
+        font-size: 20px;
+        // @include adjust-font-size-to(20px);
       }
 
       .social {
@@ -56,38 +57,36 @@ $break-small: 480px;
   article {
     header {
       padding-bottom: 20px;
-      @include display-box;
-      @include box-orient(vertical);
-      @include box-lines(multiple);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
     }
 
     h1 {
-      @include adjust-font-size-to(20px);
+      font-size: 20px;
+      // @include adjust-font-size-to(20px);
     }
 
     .post-title {
       display: block;
       margin: 0;
-      @include box-ordinal-group(1);
+      order: 1;
     }
 
     .post-meta {
       display: block;
-      @include box-ordinal-group(3);
+      order: 3;
     }
 
     .date {
       display: block;
-      @include box-ordinal-group(2);
+      order: 3;
     }
 
     .post-body {
-      p, ul, dl {
-        @include adjust-font-size-to(14px, 1)
-      }
-
-      h2, h3, h4, h5, h6 {
-        @include adjust-font-size-to(14px);
+      h2, h3, h4, h5, h6, p, ul, dl {
+        font-size: 14px;
+        // @include adjust-font-size-to(14px, 1)
       }
     }
   }

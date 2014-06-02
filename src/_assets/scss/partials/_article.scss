@@ -10,12 +10,12 @@ article {
   }
   
   h1 {
-    @include adjust-font-size-to(30px);
+    font-size: 30px;
+    // @include adjust-font-size-to(30px);
   }
 
   a {
-    @include hover-link;
-    @include link-colors($main-color, $sub-color, $sub-color, $main-color);
+    @include link-colors($main-color, $sub-color);
   }
   
   ul, ol {
@@ -34,20 +34,23 @@ article {
   }
 
   .post-title {
-    @include adjust-font-size-to(20px);
+    font-size: 20px;
+    // @include adjust-font-size-to(20px);
     margin-top: 0.25em;
   }
 
   .date {
+    font-size: 14px;
+    // @include adjust-font-size-to(14px);
     display: inline-block;;
-    @include adjust-font-size-to(14px);
   }
 
   .post-meta {
+    font-size: 12px;
+    // @include adjust-font-size-to(12px);
     position: relative;
     top: -2px;
     display: inline-block;
-    @include adjust-font-size-to(12px);
     line-height: 1.8;
     span {
       padding: 0 8px;
@@ -58,10 +61,11 @@ article {
     }
 
     a {
-      @include unstyled-link;
       span {
-        @include transition-property(background-color);
-        @include transition-duration(0.3s);
+        transition: {
+          property: background-color;
+          duration: 0.3s;
+        }
       }
       &:link, &:visited {
         span {
@@ -86,12 +90,14 @@ article {
 
   .post-body {
     p, ul, dl {
-      @include adjust-font-size-to(16px, 1);
+      font-size: 16px;
+      // @include adjust-font-size-to(16px, 1);
       margin-bottom: 1.8em;
     }
 
     h2, h3, h4, h5, h6 {
-      @include adjust-font-size-to(18px);
+      font-size: 18px;
+      // @include adjust-font-size-to(18px);
       font-weight: bold;
       margin: 1.5em 0;
     }
@@ -120,7 +126,8 @@ article {
     
     p, li {
       code {
-        @include adjust-font-size-to(13px);
+        font-size: 13px;
+        // @include adjust-font-size-to(13px);
         vertical-align: top;
         padding: 2px 3px 1px 3px;
         background: #fafafa;

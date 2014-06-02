@@ -6,14 +6,14 @@
 .pagination {
   width: 60%;
   margin: 0 auto;
-  @include adjust-font-size-to(14px);
+  font-size: 14px;
+  // @include adjust-font-size-to(14px);
   text-align: center;
   position: relative;
   overflow: hidden;
   
   a {
-    @include hover-link;
-    @include link-colors($main-color, $sub-color, $sub-color, $main-color);
+    @include link-colors($main-color, $sub-color);
     position: absolute;
 
     &.prev {
