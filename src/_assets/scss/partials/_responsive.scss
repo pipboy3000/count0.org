@@ -22,7 +22,6 @@ $break-small: 480px;
         display: inline-block;
         width: 32%;
         font-size: 20px;
-        // @include adjust-font-size-to(20px);
       }
 
       .social {
@@ -64,7 +63,6 @@ $break-small: 480px;
 
     h1 {
       font-size: 20px;
-      // @include adjust-font-size-to(20px);
     }
 
     .post-title {
@@ -86,7 +84,6 @@ $break-small: 480px;
     .post-body {
       h2, h3, h4, h5, h6, p, ul, dl {
         font-size: 14px;
-        // @include adjust-font-size-to(14px, 1)
       }
     }
   }
