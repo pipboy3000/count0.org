@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Diablo3でパラゴンレベル100達成のご報告
-categories: game diablo3
+categories: game
 ---
 ![Diablo3パラゴンレベル100達成時の画像](/images/diablo3_paragon_lv_100.jpg)
 

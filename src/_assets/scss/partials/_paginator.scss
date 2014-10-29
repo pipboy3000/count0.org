@@ -1,0 +1,41 @@
+.paginator {
+  @include container;
+  @include clearfix;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.paginator-info {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.paginator-current,
+.paginator-link {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 4px 6px;
+  margin: 0 2px;
+  min-width: 2em;
+}
+
+.paginator-current {
+  color: $main-color;
+  border: 1px solid $main-color;
+  background: $white;
+}
+
+.paginator-link {
+
+  &:link, &:visited {
+    background: $main-color;
+    color: $white;
+  }
+
+  &:hover, &:active {
+    background: $sub-color;
+    color: $white;
+  }
+}

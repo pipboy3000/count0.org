@@ -1,49 +1,24 @@
-@charset 'UTF-8';
+.page-header {
+  background: #3E89C9;
+  padding: 20px;
+}
 
-#page {
-  position: relative;
-  > header {
-    width: 150px;
-    position: fixed;
-    text-align: center;
-    background: $main-color;
-    height: 100%;
+.page-footer {
+  background: #3E89C9;
+  padding: 20px;
+}
 
-    h1 {
-      font-family: "Expletus Sans";
-      font-size: 22px;
-      text-shadow: $glass-black 0 1px 0;
-      color: $white;
-      margin: 20px 0;
-      a {
-        &:hover, &:active {
-          text-shadow: $glass-white 0 1px 0;
-        }
-      }
-    }
+.page-title {
+  text-align: center;
+}
 
-    a {
-      @include link-colors($white, $black);
-    }
+.page-license {
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: lighten($main-color, 25%);
 
-    .social {
-      a {
-        @include link-colors($white, $black);
-      }
-    }
+  a {
+    color: $white;
   }
-
-  > .content,
-  > footer {
-    width: 75%;
-    min-width: 500px;
-    padding: 20px;
-    margin-left: 150px;
-  }
-
-  > footer {
-    text-align: right;
-    font-size: 12px;
-  }
-
 }

@@ -2,18 +2,43 @@
 layout: default
 ---
 
-{% for post in paginator.posts %}
-<article>
-  <header>
-    <div class="date">{{ post.date | date_to_long_string }}</div>
-    <div class="post-meta">
-      {% for category in  post.categories %}
-      <a href="/categories/{{category}}"><span>{{ category }}</span></a>
+{% assign first_post = paginator.posts | first %}
+
+<article class="article-topstory">
+  <div class="article-header">
+    <h1 class="article-title"><a href="{{ first_post.url }}">{{ first_post.title }}</a></h1>
+    <div>
+      <div class="article-date">{{ first_post.date | date_to_long_string }}</div>
+
+      {% for category in first_post.categories %}
+      <a href="/categories/{{category}}" class="article-category">{{ category }}</a>
       {% endfor %}
     </div>
-    <div class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-  </header>
-</article>
-{% endfor %}
+  </div>
 
-{% include pagination.html %}
+  <div class="article-body">
+    <p>
+      {{ first_post.content | strip_html |xml_escape |truncate: 100 }}
+      <a href="{{ first_post.url }}">続きを読む</a>
+    </p>
+  </div>
+</article>
+
+<div class="articleList">
+  {% for post in paginator.posts offset:1 limit:3 %}
+  <div class="articleList-item">
+    <div class="articleList-item-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+    <div class="articleList-item-date">{{ post.date | date_to_long_string }}</div> 
+    {% for category in post.categories %}
+    <a href="/categories/{{category}}" class="articleList-item-category">{{ category }}</a>
+    {% endfor %}
+    <div class="articleList-item-text">
+      {{ post.content | strip_html | xml_escape | truncate: 90 }}
+    </div>
+  </div>
+  {% endfor %}
+
+  <div class="articleList-footer">
+    <a href="/archive/" class="button">すべての記事</a>
+  </div>
+</div>

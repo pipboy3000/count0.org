@@ -8,21 +8,25 @@ module Jekyll
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'category_index.html')
+
       self.data['category'] = category
+      self.data['title'] = page_title(category)
 
-      category_title_prefix = site.config['category_title_prefix'] || 'Category: '
-      self.data['title'] = "#{category_title_prefix}#{category}"
-
-      self.data['dir'] = @dir
-      self.data['base'] = @base
-      
       self.data['posts'] = []
       post_base = File.join(base, '_posts')
-      Dir.glob(post_base + "/*").each do |post|
-        cat_post = Post.new(site, base, '', File.basename(post))
-        self.data['posts'] << cat_post if cat_post.categories.include?(category)
+      Dir.glob(post_base + "/*").each do |post_file|
+        post = Post.new(site, base, '', File.basename(post_file))
+        if post.categories.include? category
+          self.data['posts'] << post
+        end
       end
+
       self.data['posts'].reverse!
+    end
+
+    def page_title(category)
+      category_title_prefix = site.config['category_title_prefix'] || 'Category: '
+     "#{category_title_prefix}#{category}" 
     end
   end
 

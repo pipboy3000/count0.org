@@ -11,11 +11,12 @@ __________  __  ___   ____________   ____  ____  ______
     {% include meta.html %}
   </head>
   <body>
-    <div id="page">
+    <div class="wrap">
       {% include header.html %}
-      <div class="content">{{ content }}</div>
+      {{ content }}
       {% include footer.html %}
+      {% include analytics.html %}
+      <script src="/js/script.js"></script>
     </div>
-    {% include analytics.html %}
   </body>
 </html>

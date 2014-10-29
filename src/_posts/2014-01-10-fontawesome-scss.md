@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Font Awesomeのscssを使った
-categories: changelog scss
+categories: scss
 ---
 このブログではSymbolsetの[Social Regular](https://symbolset.com/icons/social-regular)というアイコンを使っていました。このアイコンはオープンソースではないので、このブログのgithubリポジトリには含めることが出来ませんでした。なにか歯抜けのような気分だったので、他のアイコンに乗り換えようとおもいつつも月日が過ぎて行きました。
 

@@ -1,154 +1,91 @@
-@charset 'UTF-8';
-/*
- * article
- */
-article {
-  header  {
-    margin-bottom: 20px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  h1 {
-    font-size: 30px;
-  }
+.article-topstory {
+  background: #fefefe;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 1rem;
+}
 
-  a {
-    @include link-colors($main-color, $sub-color);
-  }
-  
-  ul, ol {
-    list-style: disc; 
-    margin-left: 20px;
-    margin-bottom: 1.75em;
-  }
+.article-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 2.5rem 0;
+}
 
-  ol {
-    margin-left: 25px;
-    list-style: decimal;
-  }
+.article-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 0 0.5rem;
+}
 
-  li {
-    margin-bottom: 0.5em;
-  }
+.article-date {
+  display: inline-block;
+  color: lighten($black, 35%);
+}
 
-  .post-title {
-    font-size: 20px;
-    margin-top: 0.25em;
-  }
+.article-category {
+  display: inline-block;
+  color: $white;
+  line-height: 1;
+  text-align: center;
+  padding: 4px 7px;
+  font-size: 0.75rem;
+  position: relative;
+  top: -2px;
+  border-radius: 2px;
 
-  .date {
-    font-size: 14px;
-    display: inline-block;;
+  &:link, &:visited {
+    color: $white;
+    background: $main-color;
   }
 
-  .post-meta {
-    font-size: 12px;
-    position: relative;
-    top: -2px;
-    display: inline-block;
-    line-height: 1.8;
-    span {
-      padding: 0 8px;
-      text-align: center;
-      display: inline-block;
-      background: $main-color;
-      color: $white;
-    }
-
-    a {
-      span {
-        transition: {
-          property: background-color;
-          duration: 0.3s;
-        }
-      }
-      &:link, &:visited {
-        span {
-          background: $main-color;
-        }
-      }
-      &:hover, &:active {
-        span {
-          background: $sub-color;
-        }
-      }
-    }
-  }
-
-  .post-image {
-    margin-bottom: 1em;
-    img {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  .post-body {
-    p, ul, dl {
-      font-size: 16px;
-      margin-bottom: 1.8em;
-    }
-
-    h2, h3, h4, h5, h6 {
-      font-size: 20px;
-      // font-weight: bold;
-      margin: 1.5em 0;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-    }
-
-    blockquote {
-      position: relative;
-      overflow: hidden;
-      padding: 0 0 0 4em;
-      &:before {
-        position: absolute;
-        color: #000;
-        display: block;
-        z-index: 100;
-        font-size: 80px;
-        font-family: georgia, serif;
-        top: 20px;
-        left: 20px;
-        content: '\201C';
-      }
-    }
-    
-    p, li {
-      code {
-        font-size: 14px;
-        padding: 2px 3px 1px 3px;
-        margin: 0 2px;
-        background: #fafafa;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-      }
-    }
-
-    a[href*="amazon"] + img {
-      width: auto;
-      display: inline;
-    }
+  &:hover, &:active {
+    color: $white;
+    background: $sub-color;
   }
 }
 
-.videoplayer {
-  position: relative;
-  margin-bottom: 30px;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
+.article-body {
+  @include container;
 
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  h1, h2, h3, h4, h5, h6 {
+    width: $contents_width;
+    margin: 2.5rem auto 0.25rem;
+    font-weight: 600;
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-size: 1.3rem;
+  }
+
+  p, ul, ol {
+    width: $contents_width;
+    box-sizing: border-box;
+    margin: 0 auto 1.5rem;
+
+    &.wide {
+      width: 100%;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  pre {
+    font-family: $monospace;
+    margin-bottom: 1.5rem;
+    padding: 2px;
+    border: 2px solid #f3f3f3;
+    overflow: scroll;
+    font-size: 0.875rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  hr {
+    margin-bottom: 1.5rem;
   }
 }

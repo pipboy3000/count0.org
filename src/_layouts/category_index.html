@@ -1,19 +1,16 @@
 ---
 layout: default
 ---
-<div class="category-title"><span>{{ page.title }}</span></div>
+<h1 class="page-title">Category: {{page.category}}</h1>
 
-{% for post in page.posts %}
-<article>
-  <header>
-    <div class="date">{{ post.date | date_to_long_string }}</div>
-    <div class="post-meta">
-      {% for category in  post.categories %}
-      <a href="/categories/{{category}}"><span>{{ category }}</span></a>
-      {% endfor %}
+<div class="articleList">
+  {% for post in page.posts %}
+  <div class="articleList-item">
+    <div class="articleList-item-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+    <div class="articleList-item-date">{{ post.date | date_to_long_string }}</div>
+    <div class="articleList-item-text">
+      {{ post.content | strip_html |xml_escape |truncate: 110 }}
     </div>
-    <div class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-  </header>
-</article>
-{% endfor %}
-
+  </div>
+  {% endfor %}
+</div>

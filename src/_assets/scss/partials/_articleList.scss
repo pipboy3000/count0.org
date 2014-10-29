@@ -1,0 +1,52 @@
+.articleList {
+  margin: 0 auto;
+  width: $contents_width;
+}
+
+.articleList-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.articleList-footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.articleList-item-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.articleList-item-date {
+  font-size: 0.875rem;
+  display: inline-block;
+  color: lighten($black, 35%);
+}
+
+.articleList-item-category {
+  display: inline-block;
+  color: $white;
+  line-height: 1;
+  text-align: center;
+  padding: 4px 7px;
+  font-size: 0.75rem;
+  position: relative;
+  top: -1px;
+  border-radius: 2px;
+
+  &:link, &:visited {
+    color: $white;
+    background: $main-color;
+  }
+
+  &:hover, &:active {
+    color: $white;
+    background: $sub-color;
+  }
+}
+
+.articleList-item-text {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}

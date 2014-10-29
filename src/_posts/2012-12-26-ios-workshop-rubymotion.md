@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ワークショップの題材をRubyMotionでも作ってみた
-categories: ios rubymotion
+categories: ios ruby
 ---
 2012年12月23日に開催された[第11回iPhoneアプリ開発勉強会](http://atnd.org/events/34953)で「1時間で作るシンプルアプリ」（講師：[鈴木秀明さん](http://blog.lapture.net/)）というワークショップがありました。このワークショップの題材をObjective-Cで進める傍らでRubyMotionでもコードを書いたので、それのメモ。
 

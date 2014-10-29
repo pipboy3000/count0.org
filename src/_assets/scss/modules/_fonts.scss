@@ -1,3 +1,5 @@
-@import url("http://fonts.googleapis.com/css?family=PT+Sans|PT+Mono|Expletus+Sans");
-$sans-serif: "PT Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$monospace: "PT Mono", "Courier New",  monospace;
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:400,600,300);
+$sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$monospace: "Inconsolata", "Courier New",  monospace;

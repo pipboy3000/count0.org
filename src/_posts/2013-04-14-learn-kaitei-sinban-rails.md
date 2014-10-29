@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 改訂新版RubyonRailsを進めている
-categories: ruby rails
+categories: ruby
 ---
 rails 3.2.13でエラーが出ては解決して進めている。chapter 8で躓いていた。rake db:resetでエラーが出る。プロパティが存在しないよというエラーだった。
 

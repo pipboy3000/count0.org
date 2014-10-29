@@ -1,6 +1,6 @@
-@charset "UTF-8";
-// ## Color
-// 
+@charset "utf-8";
+
+//
 // prefixがglass-は半透明です。
 // 
 // $main-color       - メインの色
@@ -10,7 +10,6 @@
 // $glass-black      - 半透明(opacity 50%)の黒
 // $glass-white      - 半透明(opacity 50%)の白
 // 
-// Styleguide Colors
 
 $main-color: #3892E3;
 $sub-color: darken($main-color, 20%);

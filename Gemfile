@@ -2,8 +2,6 @@
 source "https://rubygems.org"
 
 gem "jekyll"
-gem "redcarpet"
-gem "compass"
+gem "sass"
 gem "s3_website"
-gem "foreman"
 gem "rake"
