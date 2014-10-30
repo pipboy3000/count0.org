@@ -5,6 +5,12 @@
   margin: 0 auto;
 }
 
+@mixin mobile {
+  @media screen and (max-width: $mobile-width) {
+    @content
+  }
+}
+
 @mixin clearfix {
   overflow: hidden;
   &:before, &:after {
@@ -14,14 +20,6 @@
 
   &:after {
     clear: both;
-  }
-}
-
-$break-small: 480px;
-
-@mixin for-mobile {
-  @media screen and (max-width: $break-small) {
-    @content
   }
 }
 
@@ -56,5 +54,4 @@ $break-small: 480px;
       $hover
     );
   }
-
 }

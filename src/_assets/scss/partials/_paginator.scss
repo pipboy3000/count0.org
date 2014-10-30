@@ -1,5 +1,8 @@
 .paginator {
   @include container;
+  @include mobile {
+    width: $mobile_container_width;
+  }
   @include clearfix;
   padding: 20px 0;
   text-align: center;

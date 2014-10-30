@@ -38,7 +38,7 @@ gulp.task 'jekyll-rebuild', ['jekyll-build'], ->
   reload()
 
 gulp.task 'watch', ->
-  gulp.watch ['./_config.yml', 'src/**/*.html', 'src/_plugins/**/*.rb', 'src/**/*.md'], ['jekyll-rebuild']
+  gulp.watch ['./_config.yml', 'src/**/*.html', 'src/_plugins/**/*.rb', 'src/**/*.md', 'src/css/*.css'], ['jekyll-rebuild']
   gulp.watch 'src/_assets/js/**/*.js', ['js', reload]
   gulp.watch 'src/_assets/scss/**/*.scss', ['sass']
   gulp.watch '_site/js/**/*.js', [reload]

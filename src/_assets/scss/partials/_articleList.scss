@@ -1,6 +1,8 @@
 .articleList {
-  margin: 0 auto;
-  width: $contents_width;
+  @include container;
+  @include mobile {
+    width: $mobile_container_width;
+  }
 }
 
 .articleList-item {
