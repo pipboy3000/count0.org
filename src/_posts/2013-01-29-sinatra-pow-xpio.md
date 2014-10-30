@@ -1,7 +1,7 @@
 ---
 layout: post
 title: sinatra, pow, xip.io
-categories: ruby sinatra
+categories: ruby
 ---
 sinatraでスマホ向けに何か作る場合、実機で確認したいという欲求を満たしたいと思うけど、[pow](http://pow.cx/)と[xip.io](http://xip.io/)を使うと簡単に実現できる。
 

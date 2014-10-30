@@ -35,8 +35,7 @@ YAML front matterで変数定義できて便利です。[このページ](http:/
 
 ## 参考
 * [assemble/assemble](https://github.com/assemble/assemble)
-* [Welcome! | Assemble](http://assemble.io/docs/)
-* [Resources | Assemble](http://assemble.io/docs/Resources.html)
+* [Assembleのドキュメント](http://assemble.io/docs/)
 * [ものすごく簡素なサンプル](https://github.com/pipboy3000/assemble-example)
 
 

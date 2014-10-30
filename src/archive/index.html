@@ -1,0 +1,59 @@
+---
+layout: default
+title: Archive
+---
+<h1 class="page-title">Archive</h1>
+
+<div class="paginator">
+  {% if paginator.previous_page_path %}
+  <a href="{{paginator.previous_page_path}}" class="button">PREV</a>
+  {% else %}
+  <a href="/" class="button">HOME</a>
+  {% endif %}
+  <div class="paginator-info">{{paginator.page}} / {{paginator.total_pages}}</div>
+  {% if paginator.next_page_path %}
+  <a href="{{paginator.next_page_path}}" class="button">NEXT</a>
+  {% endif %}
+
+  <!--
+  Page: 
+  {% for i in (1..paginator.total_pages) %}
+    {% if i == paginator.page %}
+      <span class="paginator-current">{{i}}</span>
+    {% else %}
+      {% if i == 1 %}
+      <a href="/archive/" class="paginator-link">{{i}}</a>
+      {% else %}
+      <a href="/archive/page{{i}}/" class="paginator-link">{{i}}</a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  -->
+</div>
+
+<div class="articleList">
+  {% for post in paginator.posts %}
+  <div class="articleList-item">
+    <div class="articleList-item-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
+    <div class="articleList-item-date">{{ post.date | date_to_long_string }}</div>
+    {% for category in post.categories %}
+    <a href="/categories/{{category}}" class="articleList-item-category">{{ category }}</a>
+    {% endfor %}
+    <div class="articleList-item-text">
+      {{ post.content | strip_html | xml_escape | truncate: 90 }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="paginator">
+  {% if paginator.previous_page_path %}
+  <a href="{{paginator.previous_page_path}}" class="button">PREV</a>
+  {% else %}
+  <a href="/" class="button">HOME</a>
+  {% endif %}
+  <div class="paginator-info">{{paginator.page}} / {{paginator.total_pages}}</div>
+  {% if paginator.next_page_path %}
+  <a href="{{paginator.next_page_path}}" class="button">NEXT</a>
+  {% endif %}
+</div>

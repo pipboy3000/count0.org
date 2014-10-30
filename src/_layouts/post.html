@@ -2,21 +2,17 @@
 layout: default
 ---
 <article>
-  <header>
-    <div class="date">{{ page.date | date_to_long_string }}</div>
-    <div class="post-meta">
-      {% for category in  page.categories %}
-      <a href="/categories/{{category}}"><span>{{ category }}</span></a>
-      {% endfor %}
-    </div>
-    <h1>{{ page.title }}</h1>
-  </header>
-  {% if page.image %}
-  <div class="post-image"><img src="{{ page.image }}"></div>
-  {% endif %}
-  <div class="post-body">
+  <div class="article-header">
+    <h1 class="article-title">{{ page.title }}</h1>
+    <div class="article-date">{{ page.date | date_to_long_string }}</div>
+    {% for category in  page.categories %}
+    <a href="/categories/{{category}}" class="article-category"><span>{{ category }}</span></a>
+    {% endfor %}
+  </div>
+  <div class="article-body">
     {{ content }}
   </div>
-  <footer>
-  </footer>
+  <div class="article-footer">
+  </div>
 </article>
+

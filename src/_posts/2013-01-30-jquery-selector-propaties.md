@@ -1,7 +1,7 @@
 ---
 layout: post
 title: jQueryのfindしたあとのselectorプロパティ
-categories: jquery js
+categories: js
 ---
 jQueryのプラグインを書いていて壁にぶち当たった。  
 jQueryでfindしたあとのjQueryオブジェクトのselectorプロパティが予想と違ってハマったのでメモ。

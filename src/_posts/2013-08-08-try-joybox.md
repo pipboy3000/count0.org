@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 本当に15分でJoyboxを使ってアステロイドゲームを作れるか挑戦
-categories: rubymotion
+categories: ruby
 image: /images/try-joybox1.png
 ---
 30分かかりました。Joyboxはrubymotionでcocos2d, box2dを動かすラッパーです。cocos2dは2dゲームを作るフレームワークで、box2dは物理エンジン。ネタ元の記事は[Create an Asteroids Game for iOS in 15 Minutes… with Joybox 1.1.0 and RubyMotion! - RubyMotion Blog](http://blog.rubymotion.com/post/57465814533/create-an-asteroids-game-for-ios-in-15-minutes-with)。どんなものが出来上がるかはリンク先の下にある動画から確認できます。

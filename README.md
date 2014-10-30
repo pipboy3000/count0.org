@@ -1,6 +1,6 @@
 ## count0.org
 
-My site created by jekyll, grunt, compass and more.
+This blog created by jekyll, gulp, sass and more.
 
 ---
 

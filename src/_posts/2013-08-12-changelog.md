@@ -1,7 +1,7 @@
 ---
 layout: post
 title: changelog, humnas.txt, figlet, モバイル対応
-categories: changelog
+categories: misc
 ---
 ブログの細々とした修正についてまとめました。今回はhumans.txt、figlet、モバイル対応について。
 

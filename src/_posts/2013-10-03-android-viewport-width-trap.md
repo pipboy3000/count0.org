@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Android 4で改行位置が狂う
-categories: css html
+categories: css
 ---
 デスクトップ向けに作ったページにviewportを記述しておいてスマホで閲覧してもいい感じになるようにしたわけですが、Android 4.1のブラウザで不具合が・・・。
 

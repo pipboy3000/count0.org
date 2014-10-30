@@ -2,9 +2,8 @@ source: ./src
 timezone: Asia/Tokyo
 permalink: /:year/:month/:day/:title.html
 paginate: 10
-markdown: redcarpet
-redcarpet:
-  extensions: ['autolink', 'no_intra_emphasis']
+kramdown:
+  input: GFM
 url: http://count0.org
 name: count0.org
 analytics_id: UA-357228-7
