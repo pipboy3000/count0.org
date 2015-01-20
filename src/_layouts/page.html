@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article>
+  <div class="article-header">
+    <h1 class="article-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <div class="article-subtitle">{{ page.subtitle }}</div>
+    {% endif %}
+  </div>
+  <div class="article-body">
+    {{ content }}
+  </div>
+  <div class="article-footer">
+  </div>
+</article>
+
