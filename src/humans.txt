@@ -6,10 +6,10 @@
                                                          
 # TEAM
   Author:   Asai Masami
-  Contact:  shakeforme [at] gmail.com
+  Contact:  asaimasami [at] count0.org
   Twitter:  @count0
   From:     Nagoya, Aichi, Japan.
 
 # SITE
   Doctype:  html5
-  Software: jekyll, grunt, sass
+  Software: jekyll, gulp, sass

@@ -32,12 +32,14 @@
 
 .paginator-link {
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     background: $main-color;
     color: $white;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background: $sub-color;
     color: $white;
   }

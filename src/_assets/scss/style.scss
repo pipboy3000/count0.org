@@ -1,17 +1,17 @@
-@charset "utf-8";
+@charset 'utf-8';
 
-@import "vendor/normalize";
+@import 'vendor/normalize';
 
-@import "partials/base";
-@import "partials/elements";
-@import "partials/page";
-@import "partials/logo";
-@import "partials/article";
-@import "partials/articleList";
-@import "partials/button";
-@import "partials/paginator";
-@import "vendor/highlight_github";
-@import "vendor/font-awesome";
+@import 'partials/base';
+@import 'partials/elements';
+@import 'partials/page';
+@import 'partials/logo';
+@import 'partials/article';
+@import 'partials/articleList';
+@import 'partials/button';
+@import 'partials/paginator';
+@import 'vendor/highlight_github';
+@import 'vendor/font-awesome';
 
 .container {
   @include container;
@@ -24,6 +24,7 @@
   padding-top: 30px;
   height: 0;
   overflow: hidden;
+
   iframe {
     position: absolute;
     top: 0;

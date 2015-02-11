@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 @mixin container {
   width: $container_width;
@@ -13,8 +13,10 @@
 
 @mixin clearfix {
   overflow: hidden;
-  &:before, &:after {
-    content: " ";
+
+  &:before,
+  &:after {
+    content: ' ';
     display: table;
   }
 
@@ -24,11 +26,13 @@
 }
 
 @mixin link-colors($link, $hover) {
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: $link;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: $hover;
   }
 }
@@ -39,7 +43,8 @@
   background-size: 2px 2px;
   text-decoration: none;
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     background-image: linear-gradient(
       transparent 0,
       transparent 50%,
@@ -47,7 +52,8 @@
     );
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background-image: linear-gradient(
       transparent 0,
       transparent 50%,

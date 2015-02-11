@@ -37,12 +37,14 @@
   top: -1px;
   border-radius: 2px;
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: $white;
     background: $main-color;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: $white;
     background: $sub-color;
   }

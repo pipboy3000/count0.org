@@ -12,11 +12,13 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: $main-color;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: $sub-color;
   }
 }

@@ -4,12 +4,14 @@
   margin: 0 auto;
   display: inline-block;
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: $white;
     background: $main-color;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: $white;
     background: $sub-color;
   }
