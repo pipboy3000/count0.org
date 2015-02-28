@@ -10,7 +10,7 @@ categories: game
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9dhfsg1waxk" frameborder="0" allowfullscreen></iframe>
 </div>
 
-Metroidvania[^metroidvania]と呼ばれるジャンルのゲームでギリシア神話をモチーフにしています。グラフィックが壁画調で、これがモリモリ動くのがおもしそうで購入しました。ベータ版からプレイしていたので、バグ報告でお役に立てたかなと思っています。難易度はこのジャンルにしては優しいかな。
+Metroidvania[^metroidvania]と呼ばれるジャンルのゲームでギリシア神話をモチーフにしています。グラフィックが壁画調で、これがモリモリ動くのがおもしろそうで購入しました。ベータ版からプレイしていたので、バグ報告でお役に立てたかなと思っています。難易度はこのジャンルにしては優しいかな。
 
 ## [Darkest Dungeon][dd]
 
