@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Raspberry PiからBluetoohを使ってiPhoneでテザリング
+title: Raspberry PiからBluetoothを使ってiPhoneでテザリング
 categories: raspberrypi
 ---
 Raspberry Pi Type Bの256MBは持っていたのですが、物欲が暴走して<a href="http://www.amazon.co.jp/gp/product/B00CBWMXVE/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00CBWMXVE&linkCode=as2&tag=count_0-22">Type B 512MB</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B00CBWMXVE" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />を[MOD MY PI][1]で手に入れました。
@@ -8,7 +8,7 @@ Raspberry Pi Type Bの256MBは持っていたのですが、物欲が暴走し�
 
 このRaspberry Piを鞄に忍ばせ、外出先でiPhoneのテザリングを使って通信ができると素敵かもしれないと思ったので、iPhoneとテザリングできるようにしました。
 
-OSはRasbian。NOOBSを使い簡単にインストールしました。USB Bluetoohアダプタは<a href="http://www.amazon.co.jp/gp/product/B0071TE1G2/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B0071TE1G2&linkCode=as2&tag=count_0-22">BT-MICRO4</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B0071TE1G2" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />を使いました。特別なことをしなくても起動時に認識します。
+OSはRasbian。NOOBSを使い簡単にインストールしました。USB Bluetoothアダプタは<a href="http://www.amazon.co.jp/gp/product/B0071TE1G2/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B0071TE1G2&linkCode=as2&tag=count_0-22">BT-MICRO4</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B0071TE1G2" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />を使いました。特別なことをしなくても起動時に認識します。
 
 ## Bluetoothの設定
 [BlueZ][4]がLinuxでよく使われているようです。
