@@ -1,40 +1,100 @@
-gulp = require 'gulp'
-gulpLoadPlugins = require 'gulp-load-plugins'
-$ = gulpLoadPlugins
-  rename:
-    'gulp-ruby-sass': 'sass'
-cp = require 'child_process'
-browserSync = require 'browser-sync'
-reload = browserSync.reload
-del = require 'del'
+autoprefixer = require 'gulp-autoprefixer'
+babelify     = require 'babelify'
+browserify   = require 'browserify'
+browserSync  = require 'browser-sync'
+buffer       = require 'vinyl-buffer'
+spawn        = require('child_process').spawn
+del          = require 'del'
+gulp         = require 'gulp'
+imagemin     = require 'gulp-imagemin'
+runSequence  = require 'run-sequence'
+sass         = require 'gulp-sass'
+source       = require 'vinyl-source-stream'
+sourcemaps   = require 'gulp-sourcemaps'
+uglify       = require 'gulp-uglify'
+watchify     = require 'watchify'
+
+$ = {
+  dist: "./dist/"
+  scss: './src/scss/**/*.scss'
+  includePaths:  ['./node_modules/']
+  js: './src/js/main.js'
+  images: './src/images/*'
+  jekyll: [
+    './_config.yml'
+    './src/html/**/*.html'
+    './src/html/**/*.md'
+    './src/html/**/*.rb'
+    './src/html/**/*.xml'
+  ]
+  fonts: ['./node_modules/font-awesome/fonts/**']
+}
+
+compile = (watch) ->
+  bundler = watchify(browserify($.js, {debug: true}).transform(babelify))
+
+  rebundle = () ->
+    bundler.bundle().on('error', (err) ->
+      console.log err
+      this.emit 'end'
+    )
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init(loadMaps: true))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./dist/js'))
+
+  if (watch)
+    bundler.on('update', ->
+      console.log '-> bundling...'
+      rebundle()
+    )
+
+  rebundle()
+
+watch = -> compile(true)
+
+gulp.task 'clean', (cb) -> del([$.dist], cb)
+gulp.task 'jsBuild', -> compile()
+gulp.task 'jsWatch', -> watch()
+gulp.task 'fonts', -> gulp.src($.fonts).pipe gulp.dest($.dist + 'fonts/')
+gulp.task 'image', ->
+  gulp.src($.images)
+      .pipe(imagemin(progressive: true))
+      .pipe gulp.dest($.dist + 'images/')
+gulp.task 'assets', ['fonts', 'image']
 
 gulp.task 'sass', ->
-    $.sass('src/_assets/scss/style.scss', sourcemap: false)
-    .pipe $.plumber(errorHandler: $.notify.onError("Error: <%= error.message %>"))
-    .pipe $.autoprefixer(browsers: '> 1%', 'last 2 versions')
-    .pipe $.cssmin()
-    .pipe gulp.dest 'src/css/'
-    .pipe $.filter '**/*.css'
-    .pipe reload(stream: true)
+  gulp.src($.scss)
+    .pipe sass(includePaths: $.includePaths)
+            .on('error', (err) -> console.log err)
+    .pipe autoprefixer(
+      browsers: ['> 1%', 'last 2 versions', 'Android 4']
+      cascade: false
+    )
+    .pipe gulp.dest($.dist + 'css/')
+    .pipe browserSync.stream()
 
-gulp.task 'js', ->
-  gulp.src ['src/_assets/js/vendor/**/*.js', 'src/_assets/js/*.js']
-    .pipe $.concat 'script.js'
-    .pipe gulp.dest 'src/js'
+gulp.task 'jekyll', (done)->
+  cmd = ['exec', 'jekyll', 'build']
+  jekyll = spawn('bundle', cmd, {stdio: 'inherit'}).on('close', done)
+  jekyll.on 'exit', (code)->
+    console.log '-- jekyll finished build --'
+
 
 gulp.task 'browser-sync', ->
-  browserSync { server: { baseDir: '_site/' } }
+  browserSync.init(
+    server:
+      baseDir: $.dist
+    files: [$.dist]
+  )
+  
+  gulp.watch $.scss, ['sass']
+  gulp.watch $.images, ['image']
+  gulp.watch $.jekyll, ['jekyll']
 
-gulp.task 'jekyll-build', (done)->
-  cp.spawn('bundle', ['exec', 'jekyll', 'build', '--drafts'], {stdio: 'inherit'})
-    .on('close', done)
+gulp.task 'default', ['clean'], (cb) ->
+  runSequence('assets', 'sass', 'jekyll', 'jsWatch', 'browser-sync')
 
-gulp.task 'jekyll-rebuild', ['jekyll-build'], ->
-  reload()
-
-gulp.task 'watch', ->
-  gulp.watch ['./_config.yml', 'src/**/*.html', 'src/_plugins/**/*.rb', 'src/**/*.md', 'src/css/*.css', 'src/js/*.js'], ['jekyll-rebuild']
-  gulp.watch 'src/_assets/js/**/*.js', ['js']
-  gulp.watch 'src/_assets/scss/**/*.scss', ['sass']
-
-gulp.task 'default', ['watch', 'sass', 'js', 'jekyll-build', 'browser-sync']
+gulp.task 'build', ['clean'], (cb) ->
+  runSequence('assets', 'sass', 'jsBuild', 'jekyll')

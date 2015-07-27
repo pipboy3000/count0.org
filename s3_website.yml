@@ -9,6 +9,8 @@ s3_bucket: count0.org
 #   "assets/*": 6000
 #   "*": 300
 
+site: dist
+
 gzip:
   - .html
   - .css

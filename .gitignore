@@ -1,10 +1,17 @@
+.bundle
+.DS_Store
+.sass-cache
+dist
+Gemfile.lock
 node_modules
 vendor
-_site
-.bundle
-.sass-cache
-.DS_Store
-src/css
-src/_drafts
-Gemfile.lock
 
+src/html/_drafts
+
+### Vim ###
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~

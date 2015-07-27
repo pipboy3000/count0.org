@@ -1,13 +1,15 @@
-source: ./src
-timezone: Asia/Tokyo
-permalink: /:year/:month/:day/:title.html
-paginate: 10
+source:      ./src/html
+destination: ./dist
+timezone:    Asia/Tokyo
+permalink:   /:year/:month/:day/:title.html
+paginate:    10
 kramdown:
-  input: GFM
-url: http://count0.org
-name: count0.org
+  input:   GFM
+url:          http://count0.org
+name:         count0.org
 analytics_id: UA-357228-7
 author:
-    name: Asai Masami
-    email: shakeforme&#64;gmail.com
-    twitter: '@count0'
+  name:    Asai Masami
+  email:   shakeforme&#64;gmail.com
+  twitter: '@count0'
+keep_files: ['js', 'fonts', 'css', 'images']

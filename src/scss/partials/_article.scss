@@ -68,14 +68,14 @@
     font-size: 1.3rem;
   }
 
-  p, ul, ol {
+  p, ul, ol, dl {
     width: $contents_width;
     @include mobile {
       width: $mobile_contents_width;
     }
 
     box-sizing: border-box;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 2rem;
 
     &.wide {
       width: 100%;
@@ -86,9 +86,13 @@
     }
   }
 
+  dt {
+    font-weight: bold;
+  }
+
   pre {
     font-family: $monospace;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     padding: 2px;
     border: 2px solid #f3f3f3;
     overflow: scroll;
@@ -101,7 +105,7 @@
   }
 
   hr {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   
   table {
@@ -109,7 +113,7 @@
     @include mobile {
       width: $mobile_contents_width;
     }
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 2rem;
   }
 
   td, th {
@@ -118,5 +122,17 @@
 
   th {
     border-bottom: 1px solid lighten($black, 35%);
+  }
+
+  blockquote {
+    background: lighten($black, 70%);
+    font-style: italic;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+
+    p {
+      width: auto;
+      margin-bottom: 0;
+    }
   }
 }

@@ -17,7 +17,7 @@ Android 4.1のブラウザだと1. plain p elementの文章が途中で改行さ
 
 同僚にまで検索を手伝ってもらい解決方法が書かれたページを発見しました。
 
-[【Android】4系で幅が効かずに空白ができることがある件について | mania-ku](http://mania-ku.info/?p=304)
+[【Android】4系で幅が効かずに空白ができることがある件について](http://mania-ku.info/?p=304)
 
 自分の場合、viewportの設定をがんばるのではなく、pタグにcssで1pxの透明gifを設定することにしました。わざわざ1pxのgifを用意するのも面倒なので、Data URIを使いました。
 

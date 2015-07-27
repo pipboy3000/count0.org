@@ -1,6 +1,8 @@
 @charset 'utf-8';
 
-@import 'vendor/normalize';
+@import 'font-awesome/css/font-awesome';
+@import 'normalize.css/normalize';
+@import "highlight.js/styles/github";
 
 @import 'partials/base';
 @import 'partials/elements';
@@ -10,8 +12,6 @@
 @import 'partials/articleList';
 @import 'partials/button';
 @import 'partials/paginator';
-@import 'vendor/highlight_github';
-@import 'vendor/font-awesome';
 
 .container {
   @include container;
