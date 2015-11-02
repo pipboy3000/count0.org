@@ -8,18 +8,13 @@ module Jekyll
 
       self.process(@name)
       self.read_yaml(File.join(@base, '_layouts'), 'category_index.html')
-
       self.data['category'] = category
-      self.data['title'] = page_title(category)
 
+      self.data['title'] = page_title(category)
       self.data['posts'] = []
-      post_base = File.join(@base, '_posts')
-      Dir.glob(post_base + "/*").each do |post_file|
-        post = Post.new(@site, @base, '', File.basename(post_file))
-        if post.categories.include? category
-          post.content = post.transform.to_s
-          self.data['posts'] << post
-        end
+
+      site.posts.docs.each do |post|
+        self.data['posts'] << post if post.data["categories"].include? category
       end
 
       self.data['posts'].reverse!
@@ -36,9 +31,9 @@ module Jekyll
     
     def generate(site)
       if site.layouts.key? 'category_index'
-        base_dir = site.config['category_dir'] || 'categories'
+        dir = site.config['category_dir'] || 'categories'
         site.categories.keys.each do |category|
-          cat_dir = File.join(base_dir, category) 
+          cat_dir = File.join(dir, category) 
           site.pages << CategoryPage.new(site, site.source, cat_dir, category)
         end
       end

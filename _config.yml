@@ -13,3 +13,4 @@ author:
   email:   shakeforme&#64;gmail.com
   twitter: '@count0'
 keep_files: ['js', 'fonts', 'css', 'images']
+gems: [jekyll-paginate]

@@ -9,4 +9,4 @@ categories: ruby jekyll
 
 `category_page.rb`の19行目から23行目が追記した部分。
 
-{% gist 5886190 %}
+<script src="https://gist.github.com/pipboy3000/5886190.js"></script>

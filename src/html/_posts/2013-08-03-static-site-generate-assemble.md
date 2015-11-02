@@ -23,7 +23,7 @@ githubのプロジェクトページにこう書かれています。
 ## 変数
 YAML front matterで変数定義できて便利です。[このページ](http://assemble.io/docs/YAML-front-matter.html)に書かれているようにページ固有のデータを定義しておいて、テンプレートで使う。例えばpageに変数定義して、layoutで変数の値で読み込むpartialを切り替えるようにしておくと便利。
 
-{% gist 6140184 %}
+<script src="https://gist.github.com/pipboy3000/6140184.js"></script>
 
 その他に[jsonファイルに変数を定義する。YAMLファイルに定義する。gruntfileに定義できて、大変柔軟に使える](http://assemble.io/docs/Data.html)けど、自分が使ったのはYAML front matterのみです。
 
