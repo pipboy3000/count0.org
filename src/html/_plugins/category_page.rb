@@ -9,7 +9,6 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(@base, '_layouts'), 'category_index.html')
       self.data['category'] = category
-
       self.data['title'] = page_title(category)
       self.data['posts'] = []
 
