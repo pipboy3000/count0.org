@@ -3,14 +3,16 @@ babelify     = require 'babelify'
 browserify   = require 'browserify'
 browserSync  = require 'browser-sync'
 buffer       = require 'vinyl-buffer'
-spawn        = require('child_process').spawn
 del          = require 'del'
 gulp         = require 'gulp'
 imagemin     = require 'gulp-imagemin'
+notify       = require 'gulp-notify'
+plumber      = require 'gulp-plumber'
 runSequence  = require 'run-sequence'
 sass         = require 'gulp-sass'
 source       = require 'vinyl-source-stream'
 sourcemaps   = require 'gulp-sourcemaps'
+spawn        = require('child_process').spawn
 uglify       = require 'gulp-uglify'
 watchify     = require 'watchify'
 
@@ -66,8 +68,8 @@ gulp.task 'assets', ['fonts', 'image']
 
 gulp.task 'sass', ->
   gulp.src($.scss)
-    .pipe sass(includePaths: $.includePaths)
-            .on('error', (err) -> console.log err)
+    .pipe plumber errorHandler: notify.onError('<%= error.message %>')
+    .pipe sass includePaths: $.includePaths
     .pipe autoprefixer(
       browsers: ['> 1%', 'last 2 versions', 'Android 4']
       cascade: false
