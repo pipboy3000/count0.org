@@ -13,6 +13,13 @@ __________  __  ___   ____________   ____  ____  ______
   <body>
     <div class="wrap">
       {% include header.html %}
+
+      {% for cat in site.categories %}
+        {{cat[0]}}
+        {{cat[1].size}}
+        {{site.posts.size}}
+      {% endfor %}
+
       {{ content }}
       {% include footer.html %}
       {% include analytics.html %}

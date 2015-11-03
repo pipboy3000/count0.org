@@ -6,12 +6,15 @@ layout: default
 <div class="articleList">
   {% for archive in page.archives %}
   <div class="articleList-item">
-    <h2>{{archive[0]}}</h2>
+    <h2>{{ archive[0] }}</h2>
     {% for post in archive[1]%}
     <div class="articleList-item-title">
       <a href="{{post.url}}">{{post.title}}</a>
     </div>
     <div class="articleList-item-date">{{ post.date | date_to_long_string }}</div>
+    {% for category in post.categories %}
+    <a href="/categories/{{category}}" class="article-category"><span>{{ category }}</span></a>
+    {% endfor %}
     {% endfor %}
   </div>
   {% endfor %}

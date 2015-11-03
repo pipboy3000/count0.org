@@ -5,7 +5,7 @@ layout: default
   <div class="article-header">
     <h1 class="article-title">{{ page.title }}</h1>
     <div class="article-date">{{ page.date | date_to_long_string }}</div>
-    {% for category in  page.categories %}
+    {% for category in page.categories %}
     <a href="/categories/{{category}}" class="article-category"><span>{{ category }}</span></a>
     {% endfor %}
   </div>
