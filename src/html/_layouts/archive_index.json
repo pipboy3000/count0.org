@@ -6,9 +6,10 @@
       "title": "{{ post.title }}",
       "url": "{{ post.url }}",
       "date": "{{ post.date | date_to_long_string }}",
-      "excerpt": "{{ post.content | strip_html | xml_escape |truncate: 110 }}"
+      "categories": "{{ post.categories | join: ", " }}",
+      "excerpt": "{{ post.content | strip_html | strip_newlines | xml_escape |truncate: 110 }}"
     }{% unless forloop.last %},{% endunless %}
     {% endfor %}
-  ]
+  ]{% unless forloop.last %},{% endunless %}
   {% endfor %}
 }
