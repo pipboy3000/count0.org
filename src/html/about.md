@@ -3,7 +3,7 @@ layout: page
 title: About
 subtitle: このサイトについて
 ---
-count0.orgはAsai Masamiという個人によって創作、運営されているWebサイトです。書かれている内容は興味がある分野について調べたり、実践したことを書いています。
+count0.orgはAsai Masamiという個人によって創作、運営されているWebサイトです。興味がある分野について調べたり、実践したことを書いています。
 
 ## 私
 
