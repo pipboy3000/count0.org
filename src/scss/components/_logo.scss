@@ -1,0 +1,40 @@
+.logo {
+  > .action {
+    display: block;
+    color: black;
+  }
+
+  .image {
+    width: 40px;
+    height: 50px;
+    margin: auto;
+    background: url(../images/logo.svg) center no-repeat; 
+    background-size: 100%;
+
+    @include mobile {
+      width: 20px;
+      height: 25px;
+    }
+  }
+
+  .title {
+    font-family: $font-julius-sans;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 7px;
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+}
+
+.logo.-dark {
+  > .action {
+    color: white;
+  }
+
+  .image {
+    background-image: url(../images/logo-dark.svg); 
+  }
+}

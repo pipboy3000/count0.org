@@ -1,10 +1,5 @@
 @charset 'utf-8';
 
-@mixin container {
-  width: $container_width;
-  margin: 0 auto;
-}
-
 @mixin mobile {
   @media screen and (max-width: $mobile-width) {
     @content
@@ -22,42 +17,5 @@
 
   &:after {
     clear: both;
-  }
-}
-
-@mixin link-colors($link, $hover) {
-  &:link,
-  &:visited {
-    color: $link;
-  }
-
-  &:hover,
-  &:active {
-    color: $hover;
-  }
-}
-
-@mixin lnik-underline($link, $hover) {
-  background-position: 0 1.15em;
-  background-repeat: repeat-x;
-  background-size: 2px 2px;
-  text-decoration: none;
-
-  &:link,
-  &:visited {
-    background-image: linear-gradient(
-      transparent 0,
-      transparent 50%,
-      $link
-    );
-  }
-
-  &:hover,
-  &:active {
-    background-image: linear-gradient(
-      transparent 0,
-      transparent 50%,
-      $hover
-    );
   }
 }

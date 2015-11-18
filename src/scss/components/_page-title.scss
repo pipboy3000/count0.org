@@ -1,0 +1,16 @@
+.page-title {
+  margin: 120px auto 100px;
+
+  > .title {
+    font-size: 26px;
+  }
+
+  > .subtitle {
+    font-size: 18px;
+  }
+
+  > .meta {
+    @extend .menu-list;
+    text-align: right;
+  }
+}

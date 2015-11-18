@@ -1,44 +1,32 @@
 ---
 layout: default
 ---
+<div class="container">
+  <div class="page-title">
+    <h2 class="logo">
+      <a href="/" class="action">
+        <div class="image"></div>
+        <div class="title">{{ site.name }}</div>
+      </a>
+    </h2>
+    <p>Web製作者、プログラマーである<a href="/about.html">Asai Masami</a>の個人サイトです。メールアドレスは<a href="mailto:asaimasami@count0.org">asaimasami@count0.org</a>、Twitterは<a href="https://twitter.con/count0">@count0</a>、Facebookは<a href="https://www.facebook.com/count000">こちら</a>です。</p>
+  </div>
 
-{% assign first_post = paginator.posts | first %}
+  <div class="page-title">
+    <h2 class="title">最新の記事</h2>
+  </div>
 
-<article class="article-topstory">
-  <div class="article-header">
-    <h1 class="article-title"><a href="{{ first_post.url }}">{{ first_post.title }}</a></h1>
-    <div>
-      <div class="article-date">{{ first_post.date | date_to_long_string }}</div>
-
-      {% for category in first_post.categories %}
-      <a href="/categories/{{category}}" class="article-category">{{ category }}</a>
+  {% for post in paginator.posts limit:10 %}
+  <div class="article">
+    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <div class="meta">
+      <span class="item date">{{ post.date | date_to_long_string }}</span>
+      {% for category in post.categories %}
+      <a href="/categories/{{category}}" class="item category">{{ category }}</a>
       {% endfor %}
-    </div>
-  </div>
-
-  <div class="article-body">
-    <p>
-      {{ first_post.content | strip_html |xml_escape |truncate: 100 }}
-      <a href="{{ first_post.url }}">続きを読む</a>
-    </p>
-  </div>
-</article>
-
-<div class="articleList">
-  {% for post in paginator.posts offset:1 limit:3 %}
-  <div class="articleList-item">
-    <div class="articleList-item-title"><a href="{{ post.url }}">{{ post.title }}</a></div>
-    <div class="articleList-item-date">{{ post.date | date_to_long_string }}</div> 
-    {% for category in post.categories %}
-    <a href="/categories/{{category}}" class="articleList-item-category">{{ category }}</a>
-    {% endfor %}
-    <div class="articleList-item-text">
-      {{ post.content | strip_html | xml_escape | truncate: 90 }}
-    </div>
+    </div> 
+    <p class="excerpt">{{ post.content | strip_html | strip_newlines | xml_escape | truncate: 120 }}</p>
   </div>
   {% endfor %}
-
-  <div class="articleList-footer">
-    <a href="/archive/" class="button">すべての記事</a>
-  </div>
 </div>
+

@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <!--
-__________  __  ___   ____________   ____  ____  ______
-/ ____/ __ \/ / / / | / /_  __/ __ \ / __ \/ __ \/ ____/
-/ /   / / / / / / /  |/ / / / / / / // / / / /_/ / / __  
+   __________  __  ___   ____________   ____  ____  ______
+  / ____/ __ \/ / / / | / /_  __/ __ \ / __ \/ __ \/ ____/
+ / /   / / / / / / /  |/ / / / / / / // / / / /_/ / / __  
 / /___/ /_/ / /_/ / /|  / / / / /_/ // /_/ / _, _/ /_/ /  
 \____/\____/\____/_/ |_/ /_/  \____(_)____/_/ |_|\____/   
 -->
 <html class="no-js" lang="ja" prefix="og: http://ogp.me/ns#">
-  <head>
-    {% include meta.html %}
-  </head>
-  <body>
-    <div class="wrap">
-      {% include header.html %}
-
-      {% for cat in site.categories %}
-        {{cat[0]}}
-        {{cat[1].size}}
-        {{site.posts.size}}
-      {% endfor %}
-
-      {{ content }}
-      {% include footer.html %}
-      {% include analytics.html %}
-      <script src="/js/bundle.js"></script>
+<head>
+  {% include meta.html %}
+</head>
+<body>
+  <div class="layout-document">
+    <div class="header">
+      <h1 class="logo -dark">
+        <a href="/" class="action">
+          <div class="image"></div>
+          <div class="title">{{ site.name }}</div>
+        </a>
+      </h1>
+      <div class="menu-list -dark">
+        <a class="item" href="/about.html">About</a>
+        <a class="item" href="/archives/">Archives</a>
+      </div>
     </div>
-  </body>
+    
+    <div class="contents">
+      {{ content }}
+    </div>
+
+    <div class="footer">
+      <div class="copyright -dark">
+       <div class="creator">Created by <a href="/about.html">Asai Masami</a></div>
+       <div class="license">Document licensed under <a href="#">CC BY-NC 4.0</a></div> 
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-357228-7', 'count0.org');
+    ga('send', 'pageview');
+  </script>
+  <script src="/js/bundle.js"></script>
+</body>
 </html>

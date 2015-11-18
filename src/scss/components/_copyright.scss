@@ -1,0 +1,13 @@
+.copyright {
+  font-size: 12px;
+  margin: auto 6px;
+
+  @include mobile {
+    text-align: center;
+  }
+
+  &.-dark {
+    color: rgba(white, 0.8);
+  }
+}
+

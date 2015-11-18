@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="62px" height="77px" viewBox="0 0 62 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15575) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="-Logo-vertical" sketch:type="MSArtboardGroup" transform="translate(-230.000000, -66.000000)" fill="#1D417D">
+            <g id="Logo" sketch:type="MSLayerGroup" transform="translate(230.000000, 66.000000)">
+                <path d="M27.5555556,28.9783405 L26.8666667,29.2618345 L26.8666667,66.189097 L55.9530864,54.219352 L55.9530864,54.0662655 L56.6419753,53.7827716 L56.6419753,16.8555091 L27.5555556,28.8252541 L27.5555556,28.9783405 L27.5555556,28.9783405 L27.5555556,28.9783405 L27.5555556,28.9783405 Z M62,59.6403906 L20.6666667,76.7636886 L20.6666667,23.9374572 L62,6.81415929 L62,59.6403906 L62,59.6403906 L62,59.6403906 L62,59.6403906 Z" id="Rectangle-1" sketch:type="MSShapeGroup"></path>
+                <path d="M41.3333333,45.1945734 L41.3333333,52.8262314 L0,69.9495293 L0,17.1232979 L41.3333333,0 L41.3333333,8.26731085 L35.2864198,10.7557578 L35.2864198,10.4779302 L6.2,22.4476752 L6.2,41.1295967 L6.2,59.8115181 L35.2864198,47.8417731 L41.3333333,45.1945734 Z" id="Rectangle-1-Copy" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

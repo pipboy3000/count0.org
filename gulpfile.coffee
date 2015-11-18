@@ -17,19 +17,19 @@ uglify       = require 'gulp-uglify'
 watchify     = require 'watchify'
 
 $ = {
-  dist: "./dist/"
-  scss: './src/scss/**/*.scss'
-  includePaths:  ['./node_modules/']
-  js: './src/js/main.js'
-  images: './src/images/*'
+  dist: "dist/"
+  scss: 'src/scss/**/*.scss'
+  includePaths:  ['node_modules/']
+  js: 'src/js/main.js'
+  images: 'src/images/*'
   jekyll: [
-    './_config.yml'
-    './src/html/**/*.html'
-    './src/html/**/*.md'
-    './src/html/**/*.rb'
-    './src/html/**/*.xml'
+    '_config.yml'
+    'src/html/**/*.html'
+    'src/html/**/*.md'
+    'src/html/**/*.rb'
+    'src/html/**/*.xml'
   ]
-  fonts: ['./node_modules/font-awesome/fonts/**']
+  fonts: ['node_modules/font-awesome/fonts/**']
 }
 
 compile = (watch) ->
@@ -44,7 +44,7 @@ compile = (watch) ->
     .pipe(buffer())
     .pipe(sourcemaps.init(loadMaps: true))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest('dist/js'))
 
   if (watch)
     bundler.on('update', ->

@@ -1,8 +1,7 @@
-@charset "utf-8";
-
 body {
   font-family: $sans-serif;
-  color: $black;
+  font-weight: 300;
+  color: rgba(black, 0.8);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,4 +25,3 @@ a {
 code {
   font-family: $monospace;
 }
-

@@ -1,7 +1,11 @@
-$mobile_width: 699px;
+$mobile_width: 768px;
 
-$container_width: 700px;
-$contents_width: 38rem;
+// color
+$main-color: #3892e3;
+$sub-color: darken($main-color, 20%);
 
-$mobile_container_width: 90%;
-$mobile_contents_width: 90%;
+// fonts
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+$font-julius-sans: 'Julius Sans One', sans-serif;
+$sans-serif: serif;
+$monospace: 'Courier New', monospace;

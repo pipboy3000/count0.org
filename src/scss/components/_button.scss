@@ -6,13 +6,13 @@
 
   &:link,
   &:visited {
-    color: $white;
+    color: white;
     background: $main-color;
   }
 
   &:hover,
   &:active {
-    color: $white;
+    color: white;
     background: $sub-color;
   }
 }
