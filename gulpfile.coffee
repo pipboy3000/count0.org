@@ -33,7 +33,9 @@ $ = {
 }
 
 compile = (watch) ->
-  bundler = watchify(browserify($.js, {debug: true}).transform(babelify))
+  bundler = watchify(
+    browserify($.js, {debug: true}).transform(babelify)
+  )
 
   rebundle = () ->
     bundler.bundle().on('error', (err) ->

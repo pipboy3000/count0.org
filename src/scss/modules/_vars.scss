@@ -7,5 +7,5 @@ $sub-color: darken($main-color, 20%);
 // fonts
 @import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
 $font-julius-sans: 'Julius Sans One', sans-serif;
-$sans-serif: serif;
-$monospace: 'Courier New', monospace;
+$font-default: '游明朝', 'Yu Mincho', 'メイリオ', 'Hiragino Mincho ProN', serif;
+$font-code: 'Courier New', monospace;

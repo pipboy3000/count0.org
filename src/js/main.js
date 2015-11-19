@@ -8,9 +8,25 @@ $(function() {
   // highlight.js
   hljs.initHighlightingOnLoad();
 
-  // article images add class 'wide'
-  $('.article-body p').has('img:not([src*="amazon"])').addClass('wide');
 
+  var header = document.querySelector('.layout-document > .header');
+  var header_height = getComputedStyle(header).height.split('px')[0];
+
+  var headerScroll = function(e) {
+    if (window.pageYOffset < (header_height)) {
+      if (header.classList.contains('-mini')) {
+        header.classList.remove('-mini');
+      }
+    } 
+
+    if (window.pageYOffset > (header_height / 2)) {
+      if (!header.classList.contains('-mini')) {
+        header.classList.add('-mini');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', headerScroll, false);
 });
 
 })(jQuery);

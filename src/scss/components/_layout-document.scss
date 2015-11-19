@@ -1,4 +1,8 @@
 .layout-document {
+  @include mobile {
+    padding-top: 100px;
+  }
+
   > .header {
     width: 250px;
     height: 100%;
@@ -11,8 +15,10 @@
     @include mobile {
       width: 100%;
       height: auto;
-      position: static;
+      position: fixed;
       z-index: 0;
+      top: 0;
+      left: 0;
     }
   }
 
@@ -22,7 +28,7 @@
 
     @include mobile {
       margin: auto;
-      width: 90%;
+      width: 98%;
     }
   }
 
@@ -51,6 +57,7 @@
     margin-top: 80%;
     margin-bottom: 25px;
 
+
     @include mobile {
       margin-top: auto;
       margin-bottom: auto;
@@ -61,11 +68,18 @@
   }
 
   .menu-list {
-    @extend .pure-g;
     font-family: $font-julius-sans;
+    overflow: hidden;
+
+    @include mobile {
+      // for transition
+      max-height: 10em;
+    }
 
     > .item {
-      @extend .pure-u-1-2;
+      width: 50%;
+      display: block;
+      float: left;
       text-align: center;
       padding: 1rem 0;
       margin: 3px 0;
@@ -89,6 +103,45 @@
 
     > .article {
       margin-bottom: 80px;
+    }
+  }
+}
+
+// TRANSISION
+@include mobile {
+  .layout-document >.header {
+    .logo {
+      transition: all 0.2s linear;
+    }
+
+    .menu-list {
+      transition: all 0.2s linear;
+    }
+
+    &.-mini {
+      .logo {
+        padding: 0;
+      }
+
+      .logo .action {
+        text-align: center;
+      }
+
+      .logo .image {
+        display: inline-block;
+      }
+
+      .logo .title {
+        font-size: 12px;
+        margin: 0;
+        display: inline-block;
+        position: relative;
+        top: -8px;
+      }
+
+      .menu-list {
+        max-height: 0;
+      }
     }
   }
 }
