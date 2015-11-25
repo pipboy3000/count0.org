@@ -3,6 +3,7 @@
   "{{ archive[0] }}": [
     {% for post in archive[1]%}
     {
+      "id": "{{ post.id }}"
       "title": "{{ post.title }}",
       "url": "{{ post.url }}",
       "date": "{{ post.date | date_to_long_string }}",

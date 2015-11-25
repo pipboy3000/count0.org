@@ -1,5 +1,4 @@
 autoprefixer = require 'gulp-autoprefixer'
-babelify     = require 'babelify'
 browserify   = require 'browserify'
 browserSync  = require 'browser-sync'
 buffer       = require 'vinyl-buffer'
@@ -13,7 +12,6 @@ sass         = require 'gulp-sass'
 source       = require 'vinyl-source-stream'
 sourcemaps   = require 'gulp-sourcemaps'
 spawn        = require('child_process').spawn
-uglify       = require 'gulp-uglify'
 watchify     = require 'watchify'
 
 $ = {
@@ -30,42 +28,46 @@ $ = {
     'src/html/**/*.xml'
   ]
   fonts: ['node_modules/font-awesome/fonts/**']
+  env: process.env.NODE_ENV
 }
 
 compile = (watch) ->
-  bundler = watchify(
-    browserify($.js, {debug: true}).transform(babelify)
-  )
+  b = browserify($.js, debug: true).transform("babelify", {presets: ["es2015", "react"]})
 
-  rebundle = () ->
+  if watch
+    bundler = watchify(b)
+    bundler.on 'update', ->
+      console.log '-> bundling...'
+      bundle()
+  else
+    bundler = b
+
+  bundle = () ->
     bundler.bundle().on('error', (err) ->
-      console.log err
+      notify().write(err)
       this.emit 'end'
     )
     .pipe(source('bundle.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init(loadMaps: true))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist/js'))
 
-  if (watch)
-    bundler.on('update', ->
-      console.log '-> bundling...'
-      rebundle()
-    )
-
-  rebundle()
-
-watch = -> compile(true)
+  bundle()
 
 gulp.task 'clean', (cb) -> del([$.dist], cb)
+
 gulp.task 'jsBuild', -> compile()
-gulp.task 'jsWatch', -> watch()
+
+gulp.task 'jsWatch', -> compile(true)
+
 gulp.task 'fonts', -> gulp.src($.fonts).pipe gulp.dest($.dist + 'fonts/')
+
 gulp.task 'image', ->
   gulp.src($.images)
       .pipe(imagemin(progressive: true))
       .pipe gulp.dest($.dist + 'images/')
+
 gulp.task 'assets', ['fonts', 'image']
 
 gulp.task 'sass', ->
@@ -84,7 +86,6 @@ gulp.task 'jekyll', (done)->
   jekyll = spawn('bundle', cmd, {stdio: 'inherit'}).on('close', done)
   jekyll.on 'exit', (code)->
     console.log '-- jekyll finished build --'
-
 
 gulp.task 'browser-sync', ->
   browserSync.init(
