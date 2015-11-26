@@ -1,5 +1,6 @@
-.copyright {
+.site-info {
   font-size: 12px;
+  line-height: 1.8;
   margin: auto 6px;
 
   @include mobile {
@@ -11,3 +12,9 @@
   }
 }
 
+
+.site-info a {
+  .fa {
+    color: white;
+  }
+}

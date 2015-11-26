@@ -3,7 +3,7 @@ var _            = require('lodash');
 var hljs         = require('highlight.js');
 var React        = require('react');
 var ReactDOM     = require('react-dom');
-var RelatedPosts = require('./related-posts.js');
+var RelatedPosts = require('./components/related-posts.js');
 
 // shorthand
 var q = (selector) => document.querySelector(selector)
