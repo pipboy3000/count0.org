@@ -1,8 +1,8 @@
-var _     = require('lodash');
-var React = require('react');
-var request = require('superagent');
+import _ from 'lodash';
+import React from 'react';
+import request from 'superagent';
 
-class RelatedPosts extends React.Component {
+export default class RelatedPosts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {items: []};
@@ -64,5 +64,3 @@ class RelatedPostsItem extends React.Component {
     );
   }
 }
-
-module.exports = RelatedPosts;
