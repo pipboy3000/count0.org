@@ -37,7 +37,6 @@
     "highlight.js": "^8.6.0",
     "lodash": "^3.10.1",
     "normalize.css": "^3.0.3",
-    "purecss": "^0.6.0",
     "superagent": "^1.4.0"
   }
 }
