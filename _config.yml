@@ -2,7 +2,6 @@ source:      ./src/html
 destination: ./dist
 timezone:    Asia/Tokyo
 permalink:   /:year/:month/:day/:title.html
-paginate:    10
 kramdown:
   input:   GFM
 url:          http://count0.org
@@ -13,4 +12,3 @@ author:
   email:   shakeforme&#64;gmail.com
   twitter: '@count0'
 keep_files: ['js', 'fonts', 'css', 'images']
-gems: [jekyll-paginate]
