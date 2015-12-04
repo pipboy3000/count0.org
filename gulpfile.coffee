@@ -81,11 +81,17 @@ gulp.task 'sass', ->
     .pipe gulp.dest($.dist + 'css/')
     .pipe browserSync.stream()
 
-gulp.task 'jekyll', (done)->
-  cmd = ['exec', 'jekyll', 'build']
-  jekyll = spawn('bundle', cmd, {stdio: 'inherit'}).on('close', done)
-  jekyll.on 'exit', (code)->
-    console.log '-- jekyll finished build --'
+jekyllExec = (cmd, done)->
+  spawn('bundle', cmd, stdio: 'inherit')
+    .on('close', done)
+    .on 'exit', ()->
+      console.log '-- jekyll finished build --'
+
+gulp.task 'jekyllBuild', (done)->
+  jekyllExec(['exec', 'jekyll', 'build'], done)
+
+gulp.task 'jekyllDraft', (done)->
+  jekyllExec(['exec', 'jekyll', 'build', '--draft'], done)
 
 gulp.task 'browser-sync', ->
   browserSync.init(
@@ -96,10 +102,10 @@ gulp.task 'browser-sync', ->
   
   gulp.watch $.scss, ['sass']
   gulp.watch $.images, ['image']
-  gulp.watch $.jekyll, ['jekyll']
+  gulp.watch $.jekyll, ['jekyllDraft']
 
 gulp.task 'default', ['clean'], (cb) ->
-  runSequence('assets', 'sass', 'jekyll', 'jsWatch', 'browser-sync')
+  runSequence('assets', 'sass', 'jekyllDraft', 'jsWatch', 'browser-sync')
 
 gulp.task 'build', ['clean'], (cb) ->
-  runSequence('assets', 'sass', 'jsBuild', 'jekyll')
+  runSequence('assets', 'sass', 'jsBuild', 'jekyllBuild')
