@@ -23,7 +23,7 @@ s3_endpoint: <%= ENV['AWS_REGION'] %>
 
 s3_reduced_redundancy: true
 
-# cloudfront_distribution_id: your-dist-id
+cloudfront_distribution_id: E1ZU7397AOMC32
 
 # cloudfront_distribution_config:
 #   default_cache_behavior:
