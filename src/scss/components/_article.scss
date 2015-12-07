@@ -63,6 +63,22 @@
     }
   }
 
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    padding: 0.5em;
+  }
+
+  th {
+    border-bottom: 2px solid black;
+  }
+
+  td {
+    border-bottom: 1px solid black;
+  }
+
   .videoplayer {
     position: relative;
     margin-bottom: 1.5rem;
