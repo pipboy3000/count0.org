@@ -53,7 +53,7 @@ Cloudfrontで独自ドメインのSSLを利用する場合、IAMに証明書を�
 `count0.org-ssl`という名前で登録しました。
 
 ```bash
-aws iam upload-server-certificate --server-certificate-name count0.org-ssl \
+sudo aws iam upload-server-certificate --server-certificate-name count0.org-ssl \
 --certificate-body file:///etc/letsencrypt/live/count0.org/cert.pem \
 --private-key file:///etc/letsencrypt/live/count0.org/privkey.pem \
 --certificate-chain file:///etc/letsencrypt/live/count0.org/chain.pem \
