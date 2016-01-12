@@ -1,30 +1,37 @@
+{% if page.title %}
+  {% capture title %}{{ page.title }} | {{ site.name }}{% endcapture %}
+{% else %}
+  {% assign title = site.name %}
+{% endif %}
+
+{% if page.description %}
+  {% capture description %}{{ page.description | strip_html | strip_newlines }}{% endcapture %}
+{% elsif page.excerpt %}
+  {% capture description %}{{ page.excerpt | strip_html | strip_newlines }}{% endcapture %}
+{% elsif page.category %}
+  {% capture description %}count0.orgのカテゴリー{{ page.category }}の記事一覧です{% endcapture %}
+{% else %}
+  {% capture description %}count0.orgはAsai Masamiの個人サイトです{% endcapture %}
+{% endif %}
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
-{% if page.description %}
-<meta name="description" content="{{ page.description | strip_html | strip_newlines }}">
-{% elsif page.excerpt %}
-<meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}">
-{% else %}
-<meta name="description" content="count0.orgはAsai Masamiの個人サイトです">
-{% endif %}
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
 
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="icon" sizes="16x16 32x32" href="/favicon.ico">
+<link rel="author" href="/humans.txt">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Atom feed">
 
 <!-- twitter -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site_username" content="{{ site.author.twitter }}">
 <meta name="twitter:domain" content="{{ site.name }}">
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
-{% if page.description %}
-<meta name="twitter:description" content="{{ page.description | strip_html | strip_newlines }}">
-{% elsif page.excerpt %}
-<meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
-{% else %}
-<meta name="twitter:description" content="count0.orgはAsai Masamiの個人サイトです">
-{% endif %}
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
 {% if page.featureimage %}
 <meta name="twitter:image" content="{{ page.featureimage }}">
 {% endif %}
@@ -33,18 +40,8 @@
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="{{ site.name }}">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
-{% if page.description %}
-<meta property="og:description" content="{{ page.description | strip_html | strip_newlines }}">
-{% elsif page.excerpt %}
-<meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines }}">
-{% else %}
-<meta property="og:description" content="count0.orgはAsai Masamiの個人サイトです">
-{% endif %}
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
 {% if page.featureimage %}
 <meta property="og:image" content="{{ page.featureimage }}">
 {% endif %}
-
-<link rel="author" href="/humans.txt">
-<link rel="stylesheet" href="/css/style.css">
-<link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Atom feed">
