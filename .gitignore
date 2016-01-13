@@ -5,6 +5,7 @@ dist
 Gemfile.lock
 node_modules
 vendor
+.env
 
 src/html/_drafts
 
