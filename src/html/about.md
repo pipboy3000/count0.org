@@ -20,6 +20,7 @@ Web製作者。プログラマー。ゲームと音楽が好きです。
 * <i class="fa fa-twitter"></i> [@count0][twitter]
 * <i class="fa fa-facebook-square"></i> [count000][facebook]
 * <i class="fa fa-steam-square"></i> [cnt0][steam]
+* <i class="fa fa-github"></i> [pipboy3000][github]
 
 
 ## <i class="fa fa-feed"></i> Atom feed
@@ -37,3 +38,4 @@ Web製作者。プログラマー。ゲームと音楽が好きです。
 [atomfeed]: /atom.xml
 [cc-by-nc-4-en]: https://creativecommons.org/licenses/by-nc/4.0/
 [cc-by-nc-4-jp]: https://creativecommons.org/licenses/by-nc/4.0/deed.ja
+[github]: https://github.com/pipboy3000
