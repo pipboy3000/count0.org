@@ -7,6 +7,9 @@ categories: service
 
 従来通りHTTPでもアクセスできます。無償で利用可能なSSL証明書の発行サービスLet's Encryptがパブリックベータになったので、count0.orgの証明書の発行とブログをHTTPS化してみました。結論から言うと証明書の発行は簡単。ブログのHTTPS化は面倒でした。
 
+## 追記(2016/1)
+[AWC Certificate Manager(ACM)](https://aws.amazon.com/jp/certificate-manager/)がリリースされました。S3でWebサイトを配信している場合Let's EncryptよりもACMを使ったほうが簡単にSSLを導入できるでしょう。しかし、どちらにせよS3とCloudfrontは連携する必要があります。
+
 ## Let's Encryptとは
 Let's Encryptについては[こちら][letsencrypt-overview]や[こちらの説明][what-letsencrypt]を一読することをオススメします。
 
