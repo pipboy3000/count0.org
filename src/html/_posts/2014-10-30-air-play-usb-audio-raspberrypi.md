@@ -40,14 +40,27 @@ pi@raspberrypi ~ $ aplay -l
 
 USBスピーカーをデフォルトのオーディオデバイスにします。
 
+### wheezyの場合
+
 ```bash
 sudo vi /etc/modprobe.d/alsa-base.conf
 
-# 以下のようにコメントアウトする
+# 以下のようにコメントする
 
 options snd-usb-audio index=-2
   ↓
 # options snd-usb-audio index=-2
+```
+
+### jessieの場合
+
+``` bash
+sudo vi /usr/share/alsa/alsa.conf
+
+# 以下の行を書き換える。数字はaplay -lで表示されるUSBスピーカーの番号
+
+defaults.ctl.card 1
+defaults.pcm.card 1
 ```
 
 再起動して設定を反映させます。
@@ -59,7 +72,15 @@ sudo reboot
 ## shaiportをインストール
 [shairport][shairport]はAirTunesのエミュレータです。これが肝です。パッケージで提供されていないので、ソースコードからビルドします。
 
-Raspberry Piにはgitとビルドに必要なbuild-essentialは予めインストールされているはずです。
+Raspberry Piにはビルドに必要なbuild-essentialは予めインストールされているはずです。
+
+その他必要なパッケージをインストールします。
+
+```bash
+sudo apt-get install git libssl-dev libavahi-client-dev libasound2-dev
+```
+
+ソースを落としてきてビルドします。
 
 ```bash
 git clone https://github.com/abrasive/shairport.git
@@ -67,7 +88,7 @@ cd shairport/
 ./configure
 make
 
-# ビルドされたshairportを実行。名前はご自由に。
+# ビルドされたshairportを実行。-aオプションで名前はご自由に。
 ./shairport -a "RasPi"
 ```
 
@@ -78,12 +99,18 @@ Raspberry Piと同じLANに接続しているiPhone、iTunesからRasPiという
 ## 起動時にshairportを起動する(daemon化)
 毎回手動でスクリプトを実行するのは面倒なので、daemon化します。
 
-shairportのscriptsフォルダに起動スクリプトがあるので、コピーして使います。
+すでにビルド済みなので`make install`で`/usr/local/bin/`にshairportをインストールします。
 
 ```bash
 cd shairport
-sudo cp scripts/debian/default/shairport /etc/default/
-sudo cp scripts/debian/init.d/shairport /etc/init.d/
+sudo make install
+```
+
+続いてshairportのscriptsフォルダに起動スクリプトがあるので、コピーして使います。
+
+```bash
+sudo cp ~/shairport/scripts/debian/default/shairport /etc/default/
+sudo cp ~/shairport/scripts/debian/init.d/shairport /etc/init.d/
 ```
 
 `/etc/default/shairport`を編集してAirPlayで表示される名前を編集します。名前を指定しない場合はホスト名が使われます。

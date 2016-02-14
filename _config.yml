@@ -3,7 +3,7 @@ destination: ./dist
 timezone:    Asia/Tokyo
 permalink:   /:year/:month/:day/:title.html
 kramdown:
-  input:   GFM
+  input: GFM
 url:          http://count0.org
 name:         count0.org
 analytics_id: UA-357228-7
