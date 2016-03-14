@@ -5,6 +5,7 @@ categories: raspberrypi
 ---
 本屋でヘッドフォンアンプ搭載Bluetoothユニットが付録についている「Olasonic完全読本」という本を見かけました。買いそうになったけど、我が家のOlasonicはUSBスピーカー。本の付録は使えない。というわけでRaspberry Piを使ってAirPlay対応を試しました。
 
+
 ## 材料
 * Raspberry Pi Model B 512MB
 OSはRaspberianで電源は<a href="http://www.amazon.co.jp/gp/product/B00GTGETFG/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00GTGETFG&linkCode=as2&tag=count_0-22">Anker 40W 5ポート USB急速充電器 ACアダプタ </a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B00GTGETFG" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />を使っています。
@@ -153,6 +154,10 @@ alsamixer
 そしてiPhone / iTunesの音量はかなり抑えめで、ちょうどいい音量になりました。
 
 arch linux wikiに「[サウンドの品質が悪い時は][archlinux wiki alsa]」の項でゲインを0にするといいよと書かれていますが、これは怖くてできない。
+
+## 追記
+
+iOS9でAirplayの仕様が変わったので、Shairportよりも[Shairport Syncを使うことをオススメ]({% post_url 2016-03-02-shairport-sync %})します。
 
 [olasonic books]:http://www.olasonic.jp/press/201405supplement_press.html
 [shairport]:https://github.com/abrasive/shairport
