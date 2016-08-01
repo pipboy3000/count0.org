@@ -52,7 +52,7 @@ sudo xboxdrv
 
 ``` bash
 # /etc/rc.local
-xboxdrv --trigger-as-button --deadzone 4000 --dpad-rotation 90 --axismap -DPAD_X=DPAD_X silent &
+xboxdrv --trigger-as-button --wid 0 --led 2 --deadzone 4000 --dpad-rotation 90 --axismap -DPAD_X=DPAD_X --silent &
 ```
 
 そして再起動します。
