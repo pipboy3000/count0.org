@@ -1,8 +1,9 @@
 # A sample Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "jekyll", github: 'jekyll/jekyll'
-gem "s3_website"
-gem "rake"
+gem 'jekyll', github: 'jekyll/jekyll'
+gem 's3_website'
+gem 'rake'
+gem 'foreman'
 
-gem "pry"
+gem 'pry'

@@ -4,6 +4,7 @@ import _ from 'lodash';
 import React from 'react';
 import { render } from 'react-dom';
 import RelatedPosts from './components/related-posts';
+import '../scss/style.scss';
 
 // shorthand
 var q = (selector) => document.querySelector(selector)
@@ -36,4 +37,3 @@ if (related_posts_mount) {
   var categories = _.map(qa('.meta .category'), item => item.innerText);
   render(<RelatedPosts categories={categories} />, related_posts_mount);
 }
-
