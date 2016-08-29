@@ -1,3 +1,8 @@
+html {
+  // overwrite normalize.css global line-height
+  line-height: 1.5;
+}
+
 body {
   font-family: $font-default;
   font-weight: 400;
