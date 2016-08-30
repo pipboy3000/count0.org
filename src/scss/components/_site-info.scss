@@ -17,4 +17,8 @@
   .fa {
     color: white;
   }
+  
+  &:hover, &:active {
+    color: lighten($main-color, 20%);
+  }
 }

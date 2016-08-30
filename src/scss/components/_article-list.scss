@@ -1,0 +1,9 @@
+.article-list {
+  > .article {
+    margin-bottom: 2.5rem;
+
+    > .title {
+      margin-bottom: .75rem;
+    }
+  }
+}
