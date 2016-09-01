@@ -3,7 +3,6 @@ layout: null
 ---
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
   <title>count0.org</title>
   <link href="http://{{ site.name }}"/>
   <link type="application/atom+xml" rel="self" href="http://{{ site.name }}/atom.xml"/>
@@ -24,8 +23,7 @@ layout: null
       <name>{{ site.author.name }}</name>
       <uri>http://{{ site.name }}</uri>
     </author>
-    <content type="html">{{ post.excerpt | strip_html | strip_newlines | xml_escape }}</content>
+    <content type="html">{{ post.content }}</content>
   </entry>
   {% endfor %}
- 
 </feed>
