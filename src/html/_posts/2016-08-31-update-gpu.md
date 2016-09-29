@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GPUをとっかえた
-categories: windows
+categories: windows game
 ---
 2年前に自作したPCのパーツをアップグレードしたという話。
 
@@ -17,6 +17,6 @@ categories: windows
 
 <iframe src="http://store.steampowered.com/widget/294100/41602/" frameborder="0" width="646" height="190"></iframe>
 
-VR readyな能力を手に入れたので、HTC Viveをポンと買える余裕があればいいのだけど、現実はそんなに甘くない。それよりも7年使ったディスプレイの調子が悪いので、そろそろ買い替えを考えなければいけない。フレッシュレート144Hzのゲーミングディスプレイにしようと思っているが、そんなにFPSで遊ばないので、どうしたもんか悩んでいる。
+VR readyな能力を手に入れたので、HTC Viveをポンと買える余裕があればいいのだけど、現実はそんなに甘くない。それよりも7年使ったディスプレイの調子が悪いので、そろそろ買い替えを考えなければいけない。リフレッシュレート144Hzのゲーミングディスプレイにしようと思っているが、そんなにFPSで遊ばないので、どうしたもんか悩んでいる。
 
 [zotac]: http://www.amazon.co.jp/exec/obidos/ASIN/B01IHBSHR6/count_0-22

@@ -12,6 +12,8 @@ categories: raspberrypi
 ## Shairpot Syncをインストール
 Raspberry Pi B+でOSはRaspbian Jessie Lite、USBスピーカーは[OlasonicのTW-S5][speaker]です。手順は[Shairport SyncのREADME][shairport-sync]のとおりです。
 
+> この記事を書いたあと、READMEが大幅に更新されているのでインストール、設定手順は本家READMEを参考にすることを強くオススメします。
+
 すでにインストール済みのパッケージも幾つかあるかもしれませんが、以下のパッケージをインストールします。
 
 ```bash
