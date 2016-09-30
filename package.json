@@ -2,9 +2,9 @@
   "name": "count0.org",
   "version": "0.1.0",
   "scripts": {
-    "start": "$(npm bin)/webpack-dev-server --progress --color --hot --inline --content-base ./dist/",
+    "start": "NODE_ENV=development $(npm bin)/webpack-dev-server --progress --color --hot --inline --content-base ./dist/",
     "build": "$(npm bin)/webpack --progress --color --profile",
-    "publish": "bundle exec jekyll build && $(npm bin)/npm run build && bundle exec s3_website push"
+    "publish": "bundle exec jekyll build && NODE_ENV=production npm run build && bundle exec s3_website push"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
