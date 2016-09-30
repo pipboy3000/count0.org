@@ -11,4 +11,4 @@ author:
   name:    Asai Masami
   email:   shakeforme&#64;gmail.com
   twitter: '@count0'
-keep_files: ['js', 'fonts', 'css', 'images']
+keep_files: ['assets', 'images']

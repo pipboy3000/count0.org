@@ -4,7 +4,8 @@
   "scripts": {
     "start": "NODE_ENV=development $(npm bin)/webpack-dev-server --progress --color --hot --inline --content-base ./dist/",
     "build": "$(npm bin)/webpack --progress --color --profile",
-    "publish": "bundle exec jekyll build && NODE_ENV=production npm run build && bundle exec s3_website push"
+    "publish": "bundle exec jekyll build && npm run build && npm run imagemin && bundle exec s3_website push",
+    "imagemin": "mkdir -p dist/images;$(npm bin)/imagemin src/images/* --out-dir=dist/images"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -16,6 +17,7 @@
     "css-loader": "^0.24.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "imagemin-cli": "^3.0.0",
     "node-sass": "^3.8.0",
     "postcss-loader": "^0.11.0",
     "precss": "^1.4.0",
