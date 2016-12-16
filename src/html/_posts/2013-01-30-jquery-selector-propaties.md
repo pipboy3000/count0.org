@@ -22,7 +22,7 @@ selectorが取得できる。
 	});
 ```
 
-プラグインの中で`selector`プロパティを参照すると"#main li a", "#header li a", "#footer li a"であると思っていたが全部"li a"になっていた。これは悲劇。  
+プラグインの中で`selector`プロパティを参照すると"#main li a", "#header li a", "#footer li a"を期待したけど全部"li a"になっていた。これは悲劇。  
 どういうことか調べると、[stackoverflowのこのお話](http://stackoverflow.com/questions/12426622/why-does-the-selector-property-in-jquery-not-store-a-valid-selector-value)にたどり着く。  
 
 プラグインの中でliveに使う用途向きだけど、jQueryのtraversing系メソッド通しちゃうと`selector`は意図しない感じになるようだ。

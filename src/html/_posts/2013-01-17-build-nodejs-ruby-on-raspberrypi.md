@@ -10,7 +10,7 @@ Raspberry Pi Model B 256MB
 どちらもビルドに2時間はかかると思っていい。
 
 ### Node.js
-あえてソースからのビルド。以前はややこしかったnode.jsのビルドだけど、今はいたって簡単。
+あえてソースからのビルド。以前はややこしかったNode.jsのビルドだけど、今はいたって簡単。
 
 ``` bash
 	apt-get install python build-essential
@@ -29,6 +29,6 @@ Raspberry Pi Model B 256MB
 
 [Compiling and installing ruby on the raspberry pi using rbenv…](http://blog.pedrocarrico.net/post/29478085586/compiling-and-installing-ruby-on-the-raspberry-pi-using)
 
-apt-getでrubyをインストールした後にrbenvで再度rubyをインストールしている。
+apt-getでRubyをインストールした後にrbenvで再度rubyをインストールしている。
 
 Change your memory split to CPU 224/32 VRAM usingの部分はraspi-config側が変更されたので、設定画面で32と入力する。これはVRAMにどれだけもメモリを割り当てるかという意味。

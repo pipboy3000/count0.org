@@ -3,7 +3,7 @@ layout: post
 title: Dropbox Core API(ruby)でproxyを使う
 categories: ruby
 ---
-rubyの[Dropbox Core API](https://www.dropbox.com/developers/core)をproxy経由で使う方法です。
+Rubyの[Dropbox Core API](https://www.dropbox.com/developers/core)をproxy経由で使う方法です。
 
 ドキュメントを読んでもproxyの設定方法は書かれていませんでした。しかし、Dorpbox Core APIはNet::HTTPを使っているので、環境変数に`http_proxy`が設定してあれば自動で使うようです。OSXやLinuxならば.bashrcあたりに書いておけばいいでしょう。
 
@@ -11,7 +11,7 @@ rubyの[Dropbox Core API](https://www.dropbox.com/developers/core)をproxy経由
 export http_proxy='http://hoge.proxy.com:8080'
 ```
 
-windowsの場合はマイコンピューターを右クリックしてから設定する環境変数を使えばいいのでしょうが、プログラムに直接書いてしまいます。
+Windowsの場合はマイコンピューターを右クリックしてから設定する環境変数を使えばいいのでしょうが、プログラムに直接書いてしまいます。
 
 ``` ruby
 ENV['HTTP_PROXY'] = 'http://hoge.proxy.com:8080'

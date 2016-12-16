@@ -11,6 +11,6 @@ android 2.2のブラウザでsyntax errorとなりスクリプト実行停止で
 		"class": "red-background"
 	}
 
-原因は`class`がjavascriptの予約語に入っているから。しかし、android2.2以外ではsyntax errorにならず、スクリプトが実行される不思議。
+原因は`class`がJavaScriptの予約語に入っているから。しかし、android2.2以外ではsyntax errorにならず、スクリプトが実行される不思議。
 
 https://developer.mozilla.org/ja/docs/JavaScript/Reference/Reserved_Words

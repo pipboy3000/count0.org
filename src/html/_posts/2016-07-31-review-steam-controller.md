@@ -10,7 +10,7 @@ categories: game raspberrypi
 
 <blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">steam controller届いた！ <a href="https://t.co/nV8R4Ln1Zv">pic.twitter.com/nV8R4Ln1Zv</a></p>&mdash; アサイマサミ (@count0) <a href="https://twitter.com/count0/status/758973846900707328">2016年7月29日</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Steamコントローラの特徴は動画を見たり[製品ページ][steamcontroller]を見ると手っ取り早いです。
+Steamコントローラの特徴は動画を見たり[製品ページ][steamcontroller]を見ると手っ取り早い。
 
 <div class="videoplayer">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8fs2Yh1PFwM" frameborder="0" allowfullscreen></iframe>
@@ -20,7 +20,7 @@ Steamコントローラの特徴は動画を見たり[製品ページ][steamcont
 
 PCにレシーバーを取り付ければすぐ使える。デスクトップモードでマウス代わりに使えてちょっとした操作もコントローラで済むのは便利。日本語入力はできないけど、ソフトウェアキーボードで入力もできる。デュアルトラックパッドのハプティクスフィードバックが振動とジジジという音で伝わってきて気持ち良い。
 
-タッチパッドは最初は照準を合わせるのに苦労しても次第に具合がつかめてきて、慣れ次第。右のタッチパッドに指を置いたままコントローラを傾けるとモーションコントロールができて、2種類の操作方法を随時切り替えながら遊べる。背面のボタンは単純に便利。
+タッチパッドは最初、照準を合わせるのに苦労しても次第に具合がつかめてきて、慣れ次第。右のタッチパッドに指を置いたままコントローラを傾けるとモーションコントロールができて、2種類の操作方法を随時切り替えながら遊べる。背面のボタンは単純に便利。
 
 キーボード + マウスのゲームはメーカーもしくはコミュニティからキーアサインが提供されているので、慣れてしまえばどんなゲームもコントローラで操作できるのは気に入っている。
 
@@ -36,17 +36,17 @@ PCにレシーバーを取り付ければすぐ使える。デスクトップモ
 
 ## Raspberry Piで使ってみる
 
-MacのSteamストリーミングで存在意義が揺らいだMoonlight Embeddedが機能するRaspberry Pi。こいつはSteamコントローラが簡単に動かない。もし、Raspberry PiにLinux版SteamクライアントもしくはSteamOSがインストールできれば楽に使えたかもしれない。けれど、両者ともにARMプロセッサをサポートしていない。SteamリンクはARMプロセッサを使っているのに？疑問を持たないほうが幸せなこともある。Raspberry PiでSteamコントローラを動かしたい場合、[ynsta/steamcontroller][ynsta/steamcontroller]を利用することになる。
+MacのSteamストリーミングで存在意義が揺らいだRaspberry Pi。こいつはSteamコントローラが簡単に動かない。もし、Raspberry PiにLinux版SteamクライアントもしくはSteamOSがインストールできれば楽に使えたかもしれない。けれど、両者ともにARMプロセッサをサポートしていない。SteamリンクはARMプロセッサを使っているのに？ 疑問を持たないほうが幸せなこともある。Raspberry PiでSteamコントローラを動かしたい場合、[ynsta/steamcontroller][ynsta/steamcontroller]を利用することになる。
 
-それで試した結果、動かせないこともないけど快適にプレイできない。XBOXコントローラの動作をエミュレートするので、Steamコントローラとして認識されないのが辛い。これではSteamコントローラを使うアドバンテージがまったくない。だったら親機であるPCにレシーバーを挿して、Raspberry Piはストリーミングを行うのみにした方が良い。これならSteamコントローラとして使える。
+それで試した結果、一応動く。けれども快適にプレイできない。XBOXコントローラの動作をエミュレートするので、Steamコントローラとして認識されないのが辛い。これではSteamコントローラを使うアドバンテージがまったくない。だったら親機であるPCにレシーバーを挿して、Raspberry Piはストリーミングを行うのみにした方が良い。これならSteamコントローラとして使える。
 
-しかし、Macで快適ストリーミングができるということを考えると・・・。いやいや、試していないがSteamストリーミングではSteam以外のゲーム（OverwatchやDiablo3など）が遊べないのでは？試してみたらDiablo3をストリーミングできて、Steam以外のゲームもSteam経由ならばコントローラの設定が利用できるので普通に遊べてしまった。おおっと。
+しかし、Macで快適ストリーミングができるということを考えると…。いやいや、試していないがSteamストリーミングではSteam以外のゲーム（OverwatchやDiablo3など）が遊べないのでは？ 試してみたらDiablo3をストリーミングできて、Steam以外のゲームもSteam経由ならばコントローラの設定が利用できるので普通に遊べてしまった。おおっと。
 
 ## それで
 
 コントローラにしてはお値段がまあまあする。これより高いのはXBOX Eliteワイヤレスコントローラぐらいじゃないかな。キーアサインのカスタマイズが相当豊富なのでPCゲームをメインにプレイするなら試して見る価値はあり。
 
-副作用としてストリーミングで遊びたければMacを使えば良いという新しい発見があった。なぜストリーミングにこだわるのか？椅子のおかげでケツが痛いからである。俺は寝っ転がってゲームをやりたいんだ。
+副作用としてストリーミングで遊びたければMacを使えば良いという新しい発見があった。なぜストリーミングにこだわるのか？ 椅子のおかげでケツが痛いからである。俺は寝っ転がってゲームをやりたいんだ。
 
 <div class="amazon-block"><div class="image"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017WHPVT8/count_0-22" target="_blank"><img src="http://ecx.images-amazon.com/images/I/41Uo6hEkQpL.jpg" /></a></div><div class="title"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B017WHPVT8/count_0-22" target="_blank">STEAM CONTROLLER [並行輸入品]</a></div><div class="label">Valve Corporation</div><div class="binding">Video Game</div><div class="rank">Sales Rank: 409</div><a class="link" href="http://www.amazon.co.jp/exec/obidos/ASIN/B017WHPVT8/count_0-22">Amazonで詳細を見る</a></div>
 

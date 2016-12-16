@@ -3,7 +3,7 @@ layout: post
 title: StackEditが素晴らしい
 categories: service
 ---
-Chromeウェブストアで見つけた[StackEdit](https://stackedit.io/)が素晴らしいです。これでMarkdownPad2やMarkedを捨てることができます。
+Chrome Web Storeで見つけた[StackEdit](https://stackedit.io/)が素晴らしいです。これでMarkdownPad2やMarkedを捨てることができます。
 
 下の機能が使えるのでこれから大活躍しそうです。
 

@@ -3,7 +3,7 @@ title: Jekyllでページ分割をしたい
 layout: post
 categories: ruby jekyll
 ---
-ブログの見た目を変えたついでにアーカイブページを作りました。[以前作ったカテゴリーページ]({% post_url 2013-07-04-jekyll-category-page %})とは違い、ページ分割ができるようにしました。jekyllでページ分割のページを作りたい場合、gemでjekyllをインストールした時に一緒にインストールされる[jekyll-paginate][jekyll-paginate]を使います。
+ブログの見た目を変えたついでにアーカイブページを作りました。[以前作ったカテゴリーページ]({% post_url 2013-07-04-jekyll-category-page %})とは違い、ページ分割ができるようにしました。Jekyllでページ分割のページを作りたい場合、gemでJekyllと一緒にインストールされる[jekyll-paginate][jekyll-paginate]を使います。
 
 Jekyll::PaginateモジュールのPagerとPaginatorクラスをベースにArchivePagerとArchivePaginatorクラスを作りました。実装はベースクラスのメソッドを都合に合わせて上書きしました。独自に追加した機能はアーカイブページのパスのフォーマット(例えば/archive/page2)をconfig.ymlで設定できるようにしたことぐらいです。このコードを`SRCDIR/_plugins/archive_page.rb`として設置します。
 

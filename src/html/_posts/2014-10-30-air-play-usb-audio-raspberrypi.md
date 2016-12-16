@@ -11,7 +11,7 @@ categories: raspberrypi
 OSはRaspberianで電源は<a href="http://www.amazon.co.jp/gp/product/B00GTGETFG/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00GTGETFG&linkCode=as2&tag=count_0-22">Anker 40W 5ポート USB急速充電器 ACアダプタ </a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B00GTGETFG" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />を使っています。
 * USBスピーカー
 <a href="http://www.amazon.co.jp/gp/product/B009NQKJEY/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B009NQKJEY&linkCode=as2&tag=count_0-22">Olsasonic TW-S5W</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B009NQKJEY" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
-DAC内臓のUSBパワードスピーカー。いい音だします。
+DAC内臓のUSBパWordスピーカー。いい音だします。
 この記事のテーマを覆してしまいますが、
 <a href="http://www.amazon.co.jp/gp/product/B00J2PVIY6/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00J2PVIY6&linkCode=as2&tag=count_0-22">Bluetooth版</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B00J2PVIY6" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />があります。
 
@@ -153,7 +153,7 @@ alsamixer
 
 そしてiPhone / iTunesの音量はかなり抑えめで、ちょうどいい音量になりました。
 
-arch linux wikiに「[サウンドの品質が悪い時は][archlinux wiki alsa]」の項でゲインを0にするといいよと書かれていますが、これは怖くてできない。
+arch linux Wikiに「[サウンドの品質が悪い時は][archlinux wiki alsa]」の項でゲインを0にするといいよと書かれていますが、これは怖くてできない。
 
 ## 追記
 

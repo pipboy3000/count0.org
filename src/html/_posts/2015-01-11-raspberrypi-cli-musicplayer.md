@@ -19,7 +19,7 @@ mkdir -p mnt/disk
 sudo mount.cifs //192.168.0.2/AirMacDisk ~/mnt/disk -o sec=ntlm
 ```
 
-これでiTunesライブラリにアクセスできるようになりました。
+これでiTunesライブラリへアクセスできるようになりました。
 
 ## cmus
 
@@ -51,9 +51,9 @@ man cmus
 
 ![cmus](/images/raspberrypi-cli-musicplayer.png)
 
-さて、音楽再生で消費するCPUリソースをRaspberry Piに丸投げすることに成功しました。操作方法は宗教上の理由でハードルになりません。Raspbery PiのLoad Averageは0.14, 0.10, 0.10！しかし、素晴らしいことばかりではありません。
+さて、音楽再生で消費するCPUリソースをRaspberry Piへ丸投げすることに成功しました。操作方法は宗教上の理由でハードルになりません。Raspbery PiのLoad Averageは0.14, 0.10, 0.10！ しかし、素晴らしいことばかりではありません。
 
-まず、曲をiTunes Storeから買っているからiTunesを使う、手に入れた曲はiTunes Matchに登録したい、iPhoneのアップグレード時にiTunesを使う、たまにiTunesで映画をレンタルする等。結局iTunesを使うわけです。
+曲をiTunes Storeから買っているからiTunesを使う。手に入れた曲はiTunes Matchに登録したい。iPhoneのアップグレード時にiTunesを使う。たまにiTunesで映画をレンタルする等。結局iTunesを使うわけです。
 
 できることならAppleにはさらに軽量なiTunes[^i_think_itunes]を開発していただきたいところです。
 

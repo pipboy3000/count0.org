@@ -3,9 +3,9 @@ layout: post
 title: ShairportからShairport Syncに乗り換える
 categories: raspberrypi
 ---
-今更感があるけどiOS9でAirplayの仕様が変更されたという情報を最近知って、アレもそうかなと思ったので、識者に聞いてみたらアレはそうだという話をしたのでした。アレとはiPhoneでRaspberry PiのリモートスピーカーにAirplayで繋いで曲を再生している時に「⏩(次の曲)」をタップするとAirplayが切断してしまうことである。ちなみに連続再生で次の曲に行く場合はこの切断はないのである。
+今更感があるけどiOS9でAirplayの仕様が変更されたという情報を最近知って、アレもそうかなと思ったので、識者に聞いてみたらアレはそうだという話をしたのでした。アレとはiPhoneでRaspberry PiのリモートスピーカーにAirplayで繋いで曲を再生している時に「⏩(次の曲)」をタップするとAirplayが切断してしまうことです。ちなみに連続再生で次の曲に行く場合この切断はないのです。
 
-この症状、iTunesだと発生していたのか記憶が定かではないが、音楽を再生するときは圧倒的にMacのiTunesで再生してRaspberry Piのリモートスピーカーに繋いでいる。最近iPhoneで+ リモートスピーカーで再生する機会があり気づいたのだ。知らぬが仏である。
+この症状、iTunesだと発生していたのか記憶が定かではないが、最近iPhone + リモートスピーカーで再生する機会があり気づいたのだ。知らぬが仏です。
 
 そして[Raspberry PiでAirplayしているのはShairport]({% post_url 2014-10-30-air-play-usb-audio-raspberrypi %})。メンテナンスは終わっている。しかし、このAirplay問題をクリアしたShairport Syncがあるではないか。こいつに乗り換えるのです。
 
@@ -81,11 +81,11 @@ defaults.pcm.card 1
 sudo systemctl start shairport-sync.service
 ```
 
-何を試したかったかというと設定の`general`の`interpolation`の項目で指定する`basic`と`soxr`の違いです。The SoX resamplerでsoxr。なんか音を良くしてくれそうな感じです。shairport-sync.confの説明を読む限り、CPU負荷が高そうです。プロセスのCPU利用率を比べてみたら`basic`の場合15%程、`soxr`の場合は40%以上です。高負荷！
+何を試したかったかというと設定の`general`の`interpolation`の項目で指定する`basic`と`soxr`の違いです。The SoX resamplerでsoxr。なんか音を良くしてくれそうな感じです。shairport-sync.confの説明を読む限り、CPU負荷が高そうです。プロセスのCPU利用率を比べてみたら`basic`の場合15％程、`soxr`の場合は40％以上です。高負荷！
 
-それで、音の方はどうか？たぶん`soxr`の方がいいんじゃない？という感じです。あんまり自分の耳に自信ないんです。若いときはギターウルフとかのライブで耳に負荷をかけていたので。いい思い出です。
+それで、音の方はどうか？ たぶん`soxr`の方がいいんじゃない？ という感じです。あんまり自分の耳に自信ないんです。若いときはギターウルフとかのライブで耳に負荷をかけていたので。いい思い出です。
 
-いいんじゃない？の根拠は[Daft PunkのRandom Access Memories][ram]や[Tame ImpalaのCurrents][currents]を聞きくらべたときですね。ここら辺は感覚とCPU負荷のトレードオフでお好みに。
+いいんじゃない？ の根拠は[Daft PunkのRandom Access Memories][ram]や[Tame ImpalaのCurrents][currents]を聞きくらべたときですね。ここら辺は感覚とCPU負荷のトレードオフでお好みに。
 
 [shairport-sync]: https://github.com/mikebrady/shairport-sync
 [ram]: http://www.amazon.co.jp/exec/obidos/ASIN/B00C061I3K/count_0-22

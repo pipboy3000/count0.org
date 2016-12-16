@@ -3,7 +3,7 @@ layout: post
 title: tmuxinatorでpaneのレイアウトを指定する
 categories: linux
 ---
-tmuxを起動して手が勝手に`z |` `z s` `z(押しつつ) kk` `z(押しつつ) ll`と打ち、それぞれのpaneで`vim`, `foreman start`, なにもしないでbashということをやっています。これは何かというと画像を見るのがてっとり早いです。
+tmuxを起動して手が勝手に`z |` `z s` `z(押しつつ) kk` `z(押しながら) ll`と打ち、それぞれのpaneで`vim`, `foreman start`, なにもしないでbashということをやっています。これは何かというと画像を見るのがてっとり早いです。
 
 ![tmuxで画面分割](/images/tmuxinator-layout.png)
 
@@ -19,7 +19,7 @@ tmuxを起動して手が勝手に`z |` `z s` `z(押しつつ) kk` `z(押しつ�
   vim ~/.tmuxinator/blog.yml # 設定ファイルを編集
 ```
 
-ここで困ったのがpaneのレイアウトです。githubのページには[the five standard layouts](http://manpages.ubuntu.com/manpages/precise/en/man1/tmux.1.html#contenttoc6)を使うか[自分で定義する](http://stackoverflow.com/questions/9812000/specify-pane-percentage-in-tmuxinator-project/9976282#9976282)と書いてあります。自分で定義したものを使いたかったのですが、リンク先のstackoverflowのページに書かれているレイアウトの指定がよくわからない。なんとなくわかるようで全くわからない。
+ここで困ったのがpaneのレイアウトです。GitHubのページには[the five standard layouts](http://manpages.ubuntu.com/manpages/precise/en/man1/tmux.1.html#contenttoc6)を使うか[自分で定義する](http://stackoverflow.com/questions/9812000/specify-pane-percentage-in-tmuxinator-project/9976282#9976282)と書いてあります。自分で定義したものを使いたかったのですが、リンク先のstackoverflowのページに書かれているレイアウトの指定がよくわからない。なんとなくわかるようで全くわからない。
 
 どうすればいいかというと、記事の冒頭で行ったようにtmuxで自分のやりたいpaneのレイアウトを作り、`tmux list-windows`すると設定ファイルに記述するレイアウトの値が表示されるというものです。ちゃんと英語で書いてありました。その結果、blog.ymlは以下のようになりました。
 

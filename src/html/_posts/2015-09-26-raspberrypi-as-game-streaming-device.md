@@ -48,7 +48,7 @@ sudo apt-get install xboxdrv
 sudo xboxdrv
 ```
 
-起動時にxboxdrvが有効になるよう/etc/rc.localに以下の行を追記します。
+起動時にxboxdrvが有効になるように/etc/rc.localを編集します。
 
 ``` bash
 # /etc/rc.local
@@ -61,7 +61,7 @@ xboxdrv --trigger-as-button --wid 0 --led 2 --deadzone 4000 --dpad-rotation 90 -
 sudo reboot
 ```
 
-コントローラーを2本、3本とつなげたい場合や、/etc/rc.localではなくdaemonで運用したい場合は[Retro-Piのこのページ][retro-pi-controller]を参照してください。XBOX360以外のコントローラーを使いたい場合は[Arch Linux wikiのゲームパッド][arch-wiki-gamepad]を参考にするといいのではないでしょうか。
+コントローラーを2本、3本とつなげたい場合や、/etc/rc.localではなくdaemonで運用したい場合は[Retro-Piのこのページ][retro-pi-controller]を参照してください。XBOX360以外のコントローラーを使いたい場合は[Arch Linux Wikiのゲームパッド][arch-wiki-gamepad]を参考にするといいのではないでしょうか。
 
 ## Moonlight Embedded
 NVIDIA GAMESTREAMのオープンソース実装であるMoonlight EmbeddedをRaspberry Piにインストール、設定していきます。
@@ -94,7 +94,7 @@ PINコードが表示されます。親機のGeForce Experienceが入力受け�
 moonlight list
 ```
 
-実際にストリーミングする前に注意点が。moonlightがインストールしたコントローラーのキーマップ(/usr/share/mappings/xbox360.conf)は2015年9月時点で実用的ではないです。しかし[GitHubにPull Requestが上がっていて][moonlight-pr]、それは修正されているので使えます。将来的に本体にマージされるけど、今はPRのキーマップをダウンロードして使います。
+ストリーミングする前に注意点が。moonlightがインストールしたコントローラーのキーマップ(/usr/share/mappings/xbox360.conf)は2015年9月時点で実用的ではないです。しかし[GitHubにPull Requestが上がっていて][moonlight-pr]、それは修正されているので使えます。将来的に本体にマージされるけど、今はPRのキーマップをダウンロードして使います。
 
 ``` bash
 # キーマップをダウンロード
@@ -137,7 +137,7 @@ mapping = ./xbox360.conf
 ```
 
 ## 試してみて
-GTA5もMETAL GEAR SOLID5もストレスなくプレイできました。ソファでくつろぎながらゲームができる！htopで負荷を確認したらload averageは高い時で0.4程度でした。
+GTA5、METAL GEAR SOLID5がストレスなくプレイできました。ソファでくつろぎながらゲームができる！ htopで負荷を確認したらload averageは高い時で0.4程度でした。
 
 ## 無線LANで試してみた。
 思ったよりもラグはなかったです。その時試していたゲームはDon't Starveだったのでラグがあっても気にならなかったのですが、FPSなどシビアなタイミングを要求されるジャンルはイラつくかもしれないです。すぐに有線LANに戻しました。また、部屋を跨いだ無線LANだと体感が変わってくるかと思います。
@@ -154,10 +154,10 @@ speaker-test -c2 -l1 -t sin -f440
 原因はPC側でBluetoothスピーカーに接続していたからでした。他の音声出力デバイスに変更したらストリーミングで音がでました。
 
 ### ストリーミングが止まる
-Don't Starveをプレイしていると一定間隔で画面のストリーミングが止まります。これは親機のPCがモニターがスリープするタイミングで画面も固まっていました。逆にMETAL GEAR SOLID5はストリーミングが止まることがなかったのでゲームによって違いがあるかも。モニターのスリープ時間を変えることで回避しました。
+Don't Starveをプレイしていると一定間隔で画面のストリーミングが止まります。これは親機のPCがモニターをスリープするタイミングで画面も固まっていました。逆にMETAL GEAR SOLID5は止まることがなかったのでゲームによって違いがあるかも。モニターのスリープ時間を変えることで回避しました。
 
 ### ゲームの文字が小さい
-PCモニタ向けに作られたPCゲームなのでしょうがない。TVの都合で解像度は1280x720に下がっていますが、それでも小さい。メガネをかけてゲームします。
+PCモニタ向けに作られたPCゲームなのでしょうがない。TVの都合で解像度は1280×720に下がっていますが、それでも小さい。メガネをかけてゲームします。
 
 [steamlink]: http://store.steampowered.com/universe/link/?l=japanese
 [nvidia_gamestreaming]: http://shield.nvidia.co.jp/play-pc-games/
