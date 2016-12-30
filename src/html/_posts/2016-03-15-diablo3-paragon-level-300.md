@@ -13,7 +13,7 @@ categories: game
 300までの経緯は200達成後に惰性で数日続け、気まぐれでシーズンに参加して終了後に経験値が還元されて60レベルぐらい稼ぎ、ここ3日でレベルを50上げる。プレイ時間的に6日で100レベルは案外近い。
 
 ## アップデートのおかげ
-飽きたのにレベル50上がるまでプレイするのは矛盾しているかもしれませんが、これはBlizzardによる努力が大きい。未だにアップデートしているからです。最近[Kanai's Cube][kanais_cube]というものが導入されて放置していたのですが、これがどんなものかいじっていたのと、凶悪なまでに使い勝手の良い[Uliana's Stratagem][uliana_set]というセット装備を手に入れて[Exploding Palm][exploding_palm]で効率よく敵を爆殺できるようになったので、レベルが勝手に上がってしまったというのが実情です。
+飽きたのにレベル50上がるまでプレイするのは矛盾しているかもしれませんが、これはBlizzardによる努力が大きい。未だにアップデートしているからです。最近[Kanai's Cube][kanais_cube]というものが導入されて放置していたのですが、これがどんなものかいじっていたのと凶悪なまでに使い勝手の良い[Uliana's Stratagem][uliana_set]というセット装備を手に入れて[Exploding Palm][exploding_palm]で効率よく敵を爆殺できるようになったので、レベルが勝手に上がってしまったというのが実情です。
 
 Exploding Palmは
 
@@ -32,7 +32,7 @@ Exploding Palmは
 <iframe width="560" height="315" src="https://www.youtube.com/embed/76wg4tTNnIE" frameborder="0" allowfullscreen></iframe>
 </div>
 
-スパーン！と爆発するので気持ちがいいです。
+スパーン！ と爆発するので気持ちがいいです。
 
 ## 今後のスケジュール
 

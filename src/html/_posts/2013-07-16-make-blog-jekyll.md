@@ -3,10 +3,10 @@ layout: post
 title: jekyllでブログを作った
 categories: jekyll
 ---
-このブログは[jekyll](http://jekyllrb.com/)で作り、S3でホスティングしています。そのメモです。[github](https://github.com/pipboy3000/count0.org)でソースコードを公開しています。
+このブログは[Jekyll](http://jekyllrb.com/)で作り、S3でホスティングしています。そのメモです。[github](https://github.com/pipboy3000/count0.org)でソースコードを公開しています。
 
 ## 動機
-以前、tumblrで技術メモを書いていました。markdownも使えるので、良かったのですが、1つなんとかしたいところが。それはコードのシンタックスハイライト。fenced codeが使いたいがゆえにjekyllへの移行を決意しました。
+以前、Tumblrで技術メモを書いていました。Markdownも使えるので、良かったのですが、1つなんとかしたいところが。それはコードのシンタックスハイライト。Fenced Codeが使いたいがゆえにJekyllへの移行を決意しました。
 
 ## インストール
 Gemfile作って
@@ -55,17 +55,15 @@ author:
 ```
 
 ## ディレクトリレイアウト
-bundlerやgruntでディレクトリが散らかってきたので、テンプレートやスタイル、記事などはsourceディレクトリに配置。
+BundlerやGruntでディレクトリが散らかってきたので、テンプレートやスタイル、記事などはsourceディレクトリに配置。
 
 ## 作る
-htmlテンプレートは[html5bilderplate](http://html5boilerplate.com/)からファイルをダウンロードして、自分好みに。[liquid](http://liquidmarkup.org/)はsmartyやったことがあればだいたいわかるのとYAML Front Matterは便利だなという印象。  
-スタイルシートはcompassの手を借りてシコシコ書く。デザインは凝ったものではないので、コードはあまり書いていません。とはいえ、デザイナーではないのでなかなか苦戦した部分でもあります。
-あと仕事ではないのでレガシーブラウザは最初から考慮していません:(
+htmlテンプレートは[html5bilderplate](http://html5boilerplate.com/)からファイルをダウンロードして、自分好みに。[Liquid](http://liquidmarkup.org/)はSmartyをやったことがあれば理解が早いです。YAML Front Matterは便利だなという印象。  
 
 開発環境は走りながら整えて行きました。 
-最初はgruntとjekyllコマンドを別に動かしていて、まずjekyllコマンドをRakefileにまとめ、その次にforemanを使ってgruntとrakeコマンドを一緒に動かすようにしました。
+最初はgruntとjekyllコマンドを別に動かしていました。そしてjekyllコマンドをRakefileへまとめ、foremanを使ってgruntとRakeコマンドを一緒に動かしました。
 
-gruntはcompass、jekyllが生成したファイルを監視してlivereloadをキックしています。また、プレビュー用にwebサーバを動かしています。ローカルでブログを書いている時、jekyllは`bundle exec jekyll build --watch --drafts`です。
+GruntはCompass、Jekyllが生成したファイルを監視してlivereloadをキックしています。また、プレビュー用にwebサーバを動かしています。ローカルでブログを書いている時、jekyllは`bundle exec Jekyll build --watch --drafts`です。
 
 最終的には
 
@@ -73,14 +71,14 @@ gruntはcompass、jekyllが生成したファイルを監視してlivereloadを�
 bundle exec foreman start
 ```
 
-でgruntとjekyllが走って良い感じです。ついでにいうと`foreman`はheroku toolbeltでインストールされていたので、
+でGruntとJekyllが走って良い感じです。ついでにいうと`foreman`はheroku toolbeltでインストールされていたので、
 
 ``` bash
 foreman start
 ```
 
 で動かしていたのに気づきました。  
-localhost:9000をブラウザで開いておいて、chrome拡張のlivereloadをオン。これで記事のmarkdownやhtmlやjsやscssを編集するだけでプレビューが勝手に更新されるようになりました。快適。
+localhost:9000をブラウザで開いておいて、Chrome拡張のlivereloadをオン。これでファイルを編集するだけでプレビューが勝手に更新されるようになりました。快適。
 
 
 ## デプロイ
@@ -92,7 +90,7 @@ bundle exec s3_website cfg apply # html配信できるようにバケット設�
 bundle exec s3_website push # s3にファイルをアップロード
 ```
 
-AWSのアクセスIDと秘密キーが必要になります。s3_website.ymlに直接書き込むとgithubで公開できないので、`~/.aws_settings`なんてファイルに
+AWSのアクセスIDと秘密キーが必要になります。s3_website.ymlに直接書き込むとGitHubで公開できないので、`~/.aws_settings`なんてファイルに
 
 ``` bash
 export BLOG_AWS_ID=アクセスID
@@ -109,15 +107,15 @@ if [ -f ~/.aws_settings ]; then
 fi
 ```
 
-こんな面倒くさいことをしているのは`.bashrc`もgithubに公開しているからです。
+こんな面倒くさいことをしているのは`.bashrc`もGitHubに公開しているからです。
 
-s3_website自体は簡単便利なものですが、S3とかIAMの方が最初わけがわからず難易度は高いです。このAWS特有の方言、ルールみたいなのは何か名前がついているのだろうか。
+s3_website自体は簡単便利なものですが、S3とかIAMの方が難易度は高いです。このAWS特有の方言、ルールみたいなのは何か名前がついているのだろうか。
 
-## jekyllで作ってみて
-rssの出力、カテゴリー別記事一覧、コメント等普通のブログでは当たり前のように存在している機能が標準ではないので、つまづくところかもしれません。逆に欲しい機能は自分でなんとかする。という意気込みが必要というと敷居が高くなりますが、試行錯誤は必要かなと思います。面倒ならば、[octopress](http://octopress.org/)という選択肢もあるし、sinatraで自分ブログシステムを作るのも有りではないでしょうか。あ、wordpressもいいですね。
+## Jekyllで作ってみて
+rssの出力、カテゴリー別記事一覧、コメント等普通のブログでは当たり前のように存在している機能が標準ではないので、つまづくところかもしれません。逆に欲しい機能は自分でなんとかする。という意気込みが必要というと敷居が高くなりますが、試行錯誤は必要かなと思います。面倒ならば、[octopress](http://octopress.org/)という選択肢もあるし、Sinatraで自分ブログシステムを作るのも有りではないでしょうか。あ、wordpressもいいですね。
 
-## 追記 windowsで動かす場合
-仕事でもjekyllを使おうと試みたのですが、windows xp, ruby 2.0の環境ではエンコーディングエラーやyajlのエラーでまともに使えませんでした。エンコーディングに関しては https://github.com/mojombo/jekyll/pull/1449 が取り込まれるので近々どうにかなりそう。yajlに関してはjekyllの問題ではなくyajl-rubyの問題のようです。https://github.com/brianmario/yajl-ruby/issues/116 に詳細が書かれています。
+## 追記 Windowsで動かす場合
+仕事でもJekyllを使おうと試みたのですが、Windows XP, Ruby 2.0の環境ではエンコーディングエラーやyajlのエラーでまともに使えませんでした。エンコーディングに関しては https://github.com/mojombo/jekyll/pull/1449 が取り込まれるので近々どうにかなりそう。yajlに関してはJekyllの問題ではなくyajl-Rubyの問題のようです。https://github.com/brianmario/yajl-ruby/issues/116 に詳細が書かれています。
 
 ## 関連
-* [jekyllのカテゴリーページ]({% post_url 2013-07-04-jekyll-category-page %})
+* [Jekyllのカテゴリーページ]({% post_url 2013-07-04-jekyll-category-page %})

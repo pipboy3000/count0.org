@@ -3,10 +3,10 @@ layout: post
 title: Font Awesomeのscssを使った
 categories: scss
 ---
-このブログではSymbolsetの[Social Regular](https://symbolset.com/icons/social-regular)というアイコンを使っていました。このアイコンはオープンソースではないので、このブログのgithubリポジトリには含めることが出来ませんでした。なにか歯抜けのような気分だったので、他のアイコンに乗り換えようとおもいつつも月日が過ぎて行きました。
+このブログではSymbolsetの[Social Regular](https://symbolset.com/icons/social-regular)というアイコンを使っていました。このアイコンはオープンソースではないので、このブログのGitHubリポジトリには含めることが出来ませんでした。なにか歯抜けのような気分だったので、他のアイコンに乗り換えようとおもいつつも月日が過ぎて行きました。
 
 ## Font Awesome
-Font Awesomeというとlessで作られている、Bootstrapで使うものという印象が強かったのですが、最近のバージョンではlessだけではなくscss版も提供されているので、こいつを使おうと思いました。
+Font Awesomeというとlessで作られているBootstrapで使うものという印象が強かったのですが、最近のバージョンではlessだけではなくscss版も提供されているので、こいつを使おうと思いました。
 
 ## font-awesome-sassがあるじゃないか。
 [Get Started](http://fontawesome.io/get-started/)のページに書かれていますが、`font-awesome-sass`というgemがあります。これを使えばいいじゃないかと思うのですが、残念ながらrailsで利用されることを前提にしている模様。non railsな環境では使いにくいです。
@@ -14,7 +14,7 @@ Font Awesomeというとlessで作られている、Bootstrapで使うものと�
 ## 自分の環境に組み込む
 結局zipファイルをダウンロードして、このブログのscssに組み込みました。ディレクトリレイアウトは以下の通りで[The Sass WayのHow to structure a Sass project](http://thesassway.com/beginner/how-to-structure-a-sass-project)を参考にしています。最近のマイブームなディレクトリレイアウトです。
 
-jekyllで`src/_assets/scss/style.scss`が`_site/css/style.css`に出力され、`src/fonts`は`_site/fonts`に出力されるようにしています。`_site`はウェブルートになるディレクトリです。
+jekyllで`src/_assets/scss/style.scss`が`_site/css/style.css`へ出力され、`src/fonts`は`_site/fonts`へ出力されるようにしています。`_site`はウェブルートになるディレクトリです。
 
 ```
 src
@@ -81,4 +81,4 @@ src
 @import "vendor/font-awesome";
 ```
 
-これでアイコンが使えます<i class="fa fa-thumbs-o-up"></i>(markdown文章に生なhtmlを書くのは抵抗ありますが・・・)
+これでアイコンが使えます<i class="fa fa-thumbs-o-up"></i>(markdown文章に生なhtmlを書くのは抵抗ありますが…)

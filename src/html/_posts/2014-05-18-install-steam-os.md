@@ -5,20 +5,20 @@ categories: linux
 ---
 [はじめての自作PC][1]のきっかけとなった壊れたXPS8100にSteam OSをインストールしてみました。
 
-まず故障したHDDを<a href="http://www.amazon.co.jp/gp/product/B009QWUF9E/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B009QWUF9E&linkCode=as2&tag=count_0-22">安いHDD</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B009QWUF9E" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />に取り替えました。次に地味なところなのですが、テレビとHDMI接続する際にグラボ側には<a href="http://www.amazon.co.jp/gp/product/B00GZIHSNI/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00GZIHSNI&linkCode=as2&tag=count_0-22">HDMIの変換コネクタ</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B00GZIHSNI" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />が必要だったりします。後述しますが、ゲームのコントローラーがあると助かります。使いすぎても安心の耐久性を誇る<a href="http://www.amazon.co.jp/gp/product/B004R1R9IO/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B004R1R9IO&linkCode=as2&tag=count_0-22">XBOXのコントローラー</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B004R1R9IO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />がオススメです。
+まず故障したHDDを<a href="http://www.amazon.co.jp/gp/product/B009QWUF9E/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B009QWUF9E&linkCode=as2&tag=count_0-22">安いHDD</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B009QWUF9E" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />へ取り替えました。次に地味なところなのですが、テレビとHDMI接続する際グラボ側には<a href="http://www.amazon.co.jp/gp/product/B00GZIHSNI/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B00GZIHSNI&linkCode=as2&tag=count_0-22">HDMIの変換コネクタ</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B00GZIHSNI" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />が必要だったりします。後述しますが、ゲームのコントローラーがあると助かります。使いすぎても安心の耐久性を誇る<a href="http://www.amazon.co.jp/gp/product/B004R1R9IO/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=B004R1R9IO&linkCode=as2&tag=count_0-22">XBOXのコントローラー</a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=count_0-22&l=as2&o=9&a=B004R1R9IO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />がオススメです。
 
 [Build your own Steam Machine][2]に書かれている必須スペックは
 
 * IntelかAMDの64bitプロセッサ
 * 4GB以上のメモリ
 * 500GB以上のHDD
-* NVIDIAのグラボ(AMDとIntelのサポートはもうすぐさ！)
+* NVIDIAのグラボ(AMDとIntelのサポートはもうすぐさ！ )
 * UEFIブートできるマザボ
 * USBスティックを使ってインストールするのでUSBポート
 
 問題なしと思いきや、XPS8100はUEFIをサポートしていませんでした。終わり。
 
-が、終わりません。Valveは[UEFIをサポートしていないシステム向けのISO][3]をリリースしていました。すばらしい。ISOを[Win32 Disk Imager][3]を使ってUSBスティックに書き込めばインストールメディアの出来上がりです。
+が、終わりません。Valveは[UEFIをサポートしていないシステム向けのISO][3]をリリースしていました。すばらしい。ISOを[Win32 ディスク Imager][3]を使ってUSBスティックに書き込めばインストールメディアの出来上がりです。
 
 あとはUSBスティックをPCに差し、PC起動時にF12連打でブートメニューを呼び出し、USBスティックから起動します。Windowsとデュアルブートすることもないので、`Automatic Install`でHDDの中身を全部消しシステムをインストールします。
 

@@ -7,7 +7,7 @@ categories: windows game
 
 グラフィックボードをGeforce 750TiからGTX1060に交換して、240GBのSSDを追加した。我が家のWindows 10という多機能OSを搭載したゲーム機は拡張性があるので、これくらいの追加は朝飯前なのだ。
 
-どちらもツクモで手に入れた。SSDの方はセールで安くなっていたCFDの240GB。グラボは玄人志向のもの。価格差が数千円、オーバークロックもほんの少し高い[ZOTACのGTX20160][zotac]と悩んだので、店員さんに話を聞いて、特に玄人志向だから嫌ということもなかったので、玄人志向で。
+どちらもツクモで手に入れた。SSDの方はセールで安くなっていたCFDの240GB。グラボは玄人志向のもの。価格差が数千円、オーバークロックもほんの少し高い[ZOTACのGTX20160][zotac]と悩んだので、店員さんに話を聞いて特に玄人志向だから嫌ということもなかったので、玄人志向で。
 
 <div class="amazon-block"><div class="image"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01IOPM1TK/count_0-22" target="_blank"><img src="http://ecx.images-amazon.com/images/I/517vCsiuu8L.jpg" /></a></div><div class="title"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01IOPM1TK/count_0-22" target="_blank">玄人志向 ビデオカードGEFORCE GTX 1060搭載 GF-GTX1060-6GB/OC/DF</a></div><div class="label">玄人志向</div><div class="binding">Personal Computers</div><div class="rank">Sales Rank: 5630</div><a class="link" href="http://www.amazon.co.jp/exec/obidos/ASIN/B01IOPM1TK/count_0-22">Amazonで詳細を見る</a></div>
 

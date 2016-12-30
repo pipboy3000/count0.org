@@ -120,7 +120,7 @@ Route53でAレコードの`Alias Target`を作成したCloudfrontのDomain Name(
 
 ## s3_website
 
-ブログをS3にデプロイするのに使っている[s3_website][s3_website]の設定を編集します。`s3_website.yml`に`cloudfront_distribution_id`を追記しました。値は作成したCloudfrontのdestributionのID。それに加えブログ更新に使っているIAMのグループに対してCloudfrontFullAccessのポリシーを追加しました。これでブログを更新したらCloudfrontも更新されるようになります。
+ブログをS3へデプロイするのに使っている[s3_website][s3_website]の設定を編集します。`s3_website.yml`に`cloudfront_distribution_id`を追記しました。値は作成したCloudfrontのdestributionのID。それに加えブログ更新用IAMのグループに対してCloudfrontFullAccessのポリシーを追加しました。これでブログを更新したらCloudfrontも更新されるようになります。
 
 ## 今後
 

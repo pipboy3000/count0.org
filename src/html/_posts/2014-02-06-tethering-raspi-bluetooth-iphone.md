@@ -63,7 +63,7 @@ sudo bluez-simple-agent hci0 XX:XX:XX:XX:XX:XX # ペアリング
 sudo perl -i -pe 's/KeyboardDisplay/DisplayYesNo/' /usr/bin/bluez-simple-agent
 ```
 
-再度ペアリングを試みるとPINコードのかわりに`Yes/No`になります。ここで`yes`を入力してペアリングします。iPhone側でも許可ペアリングを許可します。そしてペアリングを保持します。
+再度ペアリングを試みるとPINコードのかわりに`Yes/No`と表示されます。ここで`yes`を入力してペアリングします。iPhone側でも許可ペアリングを許可します。そしてペアリングを保持します。
 
 ``` bash
 sudo bluez-simple-agent hci0 XX:XX:XX:XX:XX:XX # ペアリング
@@ -71,7 +71,7 @@ sudo bluez-test-device trusted XX:XX:XX:XX:XX:XX yes
 ```
 
 ## テザリング
-ペアリングとテザリングが成功すると`bnep0`というインターフェイスになるので、予め設定を書き込んでおきます。そしてPAN接続でテザリングです。
+ペアリングとテザリングが成功すると`bnep0`というインタフェースになるので、予め設定を書き込んでおきます。そしてPAN接続でテザリングです。
 
 ``` bash
 echo "echo 'iface bnep0 inet dhcp' >> /etc/network/interfaces" | sudo sh
@@ -98,7 +98,7 @@ fi
 exit 0
 ```
 
-`eth0`もしくは無線LANで`wlan0`のインターフェイスが優先されるようで、どちらも接続されていない時に`bnep0`が通信に使われました。これはmetricの値を変更すれば良いと思いますが、ここまで設定して力尽きました。
+`eth0`もしくは無線LANで`wlan0`のインタフェースが優先されるようで、どちらも接続されていない時に`bnep0`が通信に使われました。これはmetricの値を変更すれば良いと思いますが、ここまで設定して力尽きました。
 
 ### 参考
 * [Raspberry Pi Bluetooth iPhone Tethering - blog.wolfteck.com][5]

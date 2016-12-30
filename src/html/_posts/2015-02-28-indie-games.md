@@ -10,7 +10,7 @@ categories: game
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9dhfsg1waxk" frameborder="0" allowfullscreen></iframe>
 </div>
 
-Metroidvania[^metroidvania]と呼ばれるジャンルのゲームでギリシア神話をモチーフにしています。グラフィックが壁画調で、これがモリモリ動くのがおもしろそうで購入しました。ベータ版からプレイしていたので、バグ報告でお役に立てたかなと思っています。難易度はこのジャンルにしては優しいかな。
+Metroidvania[^metroidvania]と呼ばれるジャンルのゲームでギリシア神話をモチーフにしています。グラフィックが壁画調で、モリモリ動くのがおもしろそうで購入しました。ベータ版からプレイしていたので、バグ報告でお役に立てたかなと思っています。難易度はこのジャンルにしては優しいかな。
 
 ## [Darkest Dungeon][dd]
 
@@ -34,7 +34,7 @@ Kickstarterで投資してゲットしました。[マイク・ミニョーラ�
 <iframe width="560" height="315" src="https://www.youtube.com/embed/n-aG7E9gTNI" frameborder="0" allowfullscreen></iframe>
 </div>
 
-こちらもレゴのように自分で攻城兵器を組み立ててステージをクリアするゲームです。物理エンジンを積んでいるので、ちゃんと強度も考えて組み立てないと大砲を撃った瞬間自機がバラバラになったりする愉快な兵器がつくれます。今の所アルファ版なので、遊べるステージが少ないです。Youtubeで世界中の人が夢のある兵器を作っていて勉強になります。
+こちらもレゴのように自分で攻城兵器を組み立ててステージをクリアするゲームです。物理エンジンを積んでいるので、ちゃんと強度も考えて組み立てないと大砲を撃った瞬間自機がバラバラになったりする愉快な兵器がつくれます。今の所アルファ版なので、遊べるステージが少ないです。YouTubeで世界中の人が夢のある兵器を作っていて勉強になります。
 
 [^metroidvania]: メトロイド(Metroid)と悪魔城ドラキュラ(Castlevania)のようなゲームのこと。探索型2Dアクションゲーム。
 [apo]: http://www.alientrap.org/games/apotheon
