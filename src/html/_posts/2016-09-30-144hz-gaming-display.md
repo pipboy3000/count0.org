@@ -18,4 +18,6 @@ categories: windows game
 
 若干歯切れの悪い感じがするのは、遊ぶゲームのほとんどがスピード感のないゲームということもある。最近夢中になったのはセールで手に入れたPunch ClubであったりPrison Architectだ。Fallout 4にそこまでスピード感を求めないし、GTA 5では安定して60fps以上でなかった。Redoutぐらいスピード感のゲームで60fps以上出せればまた違うのかもしれない。プレイする機会があればいいのだが。
 
+<div class="steam-widget">
 <iframe src="http://store.steampowered.com/widget/517710/" frameborder="0" width="646" height="190"></iframe>
+</div>

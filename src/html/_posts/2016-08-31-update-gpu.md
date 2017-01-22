@@ -15,7 +15,9 @@ categories: windows game
 
 しかし、悲しいかな手に入れた時点で最も遊んでいるゲームはRimworld。とても面白いゲームだけど、GPUをフル活用する類のゲームではない。
 
+<div class="steam-widget">
 <iframe src="http://store.steampowered.com/widget/294100/41602/" frameborder="0" width="646" height="190"></iframe>
+</div>
 
 VR readyな能力を手に入れたので、HTC Viveをポンと買える余裕があればいいのだけど、現実はそんなに甘くない。それよりも7年使ったディスプレイの調子が悪いので、そろそろ買い替えを考えなければいけない。リフレッシュレート144Hzのゲーミングディスプレイにしようと思っているが、そんなにFPSで遊ばないので、どうしたもんか悩んでいる。
 
