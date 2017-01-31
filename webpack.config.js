@@ -9,12 +9,13 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: ['babel'],
-        query: {
-          presets: ['react', 'es2015']
-        }
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel'
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue'
       },
       {
         test: /\.gif/,
@@ -52,7 +53,10 @@ module.exports = {
     new ExtractTextPlugin('style.css', { allChunks: true })
   ],
   resolve: {
-    extensions: [ '', '.js', '.jsx' ]
+    extensions: [ '', '.js', ],
+    alias: {
+      'vue$': 'vue/dist/vue.common.js'
+    }
   },
   postcss: function(webpack) {
     return {
@@ -63,4 +67,10 @@ module.exports = {
     includePaths: [ path.resolve(__dirname, 'src', 'scss') ],
     importer: moduleInporter()
   },
+  devtool: 'source-map',
+  vue: {
+    loaders: {
+      js: 'babel'
+    }
+  }
 };

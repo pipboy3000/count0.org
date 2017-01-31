@@ -17,6 +17,11 @@ layout: default
       {{ content }}
     </div>
 
-    <div class="related-posts-container"></div>
+    <div id="related-posts" class='related-posts'>
+      <div class="header">カテゴリーの他の記事</div>
+      <div class="list">
+        <related-posts v-for="post in posts" :post="post"></related-posts>
+      </div>
+    </div>
   </div>
 </div>

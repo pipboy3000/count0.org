@@ -1,22 +1,21 @@
 import 'babel-polyfill';
 import hljs from 'highlight.js';
 import _ from 'lodash';
-import React from 'react';
-import { render } from 'react-dom';
-import RelatedPosts from './components/related-posts';
+import Vue from 'vue';
 import '../scss/style.scss';
+import axios from 'axios';
 
 // shorthand
-var q = (selector) => document.querySelector(selector)
-var qa = (selector) => document.querySelectorAll(selector);
+const q = (selector) => document.querySelector(selector)
+const qa = (selector) => document.querySelectorAll(selector);
 
 // highlight.js
 hljs.initHighlightingOnLoad();
 
 // mobile header transform 
 window.addEventListener('scroll', (e) => {
-  var header = q('.layout-document > .header');
-  var header_height = getComputedStyle(header).height.split('px')[0];
+  const header = q('.layout-document > .header');
+  const header_height = getComputedStyle(header).height.split('px')[0];
 
   if (window.pageYOffset < (header_height)) {
     if (header.classList.contains('-mini')) {
@@ -32,8 +31,41 @@ window.addEventListener('scroll', (e) => {
 }, false);
 
 // related posts
-var related_posts_mount = q('.related-posts-container');
-if (related_posts_mount) {
-  var categories = _.map(qa('.meta .category'), item => item.innerText);
-  render(<RelatedPosts categories={categories} />, related_posts_mount);
+import RelatedPosts from './components/related-posts.vue'
+Vue.component('related-posts', RelatedPosts);
+
+Vue.component('related-posts-item', {
+  template: '<a href="">item</a>'
+});
+
+new Vue({
+  el: '#related-posts',
+  data: {
+    categories: [],
+    posts: []
+  },
+  created: function() {
+    this.categories = _.map(qa('.meta .category'), item => item.innerText);
+    Promise.all(this.categories.map(category => getJSON(category)))
+            .then(results => {
+              const all_posts =  _.uniqBy(_.flatten(results), 'id');
+              const sorted = _.sortBy(all_posts, post => Date.parse(post.date)).reverse();
+              this.posts = sorted;
+            })
+            .catch(err => console.error(err));
+    
+  }
+}).$mount('#related-posts');
+
+function getJSON(category) {
+  return new Promise((resolve, reject) => {
+    axios.get(`/categories/${category}/index.json`)
+          .then((res) => {
+            resolve(res.data);
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+  });
 }
+
