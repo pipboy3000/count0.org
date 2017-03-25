@@ -32,9 +32,7 @@
 <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
 <meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ description }}">
-{% if page.featureimage %}
-<meta name="twitter:image" content="{{ page.featureimage }}">
-{% endif %}
+<meta name="twitter:image" content="{{ site.logo | prepend: site.baseurl | prepend: site.url }}">
 
 <!-- facebook -->
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
@@ -42,6 +40,4 @@
 <meta property="og:site_name" content="{{ site.name }}">
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ description }}">
-{% if page.featureimage %}
-<meta property="og:image" content="{{ page.featureimage }}">
-{% endif %}
+<meta property="og:image" content="{{ site.logo | prepend: site.baseurl | prepend: site.url }}">
