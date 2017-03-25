@@ -12,3 +12,4 @@ author:
   email:   shakeforme&#64;gmail.com
   twitter: '@count0'
 keep_files: ['assets', 'images']
+logo: '/images/logo.svg'
