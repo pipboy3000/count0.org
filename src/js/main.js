@@ -1,9 +1,9 @@
 import 'babel-polyfill';
-import hljs from 'highlight.js';
 import _ from 'lodash';
+import axios from 'axios';
+import hljs from 'highlight.js';
 import Vue from 'vue';
 import '../scss/style.scss';
-import axios from 'axios';
 
 // shorthand
 const q = (selector) => document.querySelector(selector)
