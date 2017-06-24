@@ -3,6 +3,7 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const moduleImporter = require('sass-module-importer');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const BabiliPlugin = require('babili-webpack-plugin')
 
 module.exports = {
   module: {
@@ -79,3 +80,15 @@ module.exports = {
   },
   devtool: 'source-map'
 };
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: 'production'
+      }
+    }),
+    new BabiliPlugin(),
+    new webpack.LoaderOptionsPlugin({ minimize: true })
+  ])
+}
