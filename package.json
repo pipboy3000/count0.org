@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --progress --color --hot --inline --content-base ./dist/",
-    "build": "webpack --progress --color --profile",
+    "build": "webpack --color --profile",
     "publish": "bundle exec jekyll build && npm run build && npm run imagemin && bundle exec s3_website push",
     "imagemin": "mkdir -p dist/images;imagemin src/images/* --out-dir=dist/images"
   },
