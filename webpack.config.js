@@ -1,8 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
-const precss = require('precss');
-const moduleInporter = require('sass-module-importer');
+const moduleImporter = require('sass-module-importer');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
@@ -11,11 +10,11 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel-loader'
       },
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader'
       },
       {
         test: /\.gif/,
@@ -39,7 +38,23 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', ['css-loader', 'postcss-loader', 'sass-loader'])
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {loader: 'css-loader'},
+            {
+              loader: 'postcss-loader',
+              options: { plugins: [autoprefixer] } 
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                includePaths: [ path.resolve(__dirname, 'src', 'scss') ],
+                importer: moduleImporter()
+              }
+            }
+          ]
+        })
       }
     ]
   },
@@ -50,27 +65,17 @@ module.exports = {
     publicPath: '/assets/'
   },
   plugins: [
-    new ExtractTextPlugin('style.css', { allChunks: true })
+    new ExtractTextPlugin({
+      filename: 'style.css',
+      allChunks: true,
+      disable: false
+    })
   ],
   resolve: {
-    extensions: [ '', '.js', ],
+    extensions: ['.js',],
     alias: {
       'vue$': 'vue/dist/vue.common.js'
     }
   },
-  postcss: function(webpack) {
-    return {
-      plugins: [ autoprefixer, precss ]
-    }
-  },
-  sassLoader: {
-    includePaths: [ path.resolve(__dirname, 'src', 'scss') ],
-    importer: moduleInporter()
-  },
-  devtool: 'source-map',
-  vue: {
-    loaders: {
-      js: 'babel'
-    }
-  }
+  devtool: 'source-map'
 };
