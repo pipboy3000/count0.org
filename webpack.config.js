@@ -1,20 +1,21 @@
 const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
-const precss = require('precss');
-const moduleInporter = require('sass-module-importer');
+const moduleImporter = require('sass-module-importer');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const BabiliPlugin = require('babili-webpack-plugin')
 
 module.exports = {
   module: {
     loaders: [
       {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: ['babel'],
-        query: {
-          presets: ['react', 'es2015']
-        }
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       },
       {
         test: /\.gif/,
@@ -38,7 +39,23 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', ['css-loader', 'postcss-loader', 'sass-loader'])
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {loader: 'css-loader'},
+            {
+              loader: 'postcss-loader',
+              options: { plugins: [autoprefixer] } 
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                includePaths: [ path.resolve(__dirname, 'src', 'scss') ],
+                importer: moduleImporter()
+              }
+            }
+          ]
+        })
       }
     ]
   },
@@ -49,18 +66,29 @@ module.exports = {
     publicPath: '/assets/'
   },
   plugins: [
-    new ExtractTextPlugin('style.css', { allChunks: true })
+    new ExtractTextPlugin({
+      filename: 'style.css',
+      allChunks: true,
+      disable: false
+    })
   ],
   resolve: {
-    extensions: [ '', '.js', '.jsx' ]
-  },
-  postcss: function(webpack) {
-    return {
-      plugins: [ autoprefixer, precss ]
+    extensions: ['.js',],
+    alias: {
+      'vue$': 'vue/dist/vue.common.js'
     }
   },
-  sassLoader: {
-    includePaths: [ path.resolve(__dirname, 'src', 'scss') ],
-    importer: moduleInporter()
-  },
+  devtool: 'source-map'
 };
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: 'production'
+      }
+    }),
+    new BabiliPlugin(),
+    new webpack.LoaderOptionsPlugin({ minimize: true })
+  ])
+}

@@ -1,39 +1,22 @@
 import 'babel-polyfill';
 import hljs from 'highlight.js';
-import _ from 'lodash';
-import React from 'react';
-import { render } from 'react-dom';
-import RelatedPosts from './components/related-posts';
+import Vue from 'vue';
+import mobileHeader from './mobileHeader'
 import '../scss/style.scss';
-
-// shorthand
-var q = (selector) => document.querySelector(selector)
-var qa = (selector) => document.querySelectorAll(selector);
 
 // highlight.js
 hljs.initHighlightingOnLoad();
 
 // mobile header transform 
-window.addEventListener('scroll', (e) => {
-  var header = q('.layout-document > .header');
-  var header_height = getComputedStyle(header).height.split('px')[0];
+mobileHeader()
 
-  if (window.pageYOffset < (header_height)) {
-    if (header.classList.contains('-mini')) {
-      header.classList.remove('-mini');
-    }
-  } 
+// Vue
+import RelatedPosts from './components/RelatedPosts.vue'
 
-  if (window.pageYOffset > (header_height / 2)) {
-    if (!header.classList.contains('-mini')) {
-      header.classList.add('-mini');
-    }
-  }
-}, false);
-
-// related posts
-var related_posts_mount = q('.related-posts-container');
-if (related_posts_mount) {
-  var categories = _.map(qa('.meta .category'), item => item.innerText);
-  render(<RelatedPosts categories={categories} />, related_posts_mount);
-}
+new Vue({
+  el: '#related-posts',
+  components: {
+    RelatedPosts
+  },
+  template: '<RelatedPosts></RelatedPosts>'
+});
