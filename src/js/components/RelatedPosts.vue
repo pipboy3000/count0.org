@@ -44,10 +44,12 @@ export default {
   },
   created: function () {
     this.categories = categoriesFromPost()
+    const pathname = window.location.pathname
 
     Promise.all(this.categories.map(category => getCategoryJSON(category)))
       .then(results => {
-        const all_posts = _.uniqBy(_.flatten(results), 'id');
+        const all_posts = _(results).flatten()
+          .reject(post => post.url === pathname).uniqBy('id').value()
         const sorted_posts = _.sortBy(all_posts, post => Date.parse(post.date)).reverse();
         const posts = _.take(sorted_posts, this.num)
         this.posts = posts;
