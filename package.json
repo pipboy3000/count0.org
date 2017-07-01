@@ -2,7 +2,7 @@
   "name": "count0.org",
   "version": "0.1.0",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --progress --color --hot --inline --content-base ./dist/",
+    "start": "NODE_ENV=development webpack-dev-server --color --hot --inline --content-base ./dist/",
     "build": "NODE_ENV=production webpack --color --profile --progress --hide-modules",
     "publish": "bundle exec jekyll build && npm run build && npm run imagemin && bundle exec s3_website push",
     "imagemin": "mkdir -p dist/images;imagemin src/images/* --out-dir=dist/images"
