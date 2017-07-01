@@ -48,8 +48,7 @@ export default {
 
     Promise.all(this.categories.map(category => getCategoryJSON(category)))
       .then(results => {
-        const all_posts = _(results).flatten()
-          .reject(post => post.url === pathname).uniqBy('id').value()
+        const all_posts = _.uniqBy(_.reject(_.flatten(results), post => post.url === pathname), 'id')
         const sorted_posts = _.sortBy(all_posts, post => Date.parse(post.date)).reverse();
         const posts = _.take(sorted_posts, this.num)
         this.posts = posts;
