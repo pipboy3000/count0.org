@@ -4,7 +4,7 @@ title: Raspberry PiからBluetoothを使ってiPhoneでテザリング
 categories: raspberrypi
 ---
 
-この情報はとても古いのでよければ[2017年における方法](/2017/07/16/tethering-raspi-bluetooth-iphone-2017.html)を書きました。よければそちらを参考にしてください。
+この情報はとても古いので[2017年における方法](/2017/07/16/tethering-raspi-bluetooth-iphone-2017.html)を書きました。よければそちらを参考にしてください。
 
 ---
 

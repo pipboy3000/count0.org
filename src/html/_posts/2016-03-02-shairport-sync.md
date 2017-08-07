@@ -17,7 +17,7 @@ Raspberry Pi B+でOSはRaspbian Jessie Lite、USBスピーカーは[OlasonicのT
 すでにインストール済みのパッケージも幾つかあるかもしれませんが、以下のパッケージをインストールします。
 
 ```bash
-sudo apt-get install autoconf automake libtool libdaemon-dev libasound2-dev libpopt-dev libconfig-dev libsoxr-dev libssl-dev
+sudo apt-get install autoconf automake libtool libdaemon-dev libasound2-dev libpopt-dev libconfig-dev libsoxr-dev libssl-dev avahi-daemon libavahi-client-dev
 ```
 
 ソースコードをダウンロードしてビルドします。
