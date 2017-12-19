@@ -8,7 +8,7 @@
     "imagemin": "mkdir -p dist/images;imagemin src/images/* --out-dir=dist/images"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.1",
+    "autoprefixer": "^7.1.2",
     "babel-core": "^6.14.0",
     "babel-loader": "^7.1.0",
     "babel-plugin-lodash": "^3.2.11",
@@ -18,7 +18,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "babili-webpack-plugin": "^0.1.1",
     "css-loader": "^0.28.4",
-    "extract-text-webpack-plugin": "^2.1.2",
+    "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "imagemin-cli": "^3.0.0",
     "node-sass": "^4.5.3",
@@ -27,10 +27,10 @@
     "sass-module-importer": "^1.2.1",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.7",
-    "vue-loader": "^13.0.0",
-    "vue-template-compiler": "^2.1.10",
-    "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0"
+    "vue-loader": "^13.0.4",
+    "vue-template-compiler": "^2.4.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -38,7 +38,7 @@
     "highlight.js": "^9.0.0",
     "lodash": "^4.15.0",
     "normalize.css": "^7.0.0",
-    "vue": "^2.1.10"
+    "vue": "^2.4.2"
   },
   "main": "index.js",
   "repository": "https://github.com/pipboy3000/count0.org.git",
