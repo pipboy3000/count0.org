@@ -1,9 +1,9 @@
-const webpack = require('webpack');
-const path = require('path');
-const autoprefixer = require('autoprefixer');
-const moduleImporter = require('sass-module-importer');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const BabiliPlugin = require('babili-webpack-plugin')
+const webpack = require('webpack')
+const path = require('path')
+const autoprefixer = require('autoprefixer')
+const moduleImporter = require('sass-module-importer')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   module: {
@@ -88,7 +88,7 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new BabiliPlugin(),
+    new UglifyJsPlugin(),
     new webpack.LoaderOptionsPlugin({ minimize: true })
   ])
 }
