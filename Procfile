@@ -1,2 +1,2 @@
-jekyll: bundle exec jekyll build --watch
+jekyll: bundle exec jekyll build --watch --drafts
 webpack: npm start
