@@ -5,5 +5,6 @@ gem 'jekyll'
 gem 's3_website'
 gem 'rake'
 gem 'foreman'
+gem 'rouge'
 
 gem 'pry'

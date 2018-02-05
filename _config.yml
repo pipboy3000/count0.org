@@ -2,8 +2,10 @@ source:      ./src/html
 destination: ./dist
 timezone:    Asia/Tokyo
 permalink:   /:year/:month/:day/:title.html
+markdown: kramdown
 kramdown:
   input: GFM
+  syntax_highlighter: rouge
 url:          http://count0.org
 name:         count0.org
 analytics_id: UA-357228-7
