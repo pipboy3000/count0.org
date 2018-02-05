@@ -63,7 +63,9 @@ document.addEventListener('turbolinks:load', () => {
 
 ## 応用
 
-コンパイラを含むVue.jsの完全版を利用しているので、DOMテンプレートを利用できる。以下のようにRailsのコントローラーから渡された変数をVue.jsのコンポーネントに受け渡すことができる。
+コンパイラを含むVue.jsの完全版を利用しているので、DOMテンプレートを利用できる。
+以下のようにRailsのコントローラーから渡された変数をVue.jsのコンポーネントに受け渡すことができる。
+
 
 ``` slim
 / RailsのViewテンプレート.slim
@@ -95,12 +97,12 @@ document.addEventListener('turbolinks:load', () => {
 });
 ```
 
-RailsということでActionView::FormHelperも使えるのでこんなこともできるが、これは横着である。
+RailsということでActionView::FormHelperも使える。こんなこともできるが、これは横着である。
 
 ``` slim
 / RailsのViewテンプレート.slim
 = form_with model: Item.new do |f|
-  .form-grpup#mount-point
+  .form-group#mount-point
     = f.text_field :name,
                    class: 'form-control',
                    'v-model.trim' 'nameValue',
@@ -148,6 +150,8 @@ document.addEventListener('turbolinks:load', () => {
 
 やはりTurbolinksなのでSPAのような動きをしているが、違うのである。
 
+その他にVue.jsはDOMをテンプレートとして利用できるが、[特有の注意事項][vue-dom-template]を理解した上で利用するとよい。
+
 ## まとめ
 
 * Turbolinksは共存できる。
@@ -160,3 +164,4 @@ document.addEventListener('turbolinks:load', () => {
 [vue-turbolinks]: https://github.com/jeffreyguenther/vue-turbolinks
 [vue-persistedstate]: https://github.com/robinvdvleuten/vuex-persistedstate
 [chartkick]: https://www.chartkick.com/
+[vue-dom-template]: https://jp.vuejs.org/v2/guide/components.html#DOM-%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E8%A7%A3%E6%9E%90%E3%81%AE%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85
