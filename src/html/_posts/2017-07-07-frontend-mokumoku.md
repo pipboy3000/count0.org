@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'フロントエンドもくもく会#05でもくもくしてきた'
-categories: js
+categories: js event
 ---
 HTML5NAGOYAのフロントエンドもくもく会 #5に参加してきた。これは会場に集まって黙々と自分の設定した課題にチャレンジするというものである。
 

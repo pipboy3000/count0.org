@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 第一回Swiftハッカソンに参加した
-categories: swift
+categories: swift event
 ---
 [第１回名古屋Swiftハッカソン（Swift初心者向けワークショップもあり）][1]の初心者向けワークショップの方に参加してきました。
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: nagoya.vimに行ってきました
-categories: vim
+categories: vim event
 ---
 [nagoya.vim #1](http://connpass.com/event/3179/) 9/7 12:15 start at [station](http://station-share.com/)に行ってきました。そのメモです。結論からいうとhelp読め。英語苦手なら日本語help読めです。
 
