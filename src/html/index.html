@@ -3,30 +3,30 @@ layout: default
 ---
 <div class="container">
   <div class="page-title">
-    <h2 class="logo">
-      <a href="/" class="action">
-        <div class="image"></div>
-        <div class="title">{{ site.name }}</div>
-      </a>
-    </h2>
-    <p>Web製作者、プログラマーである<a href="/about.html">Asai Masami</a>の個人サイトです。メールアドレスは<a href="mailto:asaimasami@count0.org">asaimasami@count0.org</a>、Twitterは<a href="https://twitter.con/count0">@count0</a>、Facebookは<a href="https://www.facebook.com/count000">こちら</a>です。</p>
+    <p>
+      アサイマサミの個人サイトです。このサイトについては<a href='/about.html'>About</a>へ。すべてのテキストは<a href='/archives/'>Archives</a>で閲覧できます。
+    </p>
   </div>
 
   <div class="page-title">
-    <h2 class="title">最新の記事</h2>
+    <h2 class="title">最近のテキスト</h2>
   </div>
 
-  {% for post in site.posts limit:10 %}
-  <div class="article">
-    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <div class="meta">
-      <span class="item date">{{ post.date | date_to_long_string }}</span>
-      {% for category in post.categories %}
-      <a href="/categories/{{category}}" class="item category">{{ category }}</a>
-      {% endfor %}
-    </div> 
-    <p class="excerpt">{{ post.content | strip_html | strip_newlines | xml_escape | truncate: 120 }}</p>
+  <div class="article-list">
+    {% for post in site.posts limit:5 %}
+    <div class="article">
+      <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="meta">
+        <span class="item date">{{ post.date | date_to_long_string }}</span>
+        {% for category in post.categories %}
+        <a href="/categories/{{category}}" class="item category">{{ category }}</a>
+        {% endfor %}
+      </div> 
+    </div>
+    {% endfor %}
+    <hr>
+    <div class="article">
+      <h2 class="title"><a href="/archives/">過去のテキスト</a></h2>
+    </div>
   </div>
-  {% endfor %}
 </div>
-

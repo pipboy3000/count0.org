@@ -5,11 +5,11 @@
 \____/\____/\____/_/ |_/ /_/  \____(_)____/_/ |_|\____/   
                                                          
 # TEAM
-  Author:   Asai Masami
-  Contact:  asaimasami [at] count0.org
+  Author:   Masami Asai
+  Contact:  shakeforme@gmail.com
   Twitter:  @count0
   From:     Nagoya, Aichi, Japan.
 
 # SITE
   Doctype:  html5
-  Software: jekyll, gulp, sass
+  Software: jekyll, sass, vue

@@ -1,7 +1,0 @@
-module.exports = {
-  "rules": {
-    "preset-japanese": {
-      "sentence-length": false
-    }
-  }
-}
