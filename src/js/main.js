@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import Vue from 'vue';
 import mobileHeader from './mobileHeader'
 import '../scss/style.scss';
@@ -10,7 +9,7 @@ mobileHeader()
 import RelatedPosts from './components/RelatedPosts.vue'
 
 new Vue({
-  el: '#related-posts',
+  el: document.getElementById('related-posts'),
   components: {
     RelatedPosts
   },
