@@ -27,8 +27,5 @@ Diablo3でパラゴンレベルが100になりました。発売日からプレ�
 
 兎に角殴ってばかりですが、思ったよりも早く配信されるパッチ2.1で更に追加の要素があるのでこれから楽しみです。
 
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=count_0-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00KLXU8TO" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=count_0-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00KLXU8WG" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-
 [1]:http://www.gamespark.jp/article/2014/08/13/50795.html
 [2]:http://www.4gamer.net/games/036/G003691/20120707004/
