@@ -8,8 +8,8 @@ Vue.jsのPropsはObjectを渡せるので、コンポーネントに情報の塊
 
 ```js
 const person = {
-  first_name: 'Asai',
-  last_name: 'Masami'
+  first_name: 'Masami',
+  last_name: 'Asai'
 };
 
 Vue.extend({
@@ -43,8 +43,8 @@ Vue.extend({
 });
 
 const person: Person = {
-  first_name: 'Asai',
-  last_name: 'Masami'
+  first_name: 'Masami',
+  last_name: 'Asai'
 };
 
 <personal-info v-bind:person="person" />
