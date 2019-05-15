@@ -77,7 +77,7 @@ tester.run('infinite_loop', require('../../../lib/rules/infinite-loop'), {
 
 予想よりも簡単にESLintの独自ルールが書けた。仕組みが整っているのは素晴らしい。ルールに穴があるし、頭に書いたように実用性ゼロだが、まあいいでしょう。
 
-余談だが、GitHubでコードを公開している警察はあるのか調べたら、[あった](https://github.com/politie)。すげくサイバーだ。
+余談だが、GitHubでコードを公開している警察はあるのか調べたら、[あった](https://github.com/politie)。すごくサイバーだ。
 
 ### ご参考に
 
