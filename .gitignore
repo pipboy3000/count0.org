@@ -8,6 +8,7 @@ vendor
 .env
 
 src/html/_drafts
+src/html/.jekyll-cache
 
 ### Vim ###
 [._]*.s[a-w][a-z]
