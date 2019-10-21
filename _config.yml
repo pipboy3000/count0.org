@@ -1,17 +1,21 @@
-source:      ./src/html
+source: ./src/html
 destination: ./dist
-timezone:    Asia/Tokyo
-permalink:   /:year/:month/:day/:title.html
+plugins:
+  - jekyll-feed
+timezone: Asia/Tokyo
+permalink: /:year/:month/:day/:title.html
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-url:          https://count0.org
-name:         count0.org
+url: https://count0.org
+name: count0.org
 analytics_id: UA-357228-7
 author:
-  name:    Asai Masami
-  email:   shakeforme&#64;gmail.com
+  name: Asai Masami
+  email: shakeforme&#64;gmail.com
   twitter: '@count0'
 keep_files: ['assets', 'images']
 logo: '/images/logo.png'
+feed:
+  path: atom.xml
