@@ -39,7 +39,6 @@ module.exports = {
             options: {
               url: true,
               sourceMap: true,
-              minimize: true,
               importLoaders: 2
             }
           },
@@ -57,7 +56,9 @@ module.exports = {
             options: {
               sourceMap: true,
               implementation: require("sass"),
-              fiber: Fiber
+              sassOptions: {
+                fiber: Fiber
+              }
             }
           }
         ]
