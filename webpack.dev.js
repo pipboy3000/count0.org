@@ -14,5 +14,7 @@ module.exports = merge(common, {
     noInfo: false,
     compress: true,
     overlay: true,
+    host: '0.0.0.0',
+    disableHostCheck: true
   }
 })
