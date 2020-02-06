@@ -1,0 +1,41 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: setup Ruby
+      uses: actions/setup-ruby@v1.0.0
+    - name: setup Node.js
+      uses: actions/setup-node@v1.1.0
+    - name: build
+      run: |
+        npm i
+        bundle install
+        npm run publish
+    - name: sync s3
+      uses: jakejarvis/s3-sync-action@2fb81a9e9fea11e078587911c27754e42e6a6e88
+      with:
+        args: --exclude '.git*/*' --delete --follow-symlinks
+      env:
+        SOURCE_DIR: './dist'
+        AWS_REGION: 'ap-northeast-1'
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    - name: invalidate
+      uses: chetan/invalidate-cloudfront-action@master
+      env:
+        DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
+        PATHS: '/index.html'
+        AWS_REGION: 'ap-northeast-1'
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        
+    
