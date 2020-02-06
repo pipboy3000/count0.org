@@ -9,7 +9,7 @@
     "webpack:dev": "webpack --config webpack.dev.js",
     "webpack:prod": "webpack --config webpack.prod.js",
     "webpack:server": "webpack-dev-server --config webpack.dev.js",
-    "publish": "bundle exec jekyll build && npm run webpack:prod && npm run imagemin && bundle exec s3_website push",
+    "publish": "bundle exec jekyll build && npm run webpack:prod && npm run imagemin",
     "imagemin": "mkdir -p dist/images;imagemin src/images/* --out-dir=dist/images"
   },
   "dependencies": {
