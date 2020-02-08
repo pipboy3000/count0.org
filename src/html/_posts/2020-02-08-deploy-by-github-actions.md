@@ -65,3 +65,33 @@ jobs:
 このブログ、HTMLはjekyllでビルドしているが、CSSやJavaScriptはwebpackでビルドしているので、このような感じになった。
 
 実行時間は5分程度。node module、gemのインストールとビルドに時間がかかっている。テストを実行しているわけでもないし、気付いたらデプロイ完了していればいいので、キャッシュなどはとりあえずいいかといったところ。
+
+---
+
+一つ書き忘れていたことがあった。それはS3を実行するIAMユーザーのポリシー。もともとAmazonS3FullAccessとCloudFrontFullAccessのポリシーを与えていたが、S3のアップロードでエラーが出た。
+
+幸いにもkejarvis/s3-sync-actionの[issue](https://github.com/jakejarvis/s3-sync-action/issues/10)にワークアラウンドがあったので、ポリシーを変更した。
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:*",
+        "s3:PutObject",
+        "s3:GetObjectAcl",
+        "s3:GetObject",
+        "s3:ListBucket",
+        "s3:DeleteObject",
+        "s3:PutObjectAcl"
+      ],
+      "Resource": [
+        "arn:aws:s3:::count0.org",
+        "arn:aws:s3:::count0.org/*"
+      ]
+    }
+  ]
+}
+```
