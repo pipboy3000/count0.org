@@ -8,8 +8,6 @@
   {% capture description %}{{ page.description | strip_html | strip_newlines }}{% endcapture %}
 {% elsif page.excerpt %}
   {% capture description %}{{ page.excerpt | strip_html | strip_newlines }}{% endcapture %}
-{% elsif page.category %}
-  {% capture description %}count0.orgのカテゴリー{{ page.category }}の記事一覧です{% endcapture %}
 {% else %}
   {% capture description %}count0.orgはAsai Masamiの個人サイトです{% endcapture %}
 {% endif %}

@@ -1,7 +1,5 @@
 source: ./src/html
 destination: ./dist
-plugins:
-  - jekyll-feed
 timezone: Asia/Tokyo
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
@@ -17,5 +15,3 @@ author:
   twitter: '@count0'
 keep_files: ['assets', 'images']
 logo: '/images/logo.png'
-feed:
-  path: atom.xml

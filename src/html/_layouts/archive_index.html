@@ -26,9 +26,6 @@ description: count0.orgの年別アーカイブスです。
       </h2>
       <div class="meta">
         <span class="item date">{{ post.date | date_to_long_string }}</span>
-        {% for category in post.categories %}
-        <a href="/categories/{{category}}" class="item category">{{ category }}</a>
-        {% endfor %}
       </div>
     </div>
     {% endfor %}

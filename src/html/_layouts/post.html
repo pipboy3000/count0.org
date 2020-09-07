@@ -7,16 +7,11 @@ layout: default
       <h2 class="title">{{ page.title }}</h2>
       <div class="meta">
         <span class="item date">{{ page.date | date_to_long_string }}</span>
-        {% for category in  page.categories %}
-        <a href="/categories/{{category}}" class="item category">{{ category }}</a>
-        {% endfor %}
       </div>
     </div>
 
     <div class="body">
       {{ content }}
     </div>
-
-    <div id="related-posts"></div>
   </div>
 </div>
