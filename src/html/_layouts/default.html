@@ -20,10 +20,6 @@
           <div class="title">{{ site.name }}</div>
         </a>
       </h1>
-      <div class="menu-list -dark">
-        <a class="item" href="/about.html">About</a>
-        <a class="item" href="/archives/">Archives</a>
-      </div>
     </div>
     
     <div class="contents">
@@ -44,7 +40,7 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-357228-7', 'count0.org');
+    ga('create', '{{ site.analytics_id }}', 'count0.org');
     ga('send', 'pageview');
   </script>
   <script src="/assets/bundle.js"></script>
