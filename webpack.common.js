@@ -1,5 +1,4 @@
 const path = require('path')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const Fiber = require('fibers')
 
@@ -13,7 +12,6 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.vue$/, loader: 'vue-loader' },
       {
         test: /\.(png|jpg|gif)$/i,
         use: [{
@@ -66,15 +64,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: "style.css"
     })
   ],
   resolve: {
-    extensions: ['.js', '.vue'],
-    alias: {
-      'vue$': 'vue/dist/vue.common.js'
-    }
+    extensions: ['.js'],
   }
 };
