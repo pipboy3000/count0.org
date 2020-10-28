@@ -1,6 +1,6 @@
 const path = require('path')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const Fiber = require('fibers')
+const isProductionMode = process.env.NODE_ENV === 'production'
 
 module.exports = {
   entry: [ './src/js/main.js' ],
@@ -29,44 +29,18 @@ module.exports = {
         }]
       },
       {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/i,
         use: [
-          { loader: MiniCssExtractPlugin.loader },
-          {
-            loader: 'css-loader',
-            options: {
-              url: true,
-              sourceMap: true,
-              importLoaders: 2
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              plugins: [
-                require('autoprefixer')({grid: true})
-              ]
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-              implementation: require("sass"),
-              sassOptions: {
-                fiber: Fiber
-              }
-            }
-          }
+          isProductionMode ? MiniCssExtractPlugin.loader : 'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
         ]
       }
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: "style.css"
-    })
+    new MiniCssExtractPlugin({ filename: "style.css" })
   ],
   resolve: {
     extensions: ['.js'],

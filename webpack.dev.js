@@ -15,6 +15,7 @@ module.exports = merge(common, {
     compress: true,
     overlay: true,
     host: '0.0.0.0',
-    disableHostCheck: true
+    disableHostCheck: true,
+    publicPath: '/assets'
   }
 })

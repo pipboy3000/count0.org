@@ -8,7 +8,6 @@ kramdown:
   syntax_highlighter: rouge
 url: https://count0.org
 name: count0.org
-analytics_id: UA-357228-7
 author:
   name: Asai Masami
   email: shakeforme&#64;gmail.com

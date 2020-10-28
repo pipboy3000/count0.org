@@ -29,17 +29,6 @@ count0.orgはアサイマサミの個人サイトです。
 * [GitHub][github]
 
 
-## Atom feed
-
-このサイトは更新情報を[Atomで配信][atomfeed]しています。RSSリーダーなどで更新情報を受け取ることができます。
-
-
-## ライセンス
-
-このWebサイトによって提供される記事は、他に明記がない限り[CC BY-NC 4.0][cc-by-nc-4-en] ([日本語][cc-by-nc-4-jp])の元に提供されます。
-
 [twitter]: https://twitter.com/count0
 [atomfeed]: /atom.xml
-[cc-by-nc-4-en]: https://creativecommons.org/licenses/by-nc/4.0/
-[cc-by-nc-4-jp]: https://creativecommons.org/licenses/by-nc/4.0/deed.ja
 [github]: https://github.com/pipboy3000

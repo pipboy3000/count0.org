@@ -1,70 +1,42 @@
 .layout-document {
-  @include mobile {
-    padding-top: 100px;
-  }
+  padding-top: 100px;
 
   > .header {
-    width: 250px;
-    height: 100%;
+    width: 100%;
+    height: auto;
     position: fixed;
-    left: 0;
+    z-index: 100000;
     top: 0;
+    left: 0;
     background-color: rgba(0,0,0,0.8);
-    z-index: 0;
-
-    @include mobile {
-      width: 100%;
-      height: auto;
-      position: fixed;
-      z-index: 100000;
-      top: 0;
-      left: 0;
-    }
   }
 
   > .contents {
-    margin-left: 250px; 
     background-color: white;
-
-    @include mobile {
-      margin: auto;
-      width: 98%;
-    }
+    margin: auto;
+    width: 98%;
   }
 
   > .footer {
-    width: 250px;
-    height: 4.5rem;
-    position: fixed;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: auto;
+    position: static;
     left: 0;
-    bottom: 0;
-    z-index: 100;
-
-    @include mobile {
-      background-color: rgba(0,0,0,0.8);
-      width: 100%;
-      height: auto;
-      position: static;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      z-index: 0;
-    }
+    bottom: 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 0;
   }
 }
 
 .layout-document >.header {
   .logo {
-    margin-top: 80%;
-    margin-bottom: 25px;
-
-
-    @include mobile {
-      margin-top: auto;
-      margin-bottom: auto;
-      border-bottom: 1px solid rgba(white, 0.3);
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
+    margin-top: auto;
+    margin-bottom: auto;
+    border-bottom: 1px solid rgba(white, 0.3);
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -73,51 +45,12 @@
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     box-sizing: border-box;
 
     > .article {
-      margin-bottom: 80px;
-    }
-  }
-}
-
-// TRANSISION
-@include mobile {
-  .layout-document >.header {
-    .logo {
-      transition: all 0.2s linear;
-    }
-
-    .menu-list {
-      transition: all 0.2s linear;
-    }
-
-    &.-mini {
-      .logo {
-        padding: 0;
-      }
-
-      .logo .action {
-        text-align: center;
-      }
-
-      .logo .image {
-        display: inline-block;
-      }
-
-      .logo .title {
-        font-size: 12px;
-        margin: 0;
-        display: inline-block;
-        position: relative;
-        top: -8px;
-      }
-
-      .menu-list {
-        max-height: 0;
-      }
+      margin-bottom: 40px;
     }
   }
 }

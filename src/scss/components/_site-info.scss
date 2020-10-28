@@ -1,24 +1,21 @@
 .site-info {
-  font-size: 12px;
-  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
   margin: auto 6px;
+  font-size: 14px;
+  line-height: 1.8;
+  font-family: $font-logo;
+  text-align: center;
 
   @include mobile {
     text-align: center;
   }
 
+  > a:hover, a:active {
+    color: lighten($main-color, 20%);
+  }
+
   &.-dark {
     color: rgba(white, 0.8);
-  }
-}
-
-
-.site-info a {
-  .fa {
-    color: white;
-  }
-  
-  &:hover, &:active {
-    color: lighten($main-color, 20%);
   }
 }

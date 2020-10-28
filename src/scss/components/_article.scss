@@ -8,6 +8,10 @@
     @extend .menu-list;
   }
 
+  > .footer {
+    margin: 4rem auto;
+  }
+
   .excerpt,
   .body {
     font-size: 16px;

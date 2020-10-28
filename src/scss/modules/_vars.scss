@@ -5,7 +5,8 @@ $main-color: #3892e3;
 $sub-color: darken($main-color, 20%);
 
 // fonts
-@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
-$font-julius-sans: 'Julius Sans One', sans-serif;
-$font-default: 'Hiragino Mincho ProN', 'メイリオ', serif;
-$font-code: 'Courier New', monospace;
+// @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap');
+// $font-logo: 'Baloo Tamma 2', cursive;
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+$font-logo: 'Baloo Chettan 2', cursive;

@@ -29,7 +29,7 @@ module Jekyll
       if site.layouts.key? 'archive_index'
         dir = site.config['archive_dir'] || 'archives'
         site.pages << ArchivePage.new(site, site.source, dir)
-        site.pages << ArchiveJson.new(site, site.source, dir)
+        # site.pages << ArchiveJson.new(site, site.source, dir)
       end
     end
   end
