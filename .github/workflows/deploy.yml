@@ -13,7 +13,7 @@ jobs:
     - name: setup Ruby
       uses: actions/setup-ruby@v1
     - name: setup Node.js
-      uses: actions/setup-node@v1.1.0
+      uses: actions/setup-node@v2
     - name: build
       run: |
         npm i
