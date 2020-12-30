@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: setup Ruby
-      uses: actions/setup-ruby@v1.0.0
+      uses: actions/setup-ruby@v1.61.1
     - name: setup Node.js
       uses: actions/setup-node@v1.1.0
     - name: build
