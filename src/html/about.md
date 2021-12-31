@@ -16,19 +16,26 @@ count0.orgはアサイマサミの個人サイトです。
 
 2014年から~~無職~~無所属。
 
-現在はフリーランスのウェブデベロッパー。
+現在はフリーランスのウェブデベロッパー。どちらかといえばフロントエンドが強いかもしれない。
 
-クライアントのためにRailsとVue.jsを書くことで勤労、納税、教育（自習）を実践している。
+以下の技術を使っています。
+
+* Rails
+* Ruby
+* React
+* Vie,js
+* CSS
+* JavaScript
+* TypeScript
+
+そのほかにドローンによる空撮も承っています。
 
 ## 連絡先
 
 お仕事募集しています。お気軽にご連絡ください。
 
 * [shakeforme@gmail.com](mailto:shakeforme@gmail.com)
-* [Twitter][twitter]
 * [GitHub][github]
 
 
-[twitter]: https://twitter.com/count0
 [atomfeed]: /atom.xml
-[github]: https://github.com/pipboy3000
