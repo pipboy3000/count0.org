@@ -23,7 +23,7 @@ count0.orgはアサイマサミの個人サイトです。
 * Rails
 * Ruby
 * React
-* Vie,js
+* Vue.js
 * CSS
 * JavaScript
 * TypeScript
