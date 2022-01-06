@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="stack">
+    {% for post in site.posts limit:10 %}
+    <div class="list-item">
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span class="date">{{ post.date | date: "%Y年%m月%d日" }}</span>
+    </div>
+    {% endfor %}
+    <p><a href="/archives/index.html">記事一覧へ</a></p>
+  </div>
+</div>

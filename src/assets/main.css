@@ -1,0 +1,110 @@
+@import '@exampledev/new.css';
+@import './highlight.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap');
+
+/* :root {
+} */
+
+body {
+	font-size: 16px;
+	line-height: 1.7;
+	font-family: 'Noto Serif JP', serif;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+/* overwrite */
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.7;
+	border-bottom: none;
+}
+
+p {
+	margin-bottom: 2rem;
+}
+
+ul {
+	list-style-type: disc;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+[class^='stack'] > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+	margin-top: 1.5rem;
+}
+
+.stack-large > * + * {
+  margin-top: 3rem;
+}
+
+.stack-small > * + * {
+  margin-top: 0.5rem;
+}
+
+header {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.site-menu {
+	display: flex;
+	gap: 1rem;
+}
+
+.lead {
+	background-color: #efefef;
+	border-radius: 6px;
+	padding: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.list-item {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.archives-menu {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	border-top: 1px solid #ccc;
+	margin-top: 2rem;
+	padding-top: 2rem;
+}
+
+.title,
+.article-title {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	margin-bottom: 2rem;
+}
+
+.article-meta {
+	padding-bottom: 5rem;
+}
+
+.article-footer {
+}
+

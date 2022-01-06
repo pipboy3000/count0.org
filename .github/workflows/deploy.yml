@@ -18,7 +18,7 @@ jobs:
       run: |
         npm i
         bundle install
-        npm run publish
+        npm run build
     - name: sync s3
       uses: jakejarvis/s3-sync-action@master
       with:
