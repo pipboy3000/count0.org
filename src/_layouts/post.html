@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="article">
+    <h2 class="article-title">{{ page.title }}</h2>
+    <div class="article-meta">{{ page.date | date: "%Y年%m月%d日" }}</div>
+
+    <div class="article-body">
+      {{ content }}
+    </div>
+
+    <div class="article-footer">
+      <a href="/archives/index.html">記事一覧へ</a>
+    </div>
+  </div>
+</div>

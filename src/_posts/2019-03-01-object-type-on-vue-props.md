@@ -4,9 +4,6 @@ title: Vue.jsでObject型のPropsにTypeScriptの型を割り当てる
 categories: js TypeScript
 ---
 
-
-
-
 Vue.jsのPropsはObjectを渡せるので、コンポーネントに情報の塊を渡すことができて便利。型指定すると以下のようになる。
 
 ```js

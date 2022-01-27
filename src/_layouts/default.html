@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+   __________  __  ___   ____________   ____  ____  ______
+  / ____/ __ \/ / / / | / /_  __/ __ \ / __ \/ __ \/ ____/
+ / /   / / / / / / /  |/ / / / / / / // / / / /_/ / / __  
+/ /___/ /_/ / /_/ / /|  / / / / /_/ // /_/ / _, _/ /_/ /  
+\____/\____/\____/_/ |_/ /_/  \____(_)____/_/ |_|\____/   
+-->
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+
+<head>
+  {% include meta.html %}
+  {% include analytics.html %}
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="/">{{ site.name }}</a>
+    </h1>
+    <div class="site-menu">
+      <div><a href="/about.html">自己紹介</a></div>
+      <div><a href="/archives/index.html">記事一覧</a></div>
+    </div>
+  </header>
+
+  <div class="contents">
+    {{ content }}
+  </div>
+
+  <div class="footer">
+    <div>Subscribe to <a href="/atom.xml">Atom feed</a></div>
+    <div>Created by <a href="/about.html">Asai Masami</a></div>
+    <div>Document licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">BY-NC 4.0</a></div>
+  </div>
+</body>
+
+</html>

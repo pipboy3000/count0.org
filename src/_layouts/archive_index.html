@@ -1,0 +1,30 @@
+---
+layout: default
+description: count0.orgの記事一覧です。
+---
+<div class="container">
+  <h2>記事一覧</h2>
+
+  <div class="stack-large">
+    <div class='archives-menu'>
+      {% for archive in page.archives reversed %}
+      <a href="#archive_{{ archive[0] }}">{{ archive[0] }}</a>
+      {% endfor %}
+    </div>
+
+
+    {% for archive in page.archives %}
+    <div id="archive_{{ archive[0] }}">
+      <h2>{{ archive[0] }}</h2>
+      <div class="stack">
+        {% for post in archive[1]%}
+        <div class="list-item">
+          <a href="{{post.url}}">{{ post.title }}</a>
+          <span>{{ post.date | date: "%Y年%m月%d日" }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

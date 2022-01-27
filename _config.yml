@@ -1,4 +1,4 @@
-source: ./src/html
+source: ./src
 destination: ./dist
 timezone: Asia/Tokyo
 permalink: /:year/:month/:day/:title.html

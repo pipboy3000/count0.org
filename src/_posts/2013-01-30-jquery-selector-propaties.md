@@ -9,17 +9,17 @@ jQueryでfindしたあとのjQueryオブジェクトのselectorプロパティ�
 jQueryオブジェクトの`selector`プロパティをご存知であろうか。
 
 ``` javascript
-	var $foo = $("#main li a");
-	console.log($foo.selector);	// #main li a
+var $foo = $("#main li a");
+console.log($foo.selector);	// #main li a
 ```
 
 selectorが取得できる。  
 こんな感じで実行するようにプラグインを作った
 
 ``` javascript
-	$.each(["#main", "#header", "#footer"], function(i, el) {
-		$(el).find("li").somePlugin();
-	});
+$.each(["#main", "#header", "#footer"], function(i, el) {
+	$(el).find("li").somePlugin();
+});
 ```
 
 プラグインの中で`selector`プロパティを参照すると"#main li a", "#header li a", "#footer li a"を期待したけど全部"li a"になっていた。これは悲劇。  
@@ -30,9 +30,9 @@ selectorが取得できる。
 上記の例だとこう書かなければいけない。
 
 ``` javascript
-	$.each(["#main", "#header", "#footer"], function(i, el) {
-		$(el + " li a").somePlugin();
-	});
+$.each(["#main", "#header", "#footer"], function(i, el) {
+	$(el + " li a").somePlugin();
+});
 ```
 
 すごくイケてない感じがするけど、これで一応乗り越えた。

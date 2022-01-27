@@ -7,13 +7,6 @@ node_modules
 vendor
 .env
 
-src/html/_drafts
-src/html/.jekyll-cache
+src/_drafts
+src/.jekyll-cache
 
-### Vim ###
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
-*.un~
-Session.vim
-.netrwhist
-*~
